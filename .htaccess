@@ -1,4 +1,0 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine on
-    RewriteRule !^comingsoon\.html$ /comingsoon.html [L,R=302]
-</IfModule>
