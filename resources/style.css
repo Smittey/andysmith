@@ -26,7 +26,6 @@ width: 940px;
 height: 304px;
 margin: 0 auto;
 clear: both;
-position: relative;
 top: -152px;
 
 /* IE4ever Hack: Hide from IE4 **/
@@ -85,7 +84,7 @@ font-size: 18px;
 }
 
 p.links{
-width: 274px;
+display: table;
 margin: 0 auto;
 }
 
@@ -109,7 +108,6 @@ background: url(../images/social.png) left bottom no-repeat;
 color: #4875b4;
 }
 
-
 a.tw{
 width: 54px;
 color: #ffffff;
@@ -130,10 +128,9 @@ background: url(../images/social.png) -85px bottom no-repeat;
 color: #33ccff;
 }
 
-
-a.fb{
-width: 65px;
-color: #fff;
+a.so{
+width: 103px;
+color: #ffffff;
 font-size: 10px;
 text-transform: uppercase;
 font-weight: bold;
@@ -142,11 +139,31 @@ height: 22px;
 text-decoration: none;
 background: url(../images/social.png) -164px top no-repeat;
 float: left;
+margin-right: 10px;
 padding: 0 0 0 25px;
 }
 
-a.fb:hover{
+a.so:hover{
 background: url(../images/social.png) -164px bottom no-repeat;
+color: #3b5998;
+}
+
+a.gh{
+width: 54px;
+color: #fff;
+font-size: 10px;
+text-transform: uppercase;
+font-weight: bold;
+line-height: 22px;
+height: 22px;
+text-decoration: none;
+background: url(../images/social.png) -292px top no-repeat;
+float: left;
+padding: 0 0 0 25px;
+}
+
+a.gh:hover{
+background: url(../images/social.png) -292px bottom no-repeat;
 color: #3b5998;
 }
 
