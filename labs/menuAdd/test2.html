@@ -96,7 +96,7 @@
 	$(document).ready(function(e) {
 		$("#sideBar").on('click', '.skillTag', function() {
 			//e.preventDefault();
-			$("#items").find("#" + this.id).toggle();   
+			$("#items").find("#" + this.id).parent().toggle();   
 		});
 		
 		
