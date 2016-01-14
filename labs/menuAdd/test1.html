@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://dl2.pushbulletusercontent.com/PDPsy0i1tD1B5xteqQfcZDikIsLJq7NJ/test1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+	<style type="text/css">
+		#div1{
+			top: 10px;
+			width: 200px;
+			height: 100px;
+			background-color: #993333;
+			border-width: 1px;
+			border-style: dotted;
+			border-color: black;
+			padding: 10px;
+			margin: 0 auto;
+		}
+
+		#div2{
+			top: 10px;
+			margin-right: 220px;
+			width: 200px;
+			height: auto;
+			background-color: #339933;
+			border-width: 1px;
+			border-style: dotted;
+			border-color: black;
+			padding: 10px;
+			float:right;
+			white-space:normal; 
+		}
+
+		.buttonPadding
+		{
+		  margin: 5px
+		}
+		
+		a:hover, a:visited, a:link, a:active
+		{
+			text-decoration: none;
+		}
+		
+		span
+		{
+			float: left; 
+		
+		}
+    </style>
+
+    <title>Menu adder</title>
+<style type="text/css"></style></head>
+
+<body>
+	
+	<script type="text/javascript" src="./test1_files/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./test1_files/bootstrap.min.css">
+	<script type="text/javascript" src="./test1_files/bootstrap.min.js"></script>
+    
+  
+
+
+
+	<script type="text/javascript">
+		function start(elem)
+		{
+			if ($(elem).parent().attr("id") == "div1")
+			{
+			  fade(elem);      
+			}
+		}
+
+		
+		
+		function move()
+		{
+		
+/*
+			$("span.skillTag").each(function(){
+				var skillTag = $(this);
+				setTimeout(function(){
+					fade(skillTag);
+				}, 500);
+			});
+			*/
+			
+			$('span.skillTag').each(function(index){
+				  var skillTag = $(this);
+				  setTimeout(function () {
+						//console.log(($(skillTag).attr("id")));
+						fade(skillTag);
+				  }, index*400);
+			});
+
+		
+		}
+
+
+		function fade(elem) 
+		{
+			var id = $(elem).attr('id');
+			
+			var elemForCopy = $(elem).clone();
+			
+			if($("#div2 > #" + id).length == 0)
+			{ 
+				elemForCopy.appendTo("#div2").wrap().hide().fadeIn(1000);
+				//elemForCopy.wrap( "<span></span>" );
+			}
+		}
+
+	</script>	
+	
+	
+	
+	<button id="start" onclick="move()">Start</button>
+
+	<div id="div1">
+			<!--<button id="btnDanger" onClick="start(this)" class="btn btn-danger buttonPadding">Danger</button>
+			<button id="btnSuccess" onClick="start(this)" class="btn btn-success buttonPadding">Success</button>
+			<button id="btnWarning" onClick="start(this)" class="btn btn-warning buttonPadding">Warning</button>-->
+			
+			<span id="javaTag" class="label label-default skillTag buttonPadding">Java</span>
+			<span id="cplusplusTag" class="label label-primary skillTag buttonPadding">C++</span>
+			<span id="javascriptTag" class="label label-success skillTag buttonPadding">JavaScript</span>
+			<span id="jqueryTag" class="label label-info skillTag buttonPadding">jQuery</span>
+			<span id="cssTag" class="label label-warning skillTag buttonPadding">CSS</span>
+			<span id="documentumTag" class="label label-danger skillTag buttonPadding">Documentum</span>
+
+
+	</div>
+
+		
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<div id="div2">
+
+	</div>
+
+
+</body></html>
