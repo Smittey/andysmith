@@ -102,19 +102,19 @@
 			
 			var elemForCopy = $(elem).clone();
 			
-			if($("#div2 > #" + id).length == 0)
+			if($("#div2 #" + id).length == 0)
 			{ 
 				elemForCopy.appendTo("#div2").wrap().hide().fadeIn(1000);
 				elemForCopy.wrap( "<a href='#/'></a>" );
 			}
 		}
 		
-		
-		$("#div2 a .skillTag").click(function(e) {
-			e.preventDefault();
-			$("#items").find("." + this.id).toggle();   
+		$(document).ready(function(e) {
+			$("#div2").on('click', '.skillTag', function() {
+				//e.preventDefault();
+				$("#items").find("." + this.id).toggle();   
+			});
 		});
-		
 
 	</script>	
 	
@@ -133,27 +133,30 @@
 			<span id="jqueryTag" class="label label-info skillTag buttonPadding">jQuery</span>
 			<span id="cssTag" class="label label-warning skillTag buttonPadding">CSS</span>
 			<span id="documentumTag" class="label label-danger skillTag buttonPadding">Documentum</span>
+			<span id="javaTag" class="label label-default skillTag buttonPadding">Java</span>
+
 
 
 	</div>
 
-	<div id="items">
-		<div class="javaTag">Java</div>
-		<div class="javaTag">Java</div>
-		<div class="2">Item 2</div>
-		<div class="3">Item 3</div>
-		<div class="javaTag">Java</div>
-		<div class="4">Item 4</div>
-		<div class="4">Item 4</div>
-		<div class="javaTag">Java</div>
-		<div class="5">Item 5</div>
-	</div>
 
 
 	<div id="div2">
 
 	</div>
 
+	
+	<div id="items">
+		<div class="javaTag">Java</div>
+		<div class="javaTag">Java</div>
+		<div class="cplusplusTag">C++</div>
+		<div class="documentumTag">Documentum</div>
+		<div class="javaTag">Java</div>
+		<div class="cssTag">CSS</div>
+		<div class="documentumTag">Documentum</div>
+		<div class="javaTag">Java</div>
+		<div class="javascriptTag">JavaScript</div>
+	</div>
 
 
 </body></html>
