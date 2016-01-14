@@ -105,9 +105,16 @@
 			if($("#div2 > #" + id).length == 0)
 			{ 
 				elemForCopy.appendTo("#div2").wrap().hide().fadeIn(1000);
-				//elemForCopy.wrap( "<span></span>" );
+				elemForCopy.wrap( "<a href='#/'></a>" );
 			}
 		}
+		
+		
+		$("#div2 a .skillTag").click(function(e) {
+			e.preventDefault();
+			$("#items").find("." + this.id).toggle();   
+		});
+		
 
 	</script>	
 	
@@ -130,12 +137,23 @@
 
 	</div>
 
-		
-	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<div id="items">
+		<div class="javaTag">Java</div>
+		<div class="javaTag">Java</div>
+		<div class="2">Item 2</div>
+		<div class="3">Item 3</div>
+		<div class="javaTag">Java</div>
+		<div class="4">Item 4</div>
+		<div class="4">Item 4</div>
+		<div class="javaTag">Java</div>
+		<div class="5">Item 5</div>
+	</div>
+
 
 	<div id="div2">
 
 	</div>
+
 
 
 </body></html>
