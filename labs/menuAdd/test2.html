@@ -4,220 +4,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
 
-	<style type="text/css">
-		#div1{
-			top: 10px;
-			width: 200px;
-			height: 100px;
-			background-color: #993333;
-			border-width: 1px;
-			border-style: dotted;
-			border-color: black;
-			padding: 10px;
-			margin: 0 auto;
-		}
-
-		#sideBar
-		{		
-			width:230px;
-			padding-right:20px;
-			position: absolute; 
-			right: 10px;
-			top:0px;
-		}
-
-		#sticker 
-		{
-			padding:20px;
-			margin:20px 0;
-			background:#AAA;
-			width:190px;
-		}
-
-		.stick 
-		{
-			position:fixed;
-			top:0px;
-		}
-
-		.buttonPadding
-		{
-		  margin: 5px
-		}
-		
-		a:hover, a:visited, a:link, a:active
-		{
-			text-decoration: none;
-		}
-		
-		span
-		{
-			float: left; 
-		}
-		
-		.experienceItem
-		{
-			
-			width:40%;
-			margin: 0 auto;
-			margin-top: 50px;
-			padding:50px; 
-			opacity:0;
-			background-color:lightgreen; 
-		}
-		
-		.normalBlock
-		{
-			width:60%;
-			margin: 0 auto;
-			margin-top: 50px;
-			padding:50px; 
-		}
-		
-		.experienceItemSelected
-		{
-			opacity: 0.4;
-			filter: alpha(opacity=40);
-		}
-		
-		
-    </style>
-
     <title>Menu adder</title>
-<style type="text/css"></style></head>
+</head>
 
 <body>
 	
 	<script type="text/javascript" src="./test1_files/jquery-1.10.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./test1_files/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
 	<script type="text/javascript" src="./test1_files/bootstrap.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+
+	
     <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
   
-
-
-
-	<script type="text/javascript">
-		
-	$(document).ready(function(e) {
-		$("#sideBar").on('click', '.skillTag', function() {
-			//e.preventDefault();
-			
-			
-			
-			//$("#items").find("#" + this.id).parent().toggle();  
-			
-			if($(this).hasClass("experienceItemSelected"))
-			{
-				$(this).removeClass("experienceItemSelected");
-			}
-			else
-			{
-				$(this).addClass("experienceItemSelected");
-			}
-			        
-			
-			var filteredTags = $('#sideBar #sticker .experienceItemSelected').map(function(){ return this.id; }).get().join();
-			
-			// start with all experience blocks
-			var experienceBlocks =  $('#items .experienceItem .skillTag').parent(); 
-
-		    if(filteredTags) 
-		    {
-			    //experienceBlocks = experienceBlocks.filter(filteredTags);
-				experienceBlocks = experienceBlocks.filter('#items .experienceItem #' + filteredTags);
-		    }
-			
-			 // hide everything      
-			 $('#sideBar #sticker .experienceItemSelected').hide();
-			 // show the ones we want. Pun intended
-			 filteredTags.show();
-			 console.log(filteredTags.length);
-			
-
-
-		});
-		
-		
-		
-		 /* Every time the window is scrolled ... */
-		$(window).scroll( function(){
-		
-			/* Check the location of each desired element */
-			$('.experienceItem').each( function(i){
-				
-				var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-				var bottom_of_window = $(window).scrollTop() + $(window).height();
-				
-				/* If the object is completely visible in the window, fade it it */
-				if( bottom_of_window > bottom_of_object )
-				{
-					$(this).animate({'opacity':'1'},500);
-					if(!$(this).hasClass("visible"))
-					{
-						move($(this));					
-					}
-					
-					$(this).addClass("visible");
-
-				}
-				
-			}); 			
-		});
-		
-		
-		
-		var s = $("#sticker	");
-		var a = $("#sticker").offset().top;
-		
-		var bottom = a + $("#sideBar").parent().height() - 110;
-		
-		
-		$(window).scroll(function() {
-			var windowpos = $(window).scrollTop();
-			
-			//s.html("Distance from top:" + a + "<br />Distance from bottom:" + bottom + "<br />Scroll position: " + windowpos);
-			if ((a <= windowpos + 20) && (bottom >= windowpos)) {
-				s.addClass("stick");
-			} else {
-				s.removeClass("stick");	
-			}
-		});
-		
-	});
-		
-		function move(elem)
-		{
-			$("#items #" + elem.attr('id') + " span.skillTag").each(function(index){
-				  var skillTag = $(this);
-				  setTimeout(function () {
-						//console.log(($(skillTag).attr("id")));
-						fade(skillTag);
-				  }, index*400);
-			});
-		}
-
-		function fade(elem) 
-		{
-			var id = $(elem).attr('id');
-			
-			var elemForCopy = $(elem).clone();
-			
-			if($("#sideBar #" + id).length == 0)
-			{ 
-				elemForCopy.appendTo("#sideBar #sticker").wrap().hide().fadeIn(1000);
-				elemForCopy.wrap( "<a href='#/'></a>" );
-			}
-			else
-			{
-				$("#sideBar #" + id).effect( "highlight", 1000);
-			}
-		}
-		
-	</script>	
 	
 	<div id="sideBar">
-        <div id="sticker"></div>
+		
+        <div id="sticker"><p><a id="clearFilters" onClick="clearFilters()" href="#/">[Clear Filters]</a></p></div>
     </div>
 
 	
@@ -245,34 +51,34 @@
 	<div id="items">
 
 		<div id="experience1" class="experienceItem">
-			<span id="javaTag" class="label label-default skillTag buttonPadding">Java</span>
-			<span id="documentumTag" class="label label-danger skillTag buttonPadding">Documentum</span>
+			<span class="javaTag label label-default skillTag buttonPadding">Java</span>
+			<span class="documentumTag label label-danger skillTag buttonPadding">Documentum</span>
 		</div>
 		
 		<div id="experience2" class="experienceItem">
-			<span id="cplusplusTag" class="label label-primary skillTag buttonPadding">C++</span>
-			<span id="cssTag" class="label label-warning skillTag buttonPadding">CSS</span>
+			<span class="cplusplusTag label label-primary skillTag buttonPadding">C++</span>
+			<span class="cssTag label label-warning skillTag buttonPadding">CSS</span>
 		</div>
 		
 		<div id="experience3" class="experienceItem">
-			<span id="javascriptTag" class="label label-success skillTag buttonPadding">JavaScript</span>
+			<span class="javascriptTag label label-success skillTag buttonPadding">JavaScript</span>
 		</div>
 		
 		<div id="experience4" class="experienceItem">
-			<span id="jqueryTag" class="label label-info skillTag buttonPadding">jQuery</span>
+			<span class="jqueryTag label label-info skillTag buttonPadding">jQuery</span>
 		</div>
 		
 		<div id="experience5" class="experienceItem">
-			<span id="cssTag" class="label label-warning skillTag buttonPadding">CSS</span>
+			<span class="cssTag label label-warning skillTag buttonPadding">CSS</span>
 		</div>
 
 		
 		<div id="experience6" class="experienceItem">
-			<span id="documentumTag" class="label label-danger skillTag buttonPadding">Documentum</span>
+			<span class="documentumTag label label-danger skillTag buttonPadding">Documentum</span>
 		</div>
 		
 		<div id="experience7" class="experienceItem">
-			<span id="javaTag" class="label label-default skillTag buttonPadding">Java</span>
+			<span class="javaTag label label-default skillTag buttonPadding">Java</span>
 		</div>
 
 	</div>
@@ -301,4 +107,5 @@
 	</div>
 
 
-</body></html>
+</body>
+</html>
