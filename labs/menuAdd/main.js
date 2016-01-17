@@ -60,7 +60,7 @@ $(document).ready(function(e) {
 function filterTags(elem)
 {
 			
-		
+
 		if($(elem).hasClass("experienceItemSelected"))
 		{
 			$(elem).removeClass("experienceItemSelected");
@@ -70,14 +70,18 @@ function filterTags(elem)
 			$(elem).addClass("experienceItemSelected");
 		}
 		
-		var filteredTags = $('#sideBar #sticker .experienceItemSelected').map(function(){ return "." + $(this).attr('class').split(' ')[0]; }).get();
+		var filteredTags = $('#sideBar #sticker .experienceItemSelected').map(function(){ return "." + $(this).attr('class').split(' ')[0]; }).get().join();
 		
 		// start with all experience blocks
 		var experienceBlocks =  $('#items .experienceItem');
 
 		if(filteredTags)
 		{
-			experienceBlocks = experienceBlocks.filter(function() {
+			//experienceBlocks = experienceBlocks.filter('#items .experienceItem ' + filteredTags);
+			//experienceBlocks = experienceBlocks.filter('#items .experienceItem ' + filteredTags);
+			experienceBlocks = experienceBlocks.filter('.experienceItem').find(filteredTags).parent();
+
+			/*experienceBlocks = experienceBlocks.filter(function() {
 				for (var i = 0, len = filteredTags.length; i < len; i++) 
 				{
 					if ($(filteredTags[i], this).length === 0) 
@@ -86,14 +90,24 @@ function filterTags(elem)
 					}
 				}
 				return true;
-			});
+			});*/
 		}
 		
-		 // hide everything      
-		 $('.experienceItem').hide();
+
+
+		// hide everything      
+		$('.experienceItem').hide();
 		 
-		 //Show the experience items depicted by the filters
-		 experienceBlocks.show();
+
+		//Show the experience items depicted by the filters
+		experienceBlocks.show();
+		 
+		/*$('html, body').animate({
+			scrollTop: $('#items').offset().top - 20
+		}, 'slow');*/
+		
+		jQuery('html,body').animate({ scrollTop: jQuery('#items').offset().top - 20}, 1000);
+
 }	
 	
 function move(elem)
@@ -120,7 +134,7 @@ function fade(elem)
 	if($("#sideBar ." + tagName).length == 0)
 	{ 
 		//Make a duplicate of the element as we don't want the element to actually move, but replicated. Make it into a link so that the filter can be selected
-		$(elem).clone().appendTo("#sideBar #sticker").wrap("<a href='#/'></a>").hide().fadeIn(1000);
+		$(elem).clone().appendTo("#sideBar #sticker").wrap("<h4><a href='#/'></a></h4>").hide().fadeIn(1000);
 	}
 	else
 	{
