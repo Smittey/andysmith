@@ -36,22 +36,10 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
 	  
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	  	      
-	<script type="text/javascript">
-   
-         $(document).ready(function() {
+	<script type="text/javascript" src="js/main.js"></script>
 
-			$(".timeline-panel").hover(function() {
-				$(this).parent().closest('.experienceBlockHead').find('.timeline-image').css({'border': '7px solid #ff00ff'});
-			}, function() {
-				$(this).parent().closest('.experienceBlockHead').find('.timeline-image').css({'border': '7px solid #f1f1f1'})}
-			);
-
-
-        });
-         
-			
-      </script>
 	  
 </head>
 
@@ -69,7 +57,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top">AndySmith.me</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -100,9 +88,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Scrolling Nav</h1>
-                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
-                    <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
+                    <h1>Landing bit</h1>
+                    <a class="btn btn-default page-scroll" href="#about">Scroll to the first section</a>
                 </div>
             </div>
         </div>
@@ -121,12 +108,17 @@
 
     <!-- Work and Education Section -->
     <section id="workAndEducation" class="workAndEducation-section">
+
         <div class="container">
+
             <div class="row">
+			
                 <div class="col-lg-12">
+					<div id="sideBar">
+						<div id="sticker"><p><a id="clearFilters" onClick="clearFilters()" href="#/">[Clear Filters]</a></p></div>
+					</div>
                     <h1>Work and Education</h1>
-					
-					
+						
 					 <ul class="timeline">
                         <li>
                             <div class="timeline-image">
@@ -138,21 +130,28 @@
                             <div class="timeline-image">
                                 <img class="circle-image" src="http://i.imgur.com/bKmhvZb.png" alt="">
                             </div>
-                            <div class="timeline-panel">
+                            <div id="experience1" class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>July 2014</h4>
                                     <h4 class="subheading">Graduate Software Developer</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">I currently work as a software developer a project in the Justice sector. I work both back-end using Java and Documentum XCP 2.1, and front-end using JavaScript, jQuery, CSS and HTML. I've been involved with many phases of the project life-cycle including design, development and integration, and testing. Since starting on the project I have taken ownership of two areas of a complex system and constantly strive to learn more and take my skills further.</p>
+                                    <p class="text-muted">I currently work as a full-stack software developer a project in the Justice sector. I've been involved with many phases of the project life-cycle including design, development and integration, and testing. Since starting on the project I have taken ownership of several areas of a complex system and constantly strive to learn more and take my skills further.</p>
+									</br>
+									<span class="javaTag label label-default skillTag buttonPadding">Java</span>
+									<span class="documentumTag label label-danger skillTag buttonPadding">Documentum</span>
+									<span class="xcpTag label label-xcp skillTag buttonPadding">XCP 2.1</span>
+									<span class="javascriptTag label label-warning skillTag buttonPadding">JavaScript</span>
+									<span class="AgileTag label label-success skillTag buttonPadding">Agile</span>
+									<span class="svnTag label label-svn skillTag buttonPadding">Svn</span>
                                 </div>
                             </div>
                         </li>
                         <li class="experienceBlockHead">
                             <div class="timeline-image">
-                                <img class="circle-image" src="http://cdn.ttgtmedia.com/rms/computerweekly/Logica.jpg" alt="">
+                                <img class="circle-image" src="http://i.imgur.com/s5N9It9.png" alt="">
                             </div>
-                            <div class="timeline-panel">
+                            <div id="experience2" class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>December 2012</h4>
                                     <h4 class="subheading">Junior Technical Architect/Developer</h4>
@@ -160,13 +159,22 @@
                                 <div class="timeline-body">
                                     <p class="text-muted">I worked on system modernization with a team to assist in the specification and development of the client's security. This role is mainly focused on technical architecture and development. My main responsibilities center around the development and maintenance of tools to support event analysis and alerting functions such as reporting and log parsing.
 									</br></br>
-									Other duties include liaising with the requirements team to discuss new business rules that have been agreed on for integration using Java, shell scripting, XML, Oracle and SQL as well as testing frameworks such as jUnit and jMock. I worked through remote desktops to develop a range of solutions in various different environments.</p>
-                                </div>
+									Other duties include liaising with the requirements team to discuss new business rules that have been agreed on for integration.</p>
+									</br>
+                                	<span class="shellTag label label-shell skillTag buttonPadding">Shell</span>
+                                	<span class="jenkinsTag label label-jenkins skillTag buttonPadding">Jenkins</span>
+									<span class="javaTag label label-default skillTag buttonPadding">Java</span>
+									<span class="mysqlTag label label-mysql skillTag buttonPadding">MySQL</span>
+									<span class="oracleTag label label-oracle skillTag buttonPadding">Oracle</span>
+									<span class="junitTag label label-junit skillTag buttonPadding">jUnit</span>
+									<span class="jmockTag label label-jmock skillTag buttonPadding">jMock</span>
+									<span class="svnTag label label-svn skillTag buttonPadding">Svn</span>
+								</div>
                             </div>
 							
 							
 							<li class="timeline-inverted">
-								<div class="timeline-panel">
+								<div id="experience3" class="timeline-panel">
 									<div class="timeline-heading">
 										<h4>July 2012</h4>
 										<h4 class="subheading">Test Analyst</h4>
@@ -175,37 +183,65 @@
 										<p class="text-muted">I worked as a test analyst on a modernization project for a complex solution targeted at the companies internal asset delivery system. 
 										</br></br>
 										I worked closely with the testing and development team to effectively execute and edit test scripts based on the solution requirements specification. I used the HP Quality Center to handle and report system defects.</p>
+										</br>
+										<span class="hpqualitycenterTag label label-hpQualityCenter skillTag buttonPadding">HP Quality Center</span>
 									</div>
 								</div>
 							</li>
                         </li>
+						<!--Education-->
 						<li>
                             <div class="timeline-image">
                                 <img class="circle-image" src="img/education.jpg" alt="">
                             </div>
                             
                         </li>
-						
-
-						
-
-                        <!--<li class="timeline-inverted">
+						<li class="experienceBlockHead">
                             <div class="timeline-image">
-                                <h4></h4>
+                                <img class="circle-image" src="http://i.imgur.com/Yzgg918.png" alt="">
                             </div>
-                        </li>-->
+                            <div id="experience4" class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>June 2014</h4>
+                                    <h4 class="subheading">BSc Hons Computer Science, Newcastle University</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Graduated with a degree in Computer Science with experience in the following modules:
+									</p>
+                                </div>
+                            </div>
+							
+							<li class="timeline-inverted">
+								<div id="experience5" class="timeline-panel">
+									<div class="timeline-heading">
+										<h4>May 2014</h4>
+										<h4 class="subheading">Completed Dissertation</h4>
+									</div>
+									<div class="timeline-body">
+										<p class="text-muted">My dissertation was on how technology can impact the effectiveness on treatment for mental illnesses such as anxiety and depression.
+										</br></br>
+										Talk about it a bit more......
+										</p>
+										</br>
+										<span class="androidTag label label-android skillTag buttonPadding">Java Android</span>
+										<span class="mysqlTag label label-mysql skillTag buttonPadding">MySQL</span>
+										<span class="phpTag label label-php skillTag buttonPadding">PHP</span>
+										<span class="gitTag label label-git skillTag buttonPadding">Git</span>
+									</div>
+								</div>
+							</li>
+
+                        </li>
+						<li class="timeline-inverted">
+							<div class="timeline-image">
+								<h4>				
+								You can use the menu to filter skills!</h4>
+							</div>
+						</li>
 						
 						
                     </ul>
-                
-					
-					
-					
-					
-					
-					
-					
-					
+  	
 					
                 </div>
             </div>

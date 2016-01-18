@@ -7,11 +7,38 @@
 body {
     width: 100%;
     height: 100%;
+	
+	overflow-x: hidden;
+    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 html {
     width: 100%;
     height: 100%;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.75
+}
+p.large {
+    font-size: 16px
 }
 
 @media(min-width:767px) {
@@ -62,7 +89,12 @@ of those sections to manage the look and feel of the site. */
 .timeline {
     list-style: none;
     padding: 50px 0 0 0;
-    position: relative
+    position: relative;
+	
+	/*background-color: #ddd;*/
+	width:80%;
+	margin: 0 auto;
+
 }
 .timeline:before {
     top: 50px;
@@ -77,7 +109,8 @@ of those sections to manage the look and feel of the site. */
 .timeline>li {
     margin-bottom: 50px;
     position: relative;
-    min-height: 50px
+    min-height: 50px;
+	opacity:0;
 }
 .timeline>li:before, .timeline>li:after {
     content: " ";
@@ -91,7 +124,8 @@ of those sections to manage the look and feel of the site. */
     float: right;
     padding: 0 20px 0 100px;
     position: relative;
-    text-align: left
+    text-align: left;
+	
 }
 .timeline>li .timeline-panel:before {
     border-left-width: 0;
@@ -136,13 +170,14 @@ of those sections to manage the look and feel of the site. */
 .timeline>li.timeline-inverted>.timeline-panel {
     float: right;
     text-align: left;
-    padding: 0 20px 0 100px
+    padding: 0 20px 0 100px;
 	
 }
 .timeline>li.timeline-inverted>.timeline-panel:before {
     border-left-width: 0;
     border-right-width: 15px;
     left: -15px;
+	
     right: auto
 }
 .timeline>li.timeline-inverted>.timeline-panel:after {
@@ -165,6 +200,15 @@ of those sections to manage the look and feel of the site. */
 .timeline .timeline-body>ul {
     margin-bottom: 0
 }
+
+.timeline .timeline-heading h4.subheading {
+    text-transform: none
+}
+
+.text-muted {
+    color: #777
+}
+
 @media (min-width: 768px) {
     .timeline:before {
         left: 50%
@@ -214,8 +258,9 @@ of those sections to manage the look and feel of the site. */
         line-height: 26px
     }
     .timeline>li.timeline-inverted>.timeline-panel {
-        padding: 0 20px 20px
+        padding: 0 20px 20px;
     }
+	
 }
 @media (min-width: 1200px) {
     .timeline>li {
@@ -235,4 +280,137 @@ of those sections to manage the look and feel of the site. */
     .timeline>li.timeline-inverted>.timeline-panel {
         padding: 0 100px 20px 20px
     }
+}
+
+@media (max-width: 450px) {
+	#sideBar
+	{		
+		width:230px;
+		position: absolute; 
+		right: -75px;
+		top:0px;
+		opacity:0;
+	}
+
+	#sticker 
+	{
+		padding:20px;
+		background:#AAA;
+		width:190px;
+		opacity:0;
+	}
+
+	.stick 
+	{
+		position:fixed;
+		top:100px;
+		width:100%;
+		opacity:0;
+
+	}
+}
+
+
+
+.label-shell { 
+  color: #ffffff; 
+  background-color: #5AC7B5; 
+  border-color: #130269; 
+} 
+
+.label-jenkins { 
+  color: #ffffff; 
+  background-color: #B85A2E; 
+  border-color: #130269; 
+} 
+
+.label-mysql { 
+  color: #ffffff; 
+  background-color: #2E78B8; 
+  border-color: #130269; 
+} 
+
+.label-android { 
+  color: #ffffff; 
+  background-color: #90E864; 
+  border-color: #130269; 
+} 
+ 
+.label-oracle { 
+  color: #ffffff; 
+  background-color: #B1A3C4; 
+  border-color: #130269; 
+} 
+
+.label-junit { 
+  color: #ffffff; 
+  background-color: #08635B; 
+  border-color: #130269; 
+} 
+
+.label-jmock { 
+  color: #ffffff; 
+  background-color: #370863; 
+  border-color: #130269; 
+} 
+
+.label-hpQualityCenter { 
+  color: #ffffff; 
+  background-color: #630808; 
+  border-color: #130269; 
+} 
+
+.label-php { 
+  color: #ffffff; 
+  background-color: #467042; 
+  border-color: #130269; 
+} 
+
+.label-git { 
+  color: #ffffff; 
+  background-color: #70426D; 
+  border-color: #130269; 
+} 
+
+.label-svn { 
+  color: #ffffff; 
+  background-color: #87D6CB; 
+  border-color: #130269; 
+} 
+
+.label-xcp { 
+  color: #ffffff; 
+  background-color: #B4D687; 
+  border-color: #130269; 
+} 
+
+
+#sideBar
+{		
+	width:230px;
+	position: absolute; 
+	right: -75px;
+	top:0px;
+	
+}
+
+#sticker 
+{
+	padding:20px;
+	background:#AAA;
+	width:190px;
+}
+
+.stick 
+{
+	position:fixed;
+	top:100px;
+	width:100%
+}
+
+.experienceItemSelected
+{
+	-moz-box-shadow: 0 0 15px #fff;
+	-webkit-box-shadow: 0 0 15px #fff;
+	box-shadow: 0px 0px 15px #fff;
 }
