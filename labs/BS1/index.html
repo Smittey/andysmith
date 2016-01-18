@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Scrolling Nav - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	
+	
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+	  
+	  	      
+	<script type="text/javascript">
+   
+         $(document).ready(function() {
+
+			$(".timeline-panel").hover(function() {
+				$(this).parent().closest('.experienceBlockHead').find('.timeline-image').css({'border': '7px solid #ff00ff'});
+			}, function() {
+				$(this).parent().closest('.experienceBlockHead').find('.timeline-image').css({'border': '7px solid #f1f1f1'})}
+			);
+
+
+        });
+         
+			
+      </script>
+	  
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Scrolling Nav</h1>
+                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
+                    <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>About Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Services Section</h1>
+					
+					
+					 <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="circle-image" src="http://i.imgur.com/VzATqxR.png" alt="">
+                            </div>
+                            
+                        </li>
+                        <li class="timeline-inverted experienceBlockHead">
+                            <div class="timeline-image">
+                                <img class="circle-image" src="http://i.imgur.com/bKmhvZb.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>July 2014</h4>
+                                    <h4 class="subheading">Graduate Software Developer</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">I currently work as a software developer a project in the Justice sector. I work both back-end using Java and Documentum XCP 2.1, and front-end using JavaScript, jQuery, CSS and HTML. I've been involved with many phases of the project life-cycle including design, development and integration, and testing. Since starting on the project I have taken ownership of two areas of a complex system and constantly strive to learn more and take my skills further.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="experienceBlockHead">
+                            <div class="timeline-image">
+                                <img class="circle-image" src="http://cdn.ttgtmedia.com/rms/computerweekly/Logica.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>December 2012</h4>
+                                    <h4 class="subheading">Junior Technical Architect/Developer</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">I worked on system modernization with a team to assist in the specification and development of the client's security. This role is mainly focused on technical architecture and development. My main responsibilities center around the development and maintenance of tools to support event analysis and alerting functions such as reporting and log parsing.
+									</br></br>
+									Other duties include liaising with the requirements team to discuss new business rules that have been agreed on for integration using Java, shell scripting, XML, Oracle and SQL as well as testing frameworks such as jUnit and jMock. I worked through remote desktops to develop a range of solutions in various different environments.</p>
+                                </div>
+                            </div>
+                        </li>
+						
+						
+						<li class="timeline-inverted">
+                            <div class="timeline-panel">
+								<div class="timeline-heading">
+									<h4>July 2012</h4>
+									<h4 class="subheading">Test Analyst</h4>
+								</div>
+								<div class="timeline-body">
+									<p class="text-muted">I worked as a test analyst on a modernization project for a complex solution targeted at the companies internal asset delivery system. 
+									</br></br>
+									I worked closely with the testing and development team to effectively execute and edit test scripts based on the solution requirements specification. I used the HP Quality Center to handle and report system defects.</p>
+								</div>
+                            </div>
+                        </li>
+						
+
+                        <!--<li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4></h4>
+                            </div>
+                        </li>-->
+						
+						
+                    </ul>
+                
+					
+					
+					
+					
+					
+					
+					
+					
+					
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Contact Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+	  
+	  
+</body>
+
+</html>

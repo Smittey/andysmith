@@ -1,0 +1,43 @@
+html, body {
+	margin:0;
+	padding:0;
+}
+body {
+	font-family:Segoe UI, Lucida Grande, sans-serif;
+	font-size:13px;
+	color:#444444;
+	line-height:18px;
+	background:#DDD;
+}
+div#wrapper {
+position: relative;
+
+}
+.mainContent {
+    width: 60%;
+	margin: 0 auto;
+	border: 1px solid blue;
+	height: 800px;
+	overflow: hidden; 
+}
+
+div#sideBar {
+	width:230px;
+	padding-right:20px;
+	position: absolute; 
+	right: 10px;
+	top:0px;
+}
+.clear { 
+	clear:both; 
+}
+div#sticker {
+	padding:20px;
+	margin:20px 0;
+	background:#AAA;
+	width:190px;
+}
+.stick {
+	position:fixed;
+	top:0px;
+}
