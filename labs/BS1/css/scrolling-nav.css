@@ -41,6 +41,12 @@ p.large {
     font-size: 16px
 }
 
+.inactiveLink
+{
+	color: #ccc;
+	
+}
+
 @media(min-width:767px) {
     .navbar {
         padding: 20px 0;
@@ -72,7 +78,7 @@ of those sections to manage the look and feel of the site. */
     background: #eee;
 }
 
-.workAndEducation-section {
+.experience-section {
     height: auto;
     padding: 50px 0px 50px 0px;
     text-align: center;
@@ -82,8 +88,14 @@ of those sections to manage the look and feel of the site. */
 .contact-section {
     height: auto;
     padding: 50px 0px 50px 0px;
-    text-align: center;
     background: #eee;
+}
+
+#map 
+{
+	float:left;
+	width:50%;
+	height: 450px;
 }
 
 .timeline {
@@ -399,6 +411,7 @@ of those sections to manage the look and feel of the site. */
 	padding:20px;
 	background:#AAA;
 	width:190px;
+	text-align:right;
 }
 
 .stick 
@@ -414,3 +427,4 @@ of those sections to manage the look and feel of the site. */
 	-webkit-box-shadow: 0 0 15px #fff;
 	box-shadow: 0px 0px 15px #fff;
 }
+

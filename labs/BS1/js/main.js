@@ -107,6 +107,8 @@ function fade(elem)
 
 function filterTags(elem)
 {
+	
+	
 	if($(elem).hasClass("experienceItemSelected"))
 	{
 		$(elem).removeClass("experienceItemSelected");
@@ -151,6 +153,16 @@ function filterTags(elem)
 	}, 'slow');*/
 	
 	jQuery('html,body').animate({ scrollTop: jQuery('#workAndEducation').offset().top - 20}, 1000);
+	
+	//Check to see if there are any selected tags. If there aren't, make the 'clear filters' link inactive and colourise icons 
+	if(filteredTags == "")
+	{
+		$('#clearFilters').disabled=true;
+	}
+	else
+	{
+		//Loop through and make all icons grey except those that are selected
+	}
 }	
 
 function clearFilters()

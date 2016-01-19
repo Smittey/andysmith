@@ -37,7 +37,8 @@
     <script src="js/scrolling-nav.js"></script>
 	  
 	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-	  	      
+	  	          <script src="https://maps.googleapis.com/maps/api/js"></script>
+
 	<script type="text/javascript" src="js/main.js"></script>
 
 	  
@@ -71,7 +72,7 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#workAndEducation">Work and Education</a>
+                        <a class="page-scroll" href="#experience">Experience</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -107,7 +108,7 @@
     </section>
 
     <!-- Work and Education Section -->
-    <section id="workAndEducation" class="workAndEducation-section">
+    <section id="experience" class="experience-section">
 
         <div class="container">
 
@@ -115,7 +116,7 @@
 			
                 <div class="col-lg-12">
 					<div id="sideBar">
-						<div id="sticker"><p><a id="clearFilters" onClick="clearFilters()" href="#/">[Clear Filters]</a></p></div>
+						<div id="sticker"><a id="clearFilters" class="inactiveLink">[Clear Filters]</a></div>
 					</div>
                     <h1>Work and Education</h1>
 						
@@ -250,18 +251,20 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
+		<div id="map">		
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39992.469722264665!2d-0.8230044505383969!3d51.2093233742175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48742c02125a0e93%3A0x875c1ded7715bf26!2sFarnham%2C+Surrey!5e0!3m2!1sen!2suk!4v1453162825095" width="100%" height="450px" frameborder="0" style="border:0"></iframe>
+		</div>
         <div class="container">
+
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Contact Section</h1>
                 </div>
             </div>
+
         </div>
-    </section>
 
-
-
-	  
+    </section> 
 	  
 </body>
 
