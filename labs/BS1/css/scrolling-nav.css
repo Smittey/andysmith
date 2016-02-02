@@ -69,6 +69,11 @@ of those sections to manage the look and feel of the site. */
     padding-top: 150px;
     text-align: center;
     background: #fff;
+	background-image: url('../img/landing1.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .about-section {
@@ -86,7 +91,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .contact-section {
-    height: auto;
+    height: 1000px;
     padding: 50px 0px 50px 0px;
     background: #eee;
 }
@@ -113,7 +118,7 @@ of those sections to manage the look and feel of the site. */
     bottom: 0;
     position: absolute;
     content: "";
-    width: 2px;
+    width: 5px;
     background-color: #f1f1f1;
     left: 40px;
     margin-left: -1.5px
@@ -401,8 +406,8 @@ of those sections to manage the look and feel of the site. */
 {		
 	width:230px;
 	position: absolute; 
-	right: -75px;
-	top:0px;
+	right: -150px;
+	
 	
 }
 
@@ -419,6 +424,11 @@ of those sections to manage the look and feel of the site. */
 	position:fixed;
 	top:100px;
 	width:100%
+}
+
+.stick-end {
+	bottom: 0px;
+	position:relative;
 }
 
 .experienceItemSelected

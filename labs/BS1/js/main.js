@@ -16,7 +16,7 @@ $(document).ready(function() {
 	
 
 	//sidebar scroll boundaries
-	var s = $("#sticker	");
+	/*var s = $("#sticker	");
 	var a = $("#sideBar").offset().top;
 	
 	var bottom = a + $("#sideBar").parent().height() - 110;
@@ -25,11 +25,53 @@ $(document).ready(function() {
 		var windowpos = $(window).scrollTop();
 		
 		//s.html("Distance from top:" + a + "<br />Distance from bottom:" + bottom + "<br />Scroll position: " + windowpos);
+		console.log("Distance from top:" + a + "<br />Distance from bottom:" + bottom + "<br />Scroll position: " + windowpos);
 		if ((a <= windowpos) && (bottom >= windowpos)) {
 			s.addClass("stick");
 		} else {
 			s.removeClass("stick");	
 		}
+	});*/
+
+	//sidebar scroll boundaries
+	var sticker = $("#sticker");
+	var topOfSidebar = $('#sticker').offset().top - 100;
+	var bottomOfTimeline = $('#experienceTimeline').offset().top + $('#experienceTimeline').height();
+	var topOfTimeline = $('#experienceTimeline').offset().top;
+
+		
+	$(window).scroll(function() {
+		var currentPos = $(window).scrollTop();
+		var currentTopOfSidebar = $('#sticker').offset().top;
+		var heightOfSidebar = $('#sticker').height();
+		var bottomOfSidebar = $('#sticker').offset().top + $('#sticker').height(); 
+		var scrollBottom = $(window).scrollTop() + $(window).height();
+		
+		//$('#debug').html("Top of div:" + topOfSidebar + "<br />Bottom of timeline:" + bottomOfTimeline + "<br />Height of sidebar: " + heightOfSidebar + "<br />Bottom of sidebar: " + bottomOfSidebar + "<br />Scroll position: " + currentPos);
+		
+		//$('#debug').html("Current position: " + currentPos + "<br/>Top of sidebar: " + topOfSidebar + "<br /><br />Bottom of sidebar: " + bottomOfSidebar + "<br />Bottom of timeline: " + bottomOfTimeline);
+		
+		$('#debug').html("Current position: " + currentPos + "<br/>Bottom of window: " + scrollBottom + "<br/>Bottom of Timeline: " + bottomOfTimeline + "<br/>Bottom of Sidebar: " + bottomOfSidebar);
+
+
+		if((currentPos >= topOfSidebar) && (bottomOfSidebar <= bottomOfTimeline))	 //Within the boundaries
+		{
+			sticker.removeClass("stick-end");	
+			sticker.addClass("stick");
+		}
+		else if(bottomOfSidebar >= bottomOfTimeline)
+		{
+			sticker.removeClass("stick");
+			//sticker.addClass("stick-end");
+		}
+		else																		 //Above the timeline
+		{		 
+			sticker.removeClass("stick-end");	
+			sticker.removeClass("stick");	
+		}
+		
+		
+	
 	});
 
 
@@ -43,7 +85,7 @@ $(document).ready(function() {
 		/* Check the location of each desired element */
 		$('.timeline li').each( function(i){
 			
-			var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+			var bottom_of_object = $(this).offset().top + ($(this).outerHeight() / 2);
 			var bottom_of_window = $(window).scrollTop() + $(window).height();
 			
 			/* If the object is completely visible in the window, fade it it */
@@ -169,7 +211,7 @@ function clearFilters()
 {
 	$("#sideBar #sticker .experienceItemSelected").each(function(){
 		filterTags(this);
-		//$(this).removeClass(experienceItemSelected);
+		$(this).removeClass(experienceItemSelected);
 		
 	});
 }
