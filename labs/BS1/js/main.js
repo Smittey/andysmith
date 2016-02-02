@@ -44,7 +44,7 @@ $(document).ready(function() {
 		var currentPos = $(window).scrollTop();
 		var currentTopOfSidebar = $('#sticker').offset().top;
 		var heightOfSidebar = $('#sticker').height();
-		var bottomOfSidebar = $('#sticker').offset().top + $('#sticker').height(); 
+		var bottomOfSidebar = currentPos + $('#sticker').height() + 100; 
 		var scrollBottom = $(window).scrollTop() + $(window).height();
 		
 		//$('#debug').html("Top of div:" + topOfSidebar + "<br />Bottom of timeline:" + bottomOfTimeline + "<br />Height of sidebar: " + heightOfSidebar + "<br />Bottom of sidebar: " + bottomOfSidebar + "<br />Scroll position: " + currentPos);
@@ -62,16 +62,13 @@ $(document).ready(function() {
 		else if(bottomOfSidebar >= bottomOfTimeline)
 		{
 			sticker.removeClass("stick");
-			//sticker.addClass("stick-end");
+			sticker.addClass("stick-end");
 		}
 		else																		 //Above the timeline
 		{		 
 			sticker.removeClass("stick-end");	
 			sticker.removeClass("stick");	
 		}
-		
-		
-	
 	});
 
 

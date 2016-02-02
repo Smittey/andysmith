@@ -88,6 +88,7 @@ of those sections to manage the look and feel of the site. */
     padding: 50px 0px 50px 0px;
     text-align: center;
     background: #fff;
+    position: relative;
 }
 
 .contact-section {
@@ -403,12 +404,10 @@ of those sections to manage the look and feel of the site. */
 
 
 #sideBar
-{		
+{	
 	width:230px;
-	position: absolute; 
-	right: -150px;
-	
-	
+    margin-left: auto;
+    margin-right: -150px;
 }
 
 #sticker 
@@ -426,9 +425,10 @@ of those sections to manage the look and feel of the site. */
 	width:100%
 }
 
-.stick-end {
+.stick-end 
+{
+	position: absolute; 
 	bottom: 0px;
-	position:relative;
 }
 
 .experienceItemSelected
