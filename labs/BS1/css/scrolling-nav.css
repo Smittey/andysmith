@@ -7,7 +7,8 @@
 body {
     width: 100%;
     height: 100%;
-	
+/*	background: #fafafa url(../img/bg.png) left top repeat-x;
+*/
 	overflow-x: hidden;
     font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
@@ -70,10 +71,10 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
     background: #fff;
 	background-image: url('../img/landing1.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .about-section {
@@ -87,14 +88,17 @@ of those sections to manage the look and feel of the site. */
     height: auto;
     padding: 50px 0px 50px 0px;
     text-align: center;
-    background: #fff;
+    /*background: #ff00ff;*/
+	/*background: #fff;*/
     position: relative;
 }
 
 .contact-section {
-    height: 1000px;
+    height: auto;
     padding: 50px 0px 50px 0px;
     background: #eee;
+    text-align: center;
+
 }
 
 #map 
@@ -104,13 +108,23 @@ of those sections to manage the look and feel of the site. */
 	height: 450px;
 }
 
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+
+/********** TIMELINE START **********/
+
 .timeline {
     list-style: none;
     padding: 50px 0 0 0;
     position: relative;
 	
 	/*background-color: #ddd;*/
-	width:80%;
+	width:100%;
 	margin: 0 auto;
 
 }
@@ -232,7 +246,7 @@ of those sections to manage the look and feel of the site. */
         left: 50%
     }
     .timeline>li {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
         min-height: 100px
     }
     .timeline>li .timeline-panel {
@@ -330,6 +344,52 @@ of those sections to manage the look and feel of the site. */
 
 
 
+#sideBar
+{	
+	width:230px;
+	float: right;
+}
+
+#sticker 
+{
+	padding:20px;
+	background:#AAA;
+	width:190px;
+	text-align:right;
+}
+
+.stick 
+{
+	position:fixed;
+	top:100px;
+	width:100%
+}
+
+.stick-end 
+{
+	position: absolute; 
+	bottom: 0px;
+}
+
+.experienceItemSelected
+{
+	-moz-box-shadow: 0 0 15px #fff;
+	-webkit-box-shadow: 0 0 15px #fff;
+	box-shadow: 0px 0px 15px #fff;
+}
+
+/********** TIMELINE END **********/
+
+
+
+
+
+
+
+
+
+
+
 .label-shell { 
   color: #ffffff; 
   background-color: #5AC7B5; 
@@ -401,40 +461,3 @@ of those sections to manage the look and feel of the site. */
   background-color: #B4D687; 
   border-color: #130269; 
 } 
-
-
-#sideBar
-{	
-	width:230px;
-    margin-left: auto;
-    margin-right: -150px;
-}
-
-#sticker 
-{
-	padding:20px;
-	background:#AAA;
-	width:190px;
-	text-align:right;
-}
-
-.stick 
-{
-	position:fixed;
-	top:100px;
-	width:100%
-}
-
-.stick-end 
-{
-	position: absolute; 
-	bottom: 0px;
-}
-
-.experienceItemSelected
-{
-	-moz-box-shadow: 0 0 15px #fff;
-	-webkit-box-shadow: 0 0 15px #fff;
-	box-shadow: 0px 0px 15px #fff;
-}
-

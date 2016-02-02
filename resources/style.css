@@ -9,7 +9,11 @@ height: 100%;
 body{
 margin:0;
 padding:0;
-background: #fafafa url(../images/bg.png) left top repeat-x;
+
+    background-image: url('../img/cgi.png');
+    background-repeat: repeat-y;
+	
+	
 font-family:"Helvetica Neue",Helvetica, Arial;
 }
 

@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
 	/*$(".timeline-panel").hover(function() {
-		$(this).parent().closest('.experienceBlockHead').find('.timeline-image').css({'border': '7px solid #ff00ff'});
+		$(this).parent().closest('.experienceBlockHead').find('.timeline-image').css({'border': '5px solid #BF3B3B'});
 	}, function() {
-		$(this).parent().closest('.experienceBlockHead').find('.timeline-image').css({'border': '7px solid #f1f1f1'})}
+		$(this).parent().closest('.experienceBlockHead').find('.timeline-image').css({'border': ''})}
 	);*/
 
 
@@ -51,7 +51,8 @@ $(document).ready(function() {
 		
 		//$('#debug').html("Current position: " + currentPos + "<br/>Top of sidebar: " + topOfSidebar + "<br /><br />Bottom of sidebar: " + bottomOfSidebar + "<br />Bottom of timeline: " + bottomOfTimeline);
 		
-		$('#debug').html("Current position: " + currentPos + "<br/>Bottom of window: " + scrollBottom + "<br/>Bottom of Timeline: " + bottomOfTimeline + "<br/>Bottom of Sidebar: " + bottomOfSidebar);
+		//$('#debug').html("Current position: " + currentPos + "<br/>Bottom of window: " + scrollBottom + "<br/>Bottom of Timeline: " + bottomOfTimeline + "<br/>Bottom of Sidebar: " + bottomOfSidebar);
+		//console.log("Current position: " + currentPos + "\nBottom of window: " + scrollBottom + "\nBottom of Timeline: " + bottomOfTimeline + "\nBottom of Sidebar: " + bottomOfSidebar);
 
 
 		if((currentPos >= topOfSidebar) && (bottomOfSidebar <= bottomOfTimeline))	 //Within the boundaries
