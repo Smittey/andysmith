@@ -36,12 +36,13 @@ $(document).ready(function() {
 	//sidebar scroll boundaries
 	var sticker = $("#sticker");
 	var topOfSidebar = $('#sticker').offset().top - 100;
-	var bottomOfTimeline = $('#experienceTimeline').offset().top + $('#experienceTimeline').height();
 	var topOfTimeline = $('#experienceTimeline').offset().top;
 
 		
 	$(window).scroll(function() {
 		var currentPos = $(window).scrollTop();
+		
+		var bottomOfTimeline = $('#experienceTimeline').offset().top + $('#experienceTimeline').height();
 		var currentTopOfSidebar = $('#sticker').offset().top;
 		var heightOfSidebar = $('#sticker').height();
 		var bottomOfSidebar = currentPos + $('#sticker').height() + 100; 
@@ -107,10 +108,21 @@ $(document).ready(function() {
 		}); 			
 	});
 
+	$(".timeline-more").click(function(){
+		$(this).prev().slideToggle('slow', function() {
+			if ($(this).is(":visible")) {
+				 $(this).next().text('Less...');                
+			} else {
+				 $(this).next().text('More...');                
+			}        
+		});		
+    });
 
 
 });
-         
+   
+
+	
 function move(elem)
 {
 	//For every tag found in the experience block that has just appeared/faded in
@@ -147,8 +159,6 @@ function fade(elem)
 
 function filterTags(elem)
 {
-	
-	
 	if($(elem).hasClass("experienceItemSelected"))
 	{
 		$(elem).removeClass("experienceItemSelected");
@@ -161,36 +171,54 @@ function filterTags(elem)
 	var filteredTags = $('#sideBar #sticker .experienceItemSelected').map(function(){ return "." + $(this).attr('class').split(' ')[0]; }).get().join();
 	
 	// start with all experience blocks
-	var experienceBlocks =  $('.timeline li .timeline-panel');
+	var experienceBlocks =  $('.timeline li .timeline-panel').parent();
 
 	if(filteredTags)
 	{
-		//experienceBlocks = experienceBlocks.filter('#items .experienceItem ' + filteredTags);
-		//experienceBlocks = experienceBlocks.filter('#items .experienceItem ' + filteredTags);
-		experienceBlocks = experienceBlocks.find('.timeline-body').find(filteredTags).parent().parent();
-
-		/*experienceBlocks = experienceBlocks.filter(function() {
-			for (var i = 0, len = filteredTags.length; i < len; i++) 
-			{
-				if ($(filteredTags[i], this).length === 0) 
-				{
-					return false;
-				}
-			}
-			return true;
-		});*/
+		experienceBlocks = experienceBlocks.find('.timeline-body').find(filteredTags).parent().parent().parent();
 	}
 
 	// hide everything      
-	$('.timeline li .timeline-panel').hide();
+	$('.timeline li .timeline-panel').parent().hide();	
 	 
 
+	$('#experience5').parent().prevAll(".experienceCategory:first");
+	 
 	//Show the experience items depicted by the filters
 	experienceBlocks.show();
 	 
-	/*$('html, body').animate({
-		scrollTop: $('#items').offset().top - 20
-	}, 'slow');*/
+	var hasWork = false;
+	var hasEducation= false;
+	
+	$('.timeline-panel:visible').each(function() {
+		if($(this).parent().prevAll(".experienceCategory:first").attr('id') == 'educationCategory')
+		{
+			hasEducation = true;
+		}			
+		else
+		{
+			hasWork = true;
+		}
+	});
+	
+	if(hasWork == false)
+	{
+		$('#workCategory').hide();	
+	}
+	else
+	{
+		$('#workCategory').show();	
+	}
+	
+	if(hasEducation == false)
+	{
+		$('#educationCategory').hide();
+	}
+	else
+	{
+		$('#educationCategory').show();		
+	}
+
 	
 	jQuery('html,body').animate({ scrollTop: jQuery('#experience').offset().top - 20}, 1000);
 	
