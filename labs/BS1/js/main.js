@@ -255,12 +255,7 @@ function filterTags(elem)
 function clearFilters()
 {
 	$("#sideBar #sticker .experienceItemSelected").each(function(){
-		//filterTags(this);
+		filterTags(this);
 		$(this).removeClass('experienceItemSelected');
-		
-	});
-	
-	$('#sticker .skillTag').addClass (function (){
-		return 'label-' + $(this).attr('class').split(' ')[0].substr(0, $(this).attr('class').split(' ')[0].indexOf('Tag'));
 	});
 }
