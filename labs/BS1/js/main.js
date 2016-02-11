@@ -238,8 +238,15 @@ function filterTags(elem)
 	}
 
 	
-	
-	jQuery('html,body').animate({ scrollTop: jQuery('#experience').offset().top - 20}, 1000);
+	$("html, body").on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
+       $("html, body").stop();
+	});
+
+	$("html, body").animate({ scrollTop: jQuery('#experience').offset().top - 20 }, '1000', function(){
+	   $("html, body").off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+	});
+
+	//jQuery('html,body').animate({ scrollTop: jQuery('#experience').offset().top - 20}, 1000);
 	
 	//Check to see if there are any selected tags. If there aren't, make the 'clear filters' link inactive and colourise icons 
 	/*if(filteredTags == "")
