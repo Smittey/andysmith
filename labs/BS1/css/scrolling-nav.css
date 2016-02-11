@@ -384,13 +384,29 @@ of those sections to manage the look and feel of the site. */
 
 
 
+.label-documentum { 
+  color: #ffffff; 
+  background-color: #BD0000; 
+  border-color: #130269; 
+} 
 
+.label-agile { 
+  color: #ffffff; 
+  background-color: #00BD42; 
+  border-color: #130269; 
+} 
 
+.label-javascript { 
+  color: #ffffff; 
+  background-color: #FFB700; 
+  border-color: #130269; 
+} 
 
-
-
-
-
+.label-java { 
+  color: #ffffff; 
+  background-color: #DDE089; 
+  border-color: #130269; 
+} 
 
 .label-shell { 
   color: #ffffff; 
@@ -434,7 +450,7 @@ of those sections to manage the look and feel of the site. */
   border-color: #130269; 
 } 
 
-.label-hpQualityCenter { 
+.label-hpqualitycenter { 
   color: #ffffff; 
   background-color: #630808; 
   border-color: #130269; 

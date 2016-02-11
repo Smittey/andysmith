@@ -170,6 +170,24 @@ function filterTags(elem)
 	
 	var filteredTags = $('#sideBar #sticker .experienceItemSelected').map(function(){ return "." + $(this).attr('class').split(' ')[0]; }).get().join();
 	
+	if(filteredTags == "")
+	{
+		$('#sticker .skillTag').addClass (function (){
+			return 'label-' + $(this).attr('class').split(' ')[0].substr(0, $(this).attr('class').split(' ')[0].indexOf('Tag'));
+		});
+	}
+	else
+	{
+		$('#sticker .skillTag').removeClass (function (index, css) {
+		   return (css.match (/(^|\s)label-\S+/g) || []).join(' ');
+		});
+		
+		$('#sticker .experienceItemSelected').addClass (function (){
+		   return 'label-' + $(this).attr('class').split(' ')[0].substr(0, $(this).attr('class').split(' ')[0].indexOf('Tag'));
+		});
+	}
+	
+
 	// start with all experience blocks
 	var experienceBlocks =  $('.timeline li .timeline-panel').parent();
 
@@ -220,6 +238,7 @@ function filterTags(elem)
 	}
 
 	
+	
 	jQuery('html,body').animate({ scrollTop: jQuery('#experience').offset().top - 20}, 1000);
 	
 	//Check to see if there are any selected tags. If there aren't, make the 'clear filters' link inactive and colourise icons 
@@ -236,8 +255,12 @@ function filterTags(elem)
 function clearFilters()
 {
 	$("#sideBar #sticker .experienceItemSelected").each(function(){
-		filterTags(this);
-		$(this).removeClass(experienceItemSelected);
+		//filterTags(this);
+		$(this).removeClass('experienceItemSelected');
 		
+	});
+	
+	$('#sticker .skillTag').addClass (function (){
+		return 'label-' + $(this).attr('class').split(' ')[0].substr(0, $(this).attr('class').split(' ')[0].indexOf('Tag'));
 	});
 }
