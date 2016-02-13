@@ -10,14 +10,16 @@ $(document).ready(function() {
 	//Filter by tags
 	$("#sideBar").on('click', '.skillTag', function() {			
 		filterTags(this);
-		scroll('#experience');
+
+		scroll();
 	});
 	
 	
+			
 	$("html, body").on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
-       $("html, body").stop();
+	   $("html, body").stop();
 	});
-	
+
 
 	//sidebar scroll boundaries
 	var sticker = $("#sticker");
@@ -33,7 +35,7 @@ $(document).ready(function() {
 		var heightOfSidebar = $('#sticker').height();
 		var bottomOfSidebar = currentPos + $('#sticker').height() + 100; 
 		var scrollBottom = $(window).scrollTop() + $(window).height();
-
+		
 		//$('#debug').html("Current position: " + currentPos + "<br/>Bottom of window: " + scrollBottom + "<br/>Bottom of Timeline: " + bottomOfTimeline + "<br/>Bottom of Sidebar: " + bottomOfSidebar);
 		//console.log("Current position: " + currentPos + "\nBottom of window: " + scrollBottom + "\nBottom of Timeline: " + bottomOfTimeline + "\nBottom of Sidebar: " + bottomOfSidebar);
 
@@ -53,8 +55,6 @@ $(document).ready(function() {
 			sticker.removeClass("stick");	
 		}
 	});
-
-
 
 
 
@@ -99,7 +99,6 @@ $(document).ready(function() {
 		});		
     });
 
-
 });
    
 
@@ -107,7 +106,6 @@ $(document).ready(function() {
 function move(elem)
 {
 	//For every tag found in the experience block that has just appeared/faded in
-	//$("#items #" + elem.attr('id') + " span.skillTag").each(function(index){
 	$(elem).find('.timeline-panel .timeline-body span.skillTag').each(function(index){
 		
 		//Get the skill tag to move over to the menu
@@ -129,7 +127,9 @@ function fade(elem)
 	if($("#sideBar ." + tagName).length == 0)
 	{ 
 		//Make a duplicate of the element as we don't want the element to actually move, but replicated. Make it into a link so that the filter can be selected
-		$(elem).clone().appendTo("#sideBar #sticker").wrap("<h5><a href='#/'></a></h5>").hide().fadeIn(1000);
+		var clone = $(elem).clone();
+		clone.addClass('experienceItemSelected');
+		clone.appendTo("#sideBar #sticker").wrap("<h5><a href='#/'></a></h5>").hide().fadeIn(1000);
 	}
 	else
 	{
@@ -138,44 +138,31 @@ function fade(elem)
 	}
 }
 
-function filterTags(elem)
+function filterTags(elem, toggle)
 {
-	if($(elem).hasClass("experienceItemSelected"))
+	if(($(elem).hasClass("experienceItemSelected")) || (toggle == "off"))
 	{
 		$(elem).removeClass("experienceItemSelected");
 	}
-	else
+	else if(!($(elem).hasClass("experienceItemSelected")) || (toggle == "on"))
 	{
 		$(elem).addClass("experienceItemSelected");
 	}
 	
 	var filteredTags = $('#sideBar #sticker .experienceItemSelected').map(function(){ return "." + $(this).attr('class').split(' ')[0]; }).get().join();
+
+	$('#sticker .skillTag').removeClass (function (index, css) {
+	   return (css.match (/(^|\s)label-\S+/g) || []).join(' ');
+	});
 	
-	if(filteredTags == "")
-	{
-		$('#sticker .skillTag').addClass (function (){
-			return 'label-' + $(this).attr('class').split(' ')[0].substr(0, $(this).attr('class').split(' ')[0].indexOf('Tag'));
-		});
-	}
-	else
-	{
-		$('#sticker .skillTag').removeClass (function (index, css) {
-		   return (css.match (/(^|\s)label-\S+/g) || []).join(' ');
-		});
-		
-		$('#sticker .experienceItemSelected').addClass (function (){
-		   return 'label-' + $(this).attr('class').split(' ')[0].substr(0, $(this).attr('class').split(' ')[0].indexOf('Tag'));
-		});
-	}
-	
+	$('#sticker .experienceItemSelected').addClass (function (){
+	   return 'label-' + $(this).attr('class').split(' ')[0].substr(0, $(this).attr('class').split(' ')[0].indexOf('Tag'));
+	});
 
 	// start with all experience blocks
 	var experienceBlocks =  $('.timeline li .timeline-panel').parent();
-
-	if(filteredTags)
-	{
-		experienceBlocks = experienceBlocks.find('.timeline-body').find(filteredTags).parent().parent().parent();
-	}
+	experienceBlocks = experienceBlocks.find('.timeline-body').find(filteredTags).parent().parent().parent();
+	
 
 	// hide everything      
 	$('.timeline li .timeline-panel').parent().hide();	
@@ -218,31 +205,45 @@ function filterTags(elem)
 		$('#educationCategory').show();		
 	}
 
-	
-	//Check to see if there are any selected tags. If there aren't, make the 'clear filters' link inactive and colourise icons 
-	/*if(filteredTags == "")
+	if(filteredTags == "")
 	{
-		$('#clearFilters').disabled=true;
+		$("#experienceTimeline").prepend("<li class='none' style='opacity: 1;'><p class='text-muted'>There is no experience to show. Please use the filter menu to display experience</p></li>");
 	}
 	else
 	{
-		//Loop through and make all icons grey except those that are selected
-	}*/
+		$('#experienceTimeline .none').remove();	
+	}
 }	
 
-function clearFilters()
+function showAllFilters()
 {
-	$("#sideBar #sticker .experienceItemSelected").each(function(){
-		filterTags(this);
-		$(this).removeClass('experienceItemSelected');
-	});
+	$('#sticker .skillTag').addClass (function (){
+	   return 'label-' + $(this).attr('class').split(' ')[0].substr(0, $(this).attr('class').split(' ')[0].indexOf('Tag'));
+	});	
 	
-	scroll('#experience');
+	$("#sideBar #sticker .skillTag").each(function(){
+		filterTags(this, "on");
+	});
+
+	scroll();
 }
 
-function scroll(target)
+function hideAllFilters()
 {
-	$("html, body").animate({ scrollTop: jQuery(target).offset().top - 20 }, '1000', function(){
+	$('#sticker .skillTag').removeClass (function (index, css) {
+	   return (css.match (/(^|\s)label-\S+/g) || []).join(' ');
+	});
+		
+	$("#sideBar #sticker .skillTag").each(function(){
+		filterTags(this, "off");
+	});
+
+	scroll();
+}
+
+function scroll()
+{
+	$("html, body").animate({ scrollTop: jQuery('#experience').offset().top - 20 }, '1000', function(){
 	   $("html, body").off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
 	});
 }

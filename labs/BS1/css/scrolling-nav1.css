@@ -290,10 +290,10 @@ of those sections to manage the look and feel of the site. */
         text-align: right
     }
     .timeline>li .timeline-image {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         left: 50%;
-        margin-left: -40px
+        margin-left: -50px
     }
     .timeline>li .timeline-image h4 {
         font-size: 13px;
@@ -329,9 +329,9 @@ of those sections to manage the look and feel of the site. */
         padding: 0 20px 20px
     }
     .timeline>li .timeline-image {
-        width: 100px;
-        height: 100px;
-        margin-left: -50px
+        width: 150px;
+        height: 150px;
+        margin-left: -75px
     }
     .timeline>li .timeline-image h4 {
         font-size: 18px;

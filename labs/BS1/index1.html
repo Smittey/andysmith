@@ -15,7 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="css/scrolling-nav1.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,7 +40,7 @@
 	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main1.js"></script>
 
 	  
 </head>
@@ -211,7 +211,7 @@
                         </li>
 						<!--Education-->
 						<li id="educationCategory" class="experienceCategory ">
-                            <div class="timeline-image-head">
+                            <div class="timeline-image-head	">
                                 <img class="circle-image" src="img/education.jpg" alt="">
                             </div>
                             
@@ -272,7 +272,12 @@
                 </div>
 				<div class="col-lg-2">
 					<div id="sideBar">
-						<div id="sticker"><a onClick="clearFilters()" id="clearFilters">[Clear Filters]</a> <div id="debug"></div></div>
+						<!--<div id="sticker"><a onClick="clearFilters()" id="clearFilters">[Clear Filters]</a> <div id="debug"></div></div>-->
+						<div id="sticker">
+							<button type="button" onClick="showAllFilters()" class="btn btn-default btn-xs">Show all</button>
+							<button type="button" onClick="hideAllFilters()" class="btn btn-default btn-xs">Hide all</button>
+
+						</div>
 						
 					</div>
 				</div>
