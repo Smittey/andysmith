@@ -455,6 +455,23 @@ of those sections to manage the look and feel of the site. */
 /********** TIMELINE END **********/
 
 
+.label-css { 
+  color: #ffffff; 
+  background-color: #877445; 
+  border-color: #130269; 
+}
+
+.label-html { 
+  color: #ffffff; 
+  background-color: #674587; 
+  border-color: #130269; 
+} 
+ 
+.label-jekyll { 
+  color: #ffffff; 
+  background-color: #457F87; 
+  border-color: #130269; 
+} 
 
 .label-documentum { 
   color: #ffffff; 

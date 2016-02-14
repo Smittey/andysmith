@@ -1,3 +1,14 @@
+ /*************************************************************************
+ *
+ * @description
+ * Javascript to control the different custom/none-bootstrapped elements 
+ * of the website, namely the timeline and the about me interactions
+ * 
+ * @author
+ * Andy Smith, 2016
+ *
+ *************************************************************************/
+
 $(document).ready(function() {
 
 	/*$(".timeline-panel").hover(function() {
@@ -5,6 +16,12 @@ $(document).ready(function() {
 	}, function() {
 		$(this).parent().closest('.experienceBlockHead').find('.timeline-image').css({'border': ''})}
 	);*/
+	
+	$(".timer").hover(function() {
+		$(this).fadeTo(1000, 1);
+	}, function() {
+		$(this).fadeTo(1000, 0.4);}
+	);
 
 
 	//Filter by tags
@@ -18,6 +35,7 @@ $(document).ready(function() {
        $("html, body").stop();
 	});
 	
+	var statsHasBeenSeen = false;
 
 	//sidebar scroll boundaries
 	var sticker = $("#sticker");
@@ -37,29 +55,51 @@ $(document).ready(function() {
 		//$('#debug').html("Current position: " + currentPos + "<br/>Bottom of window: " + scrollBottom + "<br/>Bottom of Timeline: " + bottomOfTimeline + "<br/>Bottom of Sidebar: " + bottomOfSidebar);
 		//console.log("Current position: " + currentPos + "\nBottom of window: " + scrollBottom + "\nBottom of Timeline: " + bottomOfTimeline + "\nBottom of Sidebar: " + bottomOfSidebar);
 
-		if((currentPos >= topOfSidebar) && (bottomOfSidebar <= bottomOfTimeline))	 //Within the boundaries
+		if((currentPos >= topOfSidebar) && (bottomOfSidebar <= bottomOfTimeline))	//Within the boundaries
 		{
 			sticker.removeClass("stick-end");	
 			sticker.addClass("stick");
 		}
-		else if(bottomOfSidebar >= bottomOfTimeline)
+		else if(bottomOfSidebar >= bottomOfTimeline)								//Below the timeline
 		{
 			sticker.removeClass("stick");
 			sticker.addClass("stick-end");
 		}
-		else																		 //Above the timeline
+		else																		//Above the timeline
 		{		 
 			sticker.removeClass("stick-end");	
 			sticker.removeClass("stick");	
 		}
+		
+		
+		
+		if(statsHasBeenSeen == false) 
+		{
+			if($(".timers").isOnScreen())
+			{
+				statsHasBeenSeen = true;
+
+				$('.timer').each(function(){
+					
+					var max = $(this).attr('value');
+					var unit = $(this).attr('unit');
+						
+					$(this).countTo({           
+						from: 0,
+						to: max,
+						speed: 2000,
+						unit: unit,
+						refreshInterval: 50,
+					});
+				});
+			}
+		}
+
+	
 	});
 
 
-
-
-
-	//Fade in experience elements
-	/* Every time the window is scrolled ... */
+	//Controls for fading in the experience elements when the window is scrolling by them
 	$(window).scroll( function(){
 	
 		/* Check the location of each desired element */
@@ -89,6 +129,7 @@ $(document).ready(function() {
 		}); 			
 	});
 
+	//Controls for the 'more...' sections of the timeline experience blocks
 	$(".timeline-more").click(function(){
 		$(this).prev().slideToggle('slow', function() {
 			if ($(this).is(":visible")) {
@@ -102,12 +143,20 @@ $(document).ready(function() {
 
 });
    
+function scroll(target)
+{
+	$("html, body").animate({ scrollTop: jQuery(target).offset().top - 20 }, '1000', function(){
+	   $("html, body").off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+	});
+}
 
-	
+ /************************
+ * Start Timeline 
+ ************************/
+ 
 function move(elem)
 {
 	//For every tag found in the experience block that has just appeared/faded in
-	//$("#items #" + elem.attr('id') + " span.skillTag").each(function(index){
 	$(elem).find('.timeline-panel .timeline-body span.skillTag').each(function(index){
 		
 		//Get the skill tag to move over to the menu
@@ -240,9 +289,77 @@ function clearFilters()
 	scroll('#experience');
 }
 
-function scroll(target)
-{
-	$("html, body").animate({ scrollTop: jQuery(target).offset().top - 20 }, '1000', function(){
-	   $("html, body").off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
-	});
-}
+ /************************
+ * End Timeline 
+ ************************/
+
+ /************************
+ * Start About me
+ ************************/
+ (function($) {
+    $.fn.countTo = function(options) 
+	{
+        //How many times to update the value
+        var loops = Math.ceil(options.speed / options.refreshInterval);
+        //How much to increment the value on each update
+		var increment = (options.to - options.from) / loops;
+
+        return $(this).each(function() {
+            var _this = this,
+                loopCount = 0,
+                value = options.from,
+                interval = setInterval(updateTimer, options.refreshInterval);
+
+            function updateTimer() 
+            {
+                value += increment;
+                loopCount++;
+				
+				//Change the html on the page to the current value of the timeer increment
+                $(_this).html(value.toFixed(options.decimals).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " " + options.unit);
+                
+                if (loopCount >= loops) 
+                {
+					//Once the number has been reached clear the interval and set the final value to it's desired count
+                    clearInterval(interval);
+                    value = options.to;
+					
+					$(_this).fadeTo(1000, 0.4);
+    
+                }
+            }
+        });
+    };
+
+	
+	
+	$.fn.isOnScreen = function()
+	{
+		var win =   $(window);
+		var viewport    =   {
+			top  : win.scrollTop(),
+			left : win.scrollLeft()
+		};
+
+		viewport.right  =   viewport.left   +   win.width();
+		viewport.bottom =   viewport.top    +   win.height();
+
+		var bounds      =   this.offset();
+
+		bounds.right    =   bounds.left + this.outerWidth();
+		bounds.bottom   =   bounds.top + this.outerHeight();
+
+		return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+	};
+
+
+
+})(jQuery);
+
+
+
+	
+ /************************
+ * End About me
+ ************************/
+ 
