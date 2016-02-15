@@ -427,7 +427,11 @@ of those sections to manage the look and feel of the site. */
 	}
 }
 
-
+.span-tag-Inline
+{
+	float: right;
+	margin:5px;
+}
 
 #sideBar
 {	
@@ -438,7 +442,6 @@ of those sections to manage the look and feel of the site. */
 #sticker 
 {
     border-radius: 10px;
-
 	padding:20px;
 	/*background:#AAA;*/
 	background:#ddd;
@@ -446,11 +449,16 @@ of those sections to manage the look and feel of the site. */
 	text-align:right;
 }
 
+.div-overflow
+{
+	overflow:hidden;
+}
+
 .stick 
 {
 	position:fixed;
 	top:100px;
-	width:100%
+	width:100%;
 }
 
 .stick-end 
@@ -468,6 +476,12 @@ of those sections to manage the look and feel of the site. */
 
 /********** TIMELINE END **********/
 
+
+.label-grey { 
+  color: #ffffff; 
+  background-color: #D1D1D1;
+  border-color: #130269; 
+}
 
 .label-css { 
   color: #ffffff; 

@@ -17,6 +17,12 @@ $(document).ready(function() {
 		$(this).parent().closest('.experienceBlockHead').find('.timeline-image').css({'border': ''})}
 	);*/
 	
+	//If the users window is smaller than 600 pixels, give the timeline sticker an overflow property so that the tags will wrap/all be seen at once
+	if($(window).height() <  600)
+	{
+		$('#sticker').addClass('div-overflow');
+	}
+	
 	$(".timer").hover(function() {
 		$(this).fadeTo(1000, 1);
 	}, function() {
@@ -40,10 +46,13 @@ $(document).ready(function() {
 	//sidebar scroll boundaries
 	var sticker = $("#sticker");
 	var topOfSidebar = $('#sticker').offset().top - 100;
-	var topOfTimeline = $('#experienceTimeline').offset().top;
 
 		
 	$(window).scroll(function() {
+		
+		var topOfTimeline = $('#experienceTimeline').offset().top;
+
+			
 		var currentPos = $(window).scrollTop();
 		
 		var bottomOfTimeline = $('#experienceTimeline').offset().top + $('#experienceTimeline').height();
@@ -177,8 +186,15 @@ function fade(elem)
 	//Does the sidebar already contain the element? If not, add it. If it is already there, briefly highlight it
 	if($("#sideBar ." + tagName).length == 0)
 	{ 
+		var clone = $(elem).clone();
+		
+		if($(window).height() < 600)
+		{
+			clone.addClass('span-tag-Inline');
+		}
+		
 		//Make a duplicate of the element as we don't want the element to actually move, but replicated. Make it into a link so that the filter can be selected
-		$(elem).clone().appendTo("#sideBar #sticker").wrap("<h5><a href='#/'></a></h5>").hide().fadeIn(1000);
+		clone.appendTo("#sideBar #sticker").wrap("<h5><a href='#/'></a></h5>").hide().fadeIn(1000);
 	}
 	else
 	{
@@ -211,6 +227,8 @@ function filterTags(elem)
 		$('#sticker .skillTag').removeClass (function (index, css) {
 		   return (css.match (/(^|\s)label-\S+/g) || []).join(' ');
 		});
+		
+		$('#sticker .skillTag').addClass('label-grey');
 		
 		$('#sticker .experienceItemSelected').addClass (function (){
 		   return 'label-' + $(this).attr('class').split(' ')[0].substr(0, $(this).attr('class').split(' ')[0].indexOf('Tag'));

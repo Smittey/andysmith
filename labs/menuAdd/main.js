@@ -134,7 +134,7 @@ function fade(elem)
 	if($("#sideBar ." + tagName).length == 0)
 	{ 
 		//Make a duplicate of the element as we don't want the element to actually move, but replicated. Make it into a link so that the filter can be selected
-		$(elem).clone().appendTo("#sideBar #sticker").wrap("<h4><a href='#/'></a></h4>").hide().fadeIn(1000);
+		$(elem).clone().appendTo("#sideBar #sticker").wrap("<h5><a href='#/'></a></h5>").hide().fadeIn(1000);
 	}
 	else
 	{
