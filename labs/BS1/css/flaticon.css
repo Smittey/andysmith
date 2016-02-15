@@ -1,17 +1,17 @@
 @font-face {
 	font-family: "Flaticon";
-	src: url("../img/flaticon.eot");
-	src: url("../img/flaticon.eot#iefix") format("embedded-opentype"),
-	url("flaticon.woff") format("woff"),
-	url("flaticon.ttf") format("truetype"),
-	url("flaticon.svg") format("svg");
+	src: url("../img/font-icon/flaticon.eot");
+	src: url("../img/font-icon/flaticon.eot#iefix") format("embedded-opentype"),
+	url("../img/font-icon/flaticon.woff") format("woff"),
+	url("../img/font-icon/flaticon.ttf") format("truetype"),
+	url("../img/font-icon/flaticon.svg") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
 	font-family: Flaticon;
-        font-size: 20px;
+        font-size: 13px;
 font-style: normal;
 margin-left: 20px;
 }.flaticon-airplane68:before {
@@ -104,3 +104,56 @@ margin-left: 20px;
 .flaticon-weightlifter3:before {
 	content: "\e01d";
 }
+
+
+
+
+
+    /*body {
+        font-family: sans-serif;
+        line-height: 1.5;
+        font-size: 16px;
+        padding: 20px;
+       
+    }*/
+
+    
+    #glyphs {
+        clear: both;
+    }
+    
+    .glyph {
+        display: inline-block;
+        margin: 10px;
+        text-align: center;
+        vertical-align: top;
+    }
+    .glyph .glyph-icon {
+        padding: 10px;
+        display: block;
+        font-family:"Flaticon";
+        font-size: 64px;
+        line-height: 1;
+		
+
+    }
+    .glyph .glyph-icon:before {
+        font-size: 40px;
+        color: #666;
+        margin-left: 0;
+		/*background-color: #00ff00;*/
+		padding:10px;
+
+    }
+	
+	.glyph .glyph-icon:hover:before {
+        font-size: 40px;
+        color: #4875b4;
+        margin-left: 0;
+		background-color:#ddd;
+		  border-radius: 10px;
+
+    }
+
+
+

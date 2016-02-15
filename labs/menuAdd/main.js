@@ -143,12 +143,17 @@ function fade(elem)
 	}
 }
 
-function clearFilters()
+function selectAllFilters()
 {
 	$("#sideBar #sticker .experienceItemSelected").each(function(){
-		filterTags(this);
-		//$(this).removeClass(experienceItemSelected);
-		
+		filterTags(this);		
+	});
+}
+
+function clearAllFilters()
+{
+	$("#sideBar #sticker .skillTag").each(function(){
+		filterTags(this);		
 	});
 }
 

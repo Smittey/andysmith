@@ -390,29 +390,40 @@ of those sections to manage the look and feel of the site. */
 
 @media (max-width: 450px) {
 	#sideBar
-	{		
+	{	
 		width:230px;
-		position: absolute; 
-		right: -75px;
-		top:0px;
-		opacity:0;
+		float: right;
 	}
 
 	#sticker 
 	{
+		border-radius: 10px;
+
 		padding:20px;
-		background:#AAA;
+		/*background:#AAA;*/
+		background:#ddd;
 		width:190px;
-		opacity:0;
+		text-align:right;
 	}
 
 	.stick 
 	{
 		position:fixed;
 		top:100px;
-		width:100%;
-		opacity:0;
+		width:100%
+	}
 
+	.stick-end 
+	{
+		position: absolute; 
+		bottom: 0px;
+	}
+
+	.experienceItemSelected
+	{
+		/*-moz-box-shadow: 0 0 15px #fff;
+		-webkit-box-shadow: 0 0 15px #fff;
+		box-shadow: 0px 0px 15px #fff;*/
 	}
 }
 
@@ -426,8 +437,11 @@ of those sections to manage the look and feel of the site. */
 
 #sticker 
 {
+    border-radius: 10px;
+
 	padding:20px;
-	background:#AAA;
+	/*background:#AAA;*/
+	background:#ddd;
 	width:190px;
 	text-align:right;
 }
