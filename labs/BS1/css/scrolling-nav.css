@@ -695,3 +695,69 @@ a.gh:hover{
 background: url(../img/social.png) -292px bottom no-repeat;
 color: #3b5998;
 }
+
+#interests-block {
+
+
+}
+
+/*#interests-block li{
+display: inline;
+list-style-type: none;
+padding-right: 20px;
+}*/
+
+ul#interests1 {
+	list-style: none;
+}
+
+ul#interests1 li {
+    display: inline;
+
+}
+
+
+#interests-middle-text {
+	display: inline-block;
+		clear:both;
+
+}
+
+/*#handi-text:before {
+
+
+	background-image: url('../img/curly-bracket.png'); 
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 30px; 
+    height: 80px;
+    content:"";
+	clear:both;
+}*/
+
+#bracket-above {
+	height: 30px;
+	width: 80px;
+	background-image: url('../img/curly-bracket-top.png'); 
+	
+    background-size: 100% 100%;
+	margin-bottom:0px;
+	
+
+}
+
+#bracket-below {
+	height: 30px;
+	width: 80px;
+	background-image: url('../img/curly-bracket-bottom.png'); 
+
+    background-size: 100% 100%;
+	margin-top:0px;
+	
+	float:right;
+}

@@ -137,23 +137,47 @@ margin-left: 20px;
 		
 
     }
-    .glyph .glyph-icon:before {
-        font-size: 40px;
+    .glyph .glyph-icon-large:before {
+		font-size: 60px;
         color: #666;
         margin-left: 0;
 		/*background-color: #00ff00;*/
 		padding:10px;
 
+		background-color:#ddd;
+		border-radius: 10px;
     }
 	
-	.glyph .glyph-icon:hover:before {
-        font-size: 40px;
+	.glyph .glyph-icon-large:hover:before {
+		font-size: 60px;
         color: #4875b4;
         margin-left: 0;
 		background-color:#ddd;
-		  border-radius: 10px;
+		border-radius: 10px;
 
     }
+	
+	    .glyph .glyph-icon:before {
+		font-size: 40px;
+        color: #666;
+        margin-left: 0;
+		/*background-color: #00ff00;*/
+		padding:10px;
+		
+		background-color:#ddd;
+		border-radius: 10px;
+
+    }
+	
+	.glyph .glyph-icon:hover:before {
+		font-size: 40px;
+        color: #4875b4;
+        margin-left: 0;
+		background-color:#ddd;
+		border-radius: 10px;
+
+    }
+
 
 
 
