@@ -846,3 +846,7 @@ p.text-muted span {
     margin-right: 20px;
     font-weight: bold;
 }
+
+#progress-container {
+	padding-right:10%;
+}
