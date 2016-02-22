@@ -24,11 +24,25 @@ $(document).ready(function() {
 	}
 	
 	$(".timer").hover(function() {
-		$(this).fadeTo(1000, 1);
-	}, function() {
-		$(this).fadeTo(1000, 0.4);}
+		$(this).fadeTo(500, 1);
+		}, function() {
+		$(this).fadeTo(500, 0.4);}
 	);
+	
 
+	$("#interests-block .glyph").hover(function() {
+		$('#aboutme-text-content').removeClass('animated lightSpeedIn');
+		$('#aboutme-text-content').addClass('animated bounceOutLeft');
+		
+		$('#aboutme-picture').html('<img src="img/' + $(this).attr('id') + '.jpg">');
+		$('#aboutme-picture').addClass('animated lightSpeedIn');
+		$('#aboutme-picture').addClass('animated bounceOutLeft');
+		}, function() {
+		$('#aboutme-text-content').removeClass('animated bounceOutLeft');
+		$('#aboutme-text-content').addClass('animated lightSpeedIn');
+		$('#aboutme-picture').removeClass('animated lightSpeedIn');
+		$('#aboutme-picture').addClass('animated bounceOutLeft');}
+	);
 
 	//Filter by tags
 	$("#sideBar").on('click', '.skillTag', function() {			
@@ -42,7 +56,8 @@ $(document).ready(function() {
 	});
 	
 	var statsHasBeenSeen = false;
-
+	var progressBarsHasBeenSeen = false;
+	
 	//sidebar scroll boundaries
 	var sticker = $("#sticker");
 	var topOfSidebar = $('#sticker').offset().top - 100;
@@ -80,7 +95,23 @@ $(document).ready(function() {
 			sticker.removeClass("stick");	
 		}
 		
-		
+		if(progressBarsHasBeenSeen == false) 
+		{
+			if($(".progress").isOnScreen())
+			{
+				progressBarsHasBeenSeen = true;
+
+				$('.progress-bar').each(function(){
+					
+					var percentage = $(this).attr('percent');
+						
+					$(this).progress({           
+						percentage: percentage,
+						speed: 2500,
+					});
+				});
+			}
+		}
 		
 		if(statsHasBeenSeen == false) 
 		{
@@ -348,6 +379,20 @@ function clearFilters()
             }
         });
     };
+	
+	$.fn.progress = function(options) 
+	{
+
+        return $(this).each(function() {
+
+			$(this).animate({
+				width: options.percentage
+			}, 2500, function() {
+				//$(this).next().addClass('skill-label');
+			});
+							
+        });
+    };
 
 	
 	
@@ -373,6 +418,7 @@ function clearFilters()
 
 
 })(jQuery);
+
 
 
 

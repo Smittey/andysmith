@@ -1,134 +1,61 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 21/02/2016 20:26
+  	*/
+
 @font-face {
-	font-family: "Flaticon";
+  font-family: "Flaticon";
 	src: url("../img/font-icon/flaticon.eot");
 	src: url("../img/font-icon/flaticon.eot#iefix") format("embedded-opentype"),
 	url("../img/font-icon/flaticon.woff") format("woff"),
 	url("../img/font-icon/flaticon.ttf") format("truetype"),
 	url("../img/font-icon/flaticon.svg") format("svg");
-	font-weight: normal;
-	font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../img/font-icon/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-	font-family: Flaticon;
-        font-size: 13px;
+  font-family: Flaticon;
+        font-size: 20px;
 font-style: normal;
 margin-left: 20px;
-}.flaticon-airplane68:before {
-	content: "\e000";
-}
-.flaticon-airplane73:before {
-	content: "\e001";
-}
-.flaticon-army6:before {
-	content: "\e002";
-}
-.flaticon-award52:before {
-	content: "\e003";
-}
-.flaticon-books30:before {
-	content: "\e004";
-}
-.flaticon-camping1:before {
-	content: "\e005";
-}
-.flaticon-camping5:before {
-	content: "\e006";
-}
-.flaticon-cellphone106:before {
-	content: "\e007";
-}
-.flaticon-coffee20:before {
-	content: "\e008";
-}
-.flaticon-computer38:before {
-	content: "\e009";
-}
-.flaticon-computers:before {
-	content: "\e00a";
-}
-.flaticon-cutlery6:before {
-	content: "\e00b";
-}
-.flaticon-drink24:before {
-	content: "\e00c";
-}
-.flaticon-dumbbell20:before {
-	content: "\e00d";
-}
-.flaticon-headphone4:before {
-	content: "\e00e";
-}
-.flaticon-hot51:before {
-	content: "\e00f";
-}
-.flaticon-knife54:before {
-	content: "\e010";
-}
-.flaticon-movie46:before {
-	content: "\e011";
-}
-.flaticon-musical175:before {
-	content: "\e012";
-}
-.flaticon-pc6:before {
-	content: "\e013";
-}
-.flaticon-piano6:before {
-	content: "\e014";
-}
-.flaticon-print48:before {
-	content: "\e015";
-}
-.flaticon-skier:before {
-	content: "\e016";
-}
-.flaticon-stick-man1:before {
-	content: "\e017";
-}
-.flaticon-tepee:before {
-	content: "\e018";
-}
-.flaticon-trophy36:before {
-	content: "\e019";
-}
-.flaticon-vegetable32:before {
-	content: "\e01a";
-}
-.flaticon-walk16:before {
-	content: "\e01b";
-}
-.flaticon-web2:before {
-	content: "\e01c";
-}
-.flaticon-weightlifter3:before {
-	content: "\e01d";
 }
 
+.flaticon-business:before { content: "\f100"; }
+.flaticon-cup:before { content: "\f101"; }
+.flaticon-cup-1:before { content: "\f102"; }
+.flaticon-drink:before { content: "\f103"; }
+.flaticon-dumbbell:before { content: "\f104"; }
+.flaticon-fashion:before { content: "\f105"; }
+.flaticon-ice:before { content: "\f106"; }
+.flaticon-moon:before { content: "\f107"; }
+.flaticon-music:before { content: "\f108"; }
+.flaticon-music-1:before { content: "\f109"; }
+.flaticon-shapes:before { content: "\f10a"; }
+.flaticon-sport:before { content: "\f10b"; }
+.flaticon-transport:before { content: "\f10c"; }
+.flaticon-transport-1:before { content: "\f10d"; }
 
 
-
-
-    /*body {
-        font-family: sans-serif;
-        line-height: 1.5;
-        font-size: 16px;
-        padding: 20px;
-       
-    }*/
-
-    
-    #glyphs {
+    #interests-block #glyphs {
         clear: both;
     }
     
-    .glyph {
+    #interests-block .glyph {
         display: inline-block;
         margin: 10px;
         text-align: center;
         vertical-align: top;
     }
-    .glyph .glyph-icon {
+    #interests-block .glyph .glyph-icon {
         padding: 10px;
         display: block;
         font-family:"Flaticon";
@@ -137,7 +64,7 @@ margin-left: 20px;
 		
 
     }
-    .glyph .glyph-icon-large:before {
+    #interests-block .glyph .glyph-icon-large:before {
 		font-size: 60px;
         color: #666;
         margin-left: 0;
@@ -148,7 +75,7 @@ margin-left: 20px;
 		border-radius: 10px;
     }
 	
-	.glyph .glyph-icon-large:hover:before {
+	#interests-block .glyph .glyph-icon-large:hover:before {
 		font-size: 60px;
         color: #4875b4;
         margin-left: 0;
@@ -157,7 +84,7 @@ margin-left: 20px;
 
     }
 	
-	    .glyph .glyph-icon:before {
+	#interests-block .glyph .glyph-icon:before {
 		font-size: 40px;
         color: #666;
         margin-left: 0;
@@ -169,7 +96,7 @@ margin-left: 20px;
 
     }
 	
-	.glyph .glyph-icon:hover:before {
+	#interests-block .glyph .glyph-icon:hover:before {
 		font-size: 40px;
         color: #4875b4;
         margin-left: 0;
@@ -177,7 +104,15 @@ margin-left: 20px;
 		border-radius: 10px;
 
     }
+	
+	
 
 
-
-
+	
+	.glyph .glyph-icon:before {
+		font-size: 30px;
+        color: #666;
+        margin-left: 0;
+		padding:10px;
+			
+    }
