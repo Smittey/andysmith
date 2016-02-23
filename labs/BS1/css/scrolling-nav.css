@@ -92,6 +92,14 @@ of those sections to manage the look and feel of the site. */
     padding: 50px 0px 50px 0px;
     text-align: center;
     background: #eee;
+	position: relative;
+}
+
+.skills-section {
+    height: auto;
+    padding: 50px 0px 50px 0px;
+    text-align: center;
+    background: #E1E7E8;
 	
 }
 
@@ -113,6 +121,15 @@ of those sections to manage the look and feel of the site. */
     background: #eee;
     text-align: center;
 
+}
+
+#profile-card {
+
+	background:rgba(255,255,255,0.5);
+	position: absolute; right: 0px; top: 0px;
+	width:350px;
+	padding:10px;
+	border-radius: 10px;
 }
 
 #map 
