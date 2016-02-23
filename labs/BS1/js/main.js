@@ -17,6 +17,22 @@ $(document).ready(function() {
 		$(this).parent().closest('.experienceBlockHead').find('.timeline-image').css({'border': ''})}
 	);*/
 	
+	//Get top artists from lastfm account
+	$.getJSON("http://ws.audioscrobbler.com/2.0/?method=user.getTopArtists&user=smitteyyyy&period=1month&api_key=9ddaab7dc99dbcfb3f2ed8204ef965ce&limit=5&format=json&callback=?", function(json) {
+        var html = '';
+        $.each(json.topartists.artist, function(i, item) {
+            //html += "<a href=" + item.url + " target='_blank'>" + item.name + "</a>, ";
+            
+			var n = item.url.lastIndexOf('/');
+			var result = item.url.substring(n + 1);
+
+			html += "<a href='http://www.last.fm/user/Smitteyyyy/library/music/" + result + "?date_preset=LAST_30_DAYS' target='_blank'>" + item.name + "</a>, ";
+        });
+		html = html.substring(0, html.length - 2) + ".";
+        $('#topArtists').append(html);
+    });
+
+	
 	//If the users window is smaller than 600 pixels, give the timeline sticker an overflow property so that the tags will wrap/all be seen at once
 	if($(window).height() <  600)
 	{
@@ -31,17 +47,19 @@ $(document).ready(function() {
 	
 
 	$("#interests-block .glyph").hover(function() {
-		$('#aboutme-text-content').removeClass('animated lightSpeedIn');
-		$('#aboutme-text-content').addClass('animated bounceOutLeft');
+		$('#aboutme-text-content').removeClass('animated fadeIn');
+		$('#aboutme-text-content').addClass('animated fadeOut');
 		
 		$('#aboutme-picture').html('<img src="img/' + $(this).attr('id') + '.jpg">');
-		$('#aboutme-picture').addClass('animated lightSpeedIn');
-		$('#aboutme-picture').addClass('animated bounceOutLeft');
+		
+		$('#aboutme-picture').removeClass('animated fadeOut');
+		$('#aboutme-picture').addClass('animated fadeIn');
 		}, function() {
-		$('#aboutme-text-content').removeClass('animated bounceOutLeft');
-		$('#aboutme-text-content').addClass('animated lightSpeedIn');
-		$('#aboutme-picture').removeClass('animated lightSpeedIn');
-		$('#aboutme-picture').addClass('animated bounceOutLeft');}
+		$('#aboutme-text-content').removeClass('animated fadeOut');
+		$('#aboutme-text-content').addClass('animated fadeIn');
+		
+		$('#aboutme-picture').removeClass('animated fadeIn');
+		$('#aboutme-picture').addClass('animated fadeOut');}
 	);
 
 	//Filter by tags
@@ -104,7 +122,8 @@ $(document).ready(function() {
 				$('.progress-bar').each(function(){
 					
 					var percentage = $(this).attr('percent');
-						
+					$(this).html(percentage);
+					
 					$(this).progress({           
 						percentage: percentage,
 						speed: 2500,

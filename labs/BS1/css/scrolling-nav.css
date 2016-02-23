@@ -776,7 +776,7 @@ p.text-muted span {
 
 .timers {
 	color: #4875b4;
-
+    font-weight: bold;
 }
 
 #aboutme-info-container {
@@ -797,7 +797,8 @@ p.text-muted span {
 }
 
 #aboutme-picture {
-		visibility: hidden;
+	visibility: hidden;
+	z-index:9;
 }
  .aboutme-heading {
 	 display: inline;
