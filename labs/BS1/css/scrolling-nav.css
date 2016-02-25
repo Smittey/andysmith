@@ -75,6 +75,7 @@ of those sections to manage the look and feel of the site. */
 
 .intro-section {
     height: 100%;
+	width:100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
@@ -85,7 +86,29 @@ of those sections to manage the look and feel of the site. */
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	
+	position: relative;
 }
+
+#profile-card {
+
+	background:rgba(255,255,255,0.75);
+	float:right;
+	width:350px;
+	padding:10px;
+	border-radius: 10px;
+}
+
+.about-info .info-title p, .about-info .info-details p{
+		color: #5e5e5e;
+    padding-bottom: 0;
+}
+.about-info .info-title{
+    float: left;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
 
 .about-section {
     height: auto;
@@ -123,14 +146,6 @@ of those sections to manage the look and feel of the site. */
 
 }
 
-#profile-card {
-
-	background:rgba(255,255,255,0.5);
-	position: absolute; right: 0px; top: 0px;
-	width:350px;
-	padding:10px;
-	border-radius: 10px;
-}
 
 #map 
 {
@@ -753,7 +768,7 @@ ul#interests1 li {
 #bracket-above {
 	height: 30px;
 	width: 80px;
-	background-image: url('../img/curly-bracket-top.png'); 
+	background-image: url('../img/curly-bracket-top.gif'); 
 	
     background-size: 100% 100%;
 	margin-bottom:0px;
@@ -766,7 +781,7 @@ ul#interests1 li {
 #bracket-below {
 	height: 30px;
 	width: 80px;
-	background-image: url('../img/curly-bracket-bottom.png'); 
+	background-image: url('../img/curly-bracket-bottom.gif'); 
 
     background-size: 100% 100%;
 	margin-top:0px;
@@ -853,15 +868,6 @@ p.text-muted span {
 }
 
 
-.about-info .info-title p, .about-info .info-details p{
-    color: #7e868e;
-    padding-bottom: 0;
-}
-.about-info .info-title{
-    float: left;
-    margin-right: 20px;
-    font-weight: bold;
-}
 
 #progress-container {
 	padding-right:10%;
@@ -869,7 +875,7 @@ p.text-muted span {
 
 .imgRounded
 {
-    border-radius: 10%;
+    border-radius: 50%;
 	width:400px;
 	height:400px;
 }

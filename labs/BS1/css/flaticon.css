@@ -56,19 +56,19 @@ margin-left: 20px;
         vertical-align: top;
     }
     #interests-block .glyph .glyph-icon {
-        padding: 10px;
+        padding: 5px;
         display: block;
         font-family:"Flaticon";
         font-size: 64px;
         line-height: 1;
-		
+		/*background-color: #00ff00;*/
+
 
     }
     #interests-block .glyph .glyph-icon-large:before {
 		font-size: 60px;
         color: #666;
         margin-left: 0;
-		/*background-color: #00ff00;*/
 		padding:10px;
 
 		background-color:#ddd;
@@ -88,7 +88,6 @@ margin-left: 20px;
 		font-size: 40px;
         color: #666;
         margin-left: 0;
-		/*background-color: #00ff00;*/
 		padding:10px;
 		
 		background-color:#ddd;
@@ -99,16 +98,11 @@ margin-left: 20px;
 	#interests-block .glyph .glyph-icon:hover:before {
 		font-size: 40px;
         color: #4875b4;
-        margin-left: 0;
 		background-color:#ddd;
 		border-radius: 10px;
 
     }
-	
-	
-
-
-	
+		
 	.glyph .glyph-icon:before {
 		font-size: 30px;
         color: #666;

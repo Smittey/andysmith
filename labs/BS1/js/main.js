@@ -124,10 +124,14 @@ $(document).ready(function() {
 					var percentage = $(this).attr('percent');
 					$(this).html(percentage);
 					
-					$(this).progress({           
+					/*$(this).progress({           
 						percentage: percentage,
 						speed: 2500,
-					});
+					});*/
+					
+					$(this).animate({
+						width: percentage
+					}, 2500);
 				});
 			}
 		}
