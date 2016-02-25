@@ -87,7 +87,7 @@ of those sections to manage the look and feel of the site. */
 	position: relative;
 }
 
-#one {
+#map {
 	z-index:100;
 	height:100%;
 	width:100%;
@@ -96,7 +96,7 @@ of those sections to manage the look and feel of the site. */
 }
 .gm-style-iw * {
 	display: block;
-	width: 100%;
+	width: auto;
 }
 .gm-style-iw h4, .gm-style-iw p {
 	margin: 0;
@@ -110,12 +110,24 @@ of those sections to manage the look and feel of the site. */
 
 #profile-card {
 	z-index:200;
-	right: 0;
-	width:400px;
+	right: 100px;
+	width:auto;
 	text-align:left;
-	padding-top:150px;
+	margin-top:150px;
+	padding:20px;
 	position: absolute;
 }
+
+.aboutme-info-container-profile {
+	background:rgba(255,255,255,0.8);
+	border-radius: 10px;
+}
+
+.aboutme-info-container-profile .about-info .info-details a:link, .aboutme-info-container-profile .about-info .info-title p {
+
+	color: #5e5e5e;
+}
+
 
 
 /*#profile-card {
@@ -126,6 +138,11 @@ of those sections to manage the look and feel of the site. */
 	padding:10px;
 	border-radius: 10px;
 }*/
+
+.about-info .info-details {
+	white-space: nowrap;
+	display: inline-block;
+}
 
 .about-info .info-title p, .about-info .info-details p{
 	color: #ddd;
@@ -838,7 +855,7 @@ p.text-muted span {
 	color: #4875b4;
 }
 
-#aboutme-info-container {
+.aboutme-info-container {
 	text-align:left;
 	padding:10px 0 10px 0;
 	

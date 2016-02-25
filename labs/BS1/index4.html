@@ -41,6 +41,7 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
 	  
+	<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAVgsu4XofoejLg8cOnAHTTi7lh8cZLR3Q&sensor=false&extension=.js'></script> 
 	  
 	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -99,7 +100,6 @@
 
 		<div id="profile-card">
 
-			<div id="aboutme-info-containefr">
 				<div class="about-info">
 					<div class="info-title">
 						<p class="icon"><i class="fa fa-fw fa-user"></i></p>
@@ -109,16 +109,15 @@
 					</div> 
 					<div class="info-details">
 						<p class="info"><a class="page-scroll" href="#about">Andy Smith</a></p>
-						<p class="info"><a class="page-scroll" href="#experience">Full-stack Software Engineer</a></p>
+						<p class="info"><a class="page-scroll" href="#experience">Full-stack 	Software Engineer</a></p>
 						<p class="info"><a class="aboutme-location-link page-scroll" href='#'>Farnham, Surrey</a></p>
 						<p class="info"><a href="mailto:hello@andysmith.me?Subject=Work for me" target="_top">hello@andysmith.me</a></p>
 					</div>	
 				</div>
 
-			</div>
 		</div>
 		
-		<div id='one'></div>
+		<div id='map'></div>
 
         <!--<div class="container-fluid">
             <div class="row">
@@ -147,7 +146,7 @@
 					</div>
 				
 						<div id="aboutme-text-content">
-							<div id="aboutme-info-container">
+							<div class="aboutme-info-container">
 								<p class="text-muted">
 									Hi, I'm Andy. 
 								</p>
@@ -264,9 +263,9 @@
 							<div class="glyph-icon flaticon-cup"><h3 class="aboutme-heading">Qualifications</h3></div>
 						</div>
 					</div>
-					<div id="aboutme-info-container">
-						<p class="text-muted"><i class="fa fa-caret-right"> BSc Hons Computer Science</i></p>
-						<p class="text-muted"><i class="fa fa-caret-right"> Qualified lifegaurd</i></p>
+					<div class="aboutme-info-container">
+						<p class="text-muted"><i class="fa fa-caret-right"> </i> BSc Hons Computer Science</p>
+						<p class="text-muted"><i class="fa fa-caret-right"> </i> Qualified lifegaurd</p>
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -275,7 +274,7 @@
 							<div class="glyph-icon flaticon-fashion"><h3 class="aboutme-heading">Skills</h3></div>
 						</div>
 					</div>
-					<div id="aboutme-info-container">
+					<div class="aboutme-info-container">
 						<div id="progress-container">
 							<div class="progress">
 							  <div class="progress-bar progress-bar-success" role="progressbar" style="width: 0%" percent="70%">
@@ -316,10 +315,11 @@
 							<div class="glyph-icon flaticon-computer"><h3 class="aboutme-heading">Projects</h3></div>
 						</div>
 					</div>
-					<div id="aboutme-info-container">
-						<a href="#"><i class="fa fa-television"> Application example</i></a></br>
-						<a href="#"><i class="fa fa-television"> Website example</i></a></br>
-						<a href="#"><i class="fa fa-tablet"> Another application example</i></a></br>
+					<div class="aboutme-info-container">
+						<p class="text-muted"><a href="http://www.littlefarnhampianists.co.uk"><i class="fa fa-television"> </i> LittleFarnhamPianists.co.uk</a></p>
+						<p class="text-muted"><a href="http://www.andysmith.me"><i class="fa fa-television"> </i> AndySmith.me</a></p>
+						<p class="text-muted"><a href="https://play.google.com/store/apps/details?id=my.gym.journal"><i class="fa fa-tablet"></i>  My Gym Journal</a></p>
+						<p class="text-muted"><a href="http://www.smittey.co.uk"><i class="fa fa-television"> </i> Smittey.co.uk [Blog]</a></p>
 					</div>
 				</div>
 			</div>	
