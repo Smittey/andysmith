@@ -813,6 +813,10 @@ p.text-muted span {
 #aboutme-info-container {
 	text-align:left;
 	padding:10px 0 10px 0;
+	
+	background:rgba(255,255,255,0.4);
+	padding:10px;
+	border-radius: 10px;
 }
 
 #aboutme-text-container {
@@ -870,7 +874,6 @@ p.text-muted span {
 
 
 #progress-container {
-	padding-right:10%;
 }
 
 .imgRounded

@@ -30,21 +30,19 @@ margin-left: 20px;
 }
 
 .flaticon-business:before { content: "\f100"; }
-.flaticon-clock:before { content: "\f101"; }
-.flaticon-computer:before { content: "\f102"; }
-.flaticon-cup:before { content: "\f103"; }
-.flaticon-cup-1:before { content: "\f104"; }
-.flaticon-drink:before { content: "\f105"; }
-.flaticon-dumbbell:before { content: "\f106"; }
-.flaticon-fashion:before { content: "\f107"; }
-.flaticon-ice:before { content: "\f108"; }
-.flaticon-moon:before { content: "\f109"; }
-.flaticon-music:before { content: "\f10a"; }
-.flaticon-music-1:before { content: "\f10b"; }
-.flaticon-shapes:before { content: "\f10c"; }
-.flaticon-sport:before { content: "\f10d"; }
-.flaticon-transport:before { content: "\f10e"; }
-.flaticon-transport-1:before { content: "\f10f"; }
+.flaticon-cup:before { content: "\f101"; }
+.flaticon-cup-1:before { content: "\f102"; }
+.flaticon-drink:before { content: "\f103"; }
+.flaticon-dumbbell:before { content: "\f104"; }
+.flaticon-fashion:before { content: "\f105"; }
+.flaticon-ice:before { content: "\f106"; }
+.flaticon-moon:before { content: "\f107"; }
+.flaticon-music:before { content: "\f108"; }
+.flaticon-music-1:before { content: "\f109"; }
+.flaticon-shapes:before { content: "\f10a"; }
+.flaticon-sport:before { content: "\f10b"; }
+.flaticon-transport:before { content: "\f10c"; }
+.flaticon-transport-1:before { content: "\f10d"; }
 
 
     #interests-block #glyphs {
