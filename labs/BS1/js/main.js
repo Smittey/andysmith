@@ -273,10 +273,16 @@ function init() {
         $('#topArtists').append(html);
     });
 
-	$(".timer").hover(function() {
+	/*$(".timer").hover(function() {
 		$(this).fadeTo(500, 1);
 		}, function() {
 		$(this).fadeTo(500, 0.4);}
+	);*/
+	
+	$('.glyph-icon-large').hover(function() {
+		$(this).siblings('.timer').fadeTo(500, 1);
+		}, function() {
+		$(this).siblings('.timer').fadeTo(500, 0.4);}
 	);	
 	
 	
@@ -340,7 +346,7 @@ function init() {
 					$(this).countTo({           
 						from: 0,
 						to: max,
-						speed: 2000,
+						speed: 4000,
 						unit: unit,
 						refreshInterval: 50,
 					});

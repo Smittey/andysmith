@@ -37,14 +37,15 @@ margin-left: 20px;
 .flaticon-drink:before { content: "\f105"; }
 .flaticon-dumbbell:before { content: "\f106"; }
 .flaticon-fashion:before { content: "\f107"; }
-.flaticon-ice:before { content: "\f108"; }
-.flaticon-moon:before { content: "\f109"; }
-.flaticon-music:before { content: "\f10a"; }
-.flaticon-music-1:before { content: "\f10b"; }
-.flaticon-shapes:before { content: "\f10c"; }
-.flaticon-sport:before { content: "\f10d"; }
-.flaticon-transport:before { content: "\f10e"; }
-.flaticon-transport-1:before { content: "\f10f"; }
+.flaticon-hand:before { content: "\f108"; }
+.flaticon-ice:before { content: "\f109"; }
+.flaticon-moon:before { content: "\f10a"; }
+.flaticon-music:before { content: "\f10b"; }
+.flaticon-music-1:before { content: "\f10c"; }
+.flaticon-shapes:before { content: "\f10d"; }
+.flaticon-sport:before { content: "\f10e"; }
+.flaticon-transport:before { content: "\f10f"; }
+.flaticon-transport-1:before { content: "\f110"; }
 
 
     #interests-block #glyphs {

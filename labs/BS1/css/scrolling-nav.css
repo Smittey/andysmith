@@ -790,13 +790,17 @@ of those sections to manage the look and feel of the site. */
 }
 
 
-
+.findme-text 
+{
+	margin: 0 auto;
+	padding: 50px 0 10px 0;
+}
 
 p.links 
 {
 	display: table;
 	margin: 0 auto;
-	padding: 50px 0 50px 0;
+	padding: 10px 0 10px 0;
 }
 
 a.li 
@@ -846,7 +850,7 @@ a.tw:hover
 
 a.so 
 {
-	width: 129px;
+	width: 128px;
 	color: #ffffff;
 	font-size: 10px;
 	text-transform: uppercase;
@@ -959,6 +963,11 @@ p.text-muted span
 .timers 
 {
 	color: #4875b4;
+}
+
+.timer
+{
+	font-weight:bold;
 }
 
 .aboutme-info-container 
