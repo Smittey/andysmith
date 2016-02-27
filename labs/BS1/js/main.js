@@ -296,7 +296,7 @@ function init() {
 	);	
 	
 	
-	$("#interests-block .glyph").hover(function() {
+	/*$("#interests-block .glyph").hover(function() {
 
 			$('#aboutme-picture').show();
 			
@@ -329,7 +329,7 @@ function init() {
 			});
 			 
 		}
-	);
+	);*/
 	
 	
 	

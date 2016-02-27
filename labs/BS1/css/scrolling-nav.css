@@ -123,12 +123,12 @@ of those sections to manage the look and feel of the site. */
 #profile-card {
 	z-index:200;
 	right: 0px;
-	min-width:400px;
+	min-width:auto;
 	text-align:left;
 	margin-top:150px;
 	padding:20px;
 	position: absolute;
-overflow: auto;
+	overflow: auto;
 }
 
 @media all and (max-width: 450px) {
@@ -138,11 +138,17 @@ overflow: auto;
 		background:rgba(255,255,255,0.8);
 		border-radius: 10px;
 		color: #5e5e5e;
+		
+		max-width:100%;
+		overflow: auto;
+
     }
 
 	#profile-card .about-info .info-details a:link, #profile-card .about-info .info-details a:hover, #profile-card .about-info .info-title p 
 	{
 		color: #5e5e5e;
+		
+		font-size: 4vw;
 	}
 }
 
@@ -1070,11 +1076,16 @@ p.text-muted span
 }
 
 
-.imgRounded
+.img-responsive
 {
+	
     border-radius: 50%;
-	width:400px;
-	height:400px;
+
+}
+
+.cont{
+	max-width:400px;
+	max-height:400px;
 }
 
 .imgRoundedSquare
