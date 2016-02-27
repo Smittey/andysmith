@@ -498,7 +498,14 @@ $(document).ready(function() {
 	var sticker = $("#sticker");
 	var topOfSidebar = $('#sticker').offset().top - 100;
 
-		
+	
+	$(window).on('resize', function(){
+		//var win = $(this); //this = window
+		sticker = $("#sticker");
+		topOfSidebar = $('#sticker').offset().top - 100;
+	
+	});
+
 	$(window).scroll(function() {
 		
 		var topOfTimeline = $('#experienceTimeline').offset().top;
