@@ -20,7 +20,7 @@ $(document).ready(function() {
  /************************
  * Start Misc 
  ************************/
-
+/*
  $( document ).ready(function() {
     var heights = $(".welll").map(function() {
         return $(this).height();
@@ -29,7 +29,7 @@ $(document).ready(function() {
     maxHeight = Math.max.apply(null, heights);
 
     $(".welll").height(maxHeight);
-});
+});*/
 
 function scroll(target)
 {
