@@ -20,7 +20,17 @@ $(document).ready(function() {
  /************************
  * Start Misc 
  ************************/
-   
+
+ $( document ).ready(function() {
+    var heights = $(".welll").map(function() {
+        return $(this).height();
+    }).get(),
+
+    maxHeight = Math.max.apply(null, heights);
+
+    $(".welll").height(maxHeight);
+});
+
 function scroll(target)
 {
 	$("html, body").animate({ scrollTop: jQuery(target).offset().top - 20 }, '1000', function(){
@@ -287,19 +297,38 @@ function init() {
 	
 	
 	$("#interests-block .glyph").hover(function() {
-		$('#aboutme-text-content').removeClass('animated fadeIn');
-		$('#aboutme-text-content').addClass('animated fadeOut');
+
+			$('#aboutme-picture').show();
+			
+			 
+			$('#aboutme-text-content .aboutme-info-container').removeClass('animated fadeIn');
+			$('#aboutme-text-content .aboutme-info-container').addClass('animated fadeOut');
+			
+			$('#aboutme-picture').html('<img class="imgRoundedSquare" src="img/' + $(this).attr('id') + '.jpg">');
+			
+			$('#aboutme-picture').removeClass('animated fadeOut');
+			$('#aboutme-picture').addClass('animated fadeIn');
+			
+			$('#aboutme-picture').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
+				function(e){
+					$('#aboutme-picture').show();
+					$(this).off(e);
+			});
 		
-		$('#aboutme-picture').html('<img class="imgRoundedSquare" src="img/' + $(this).attr('id') + '.jpg">');
-		
-		$('#aboutme-picture').removeClass('animated fadeOut');
-		$('#aboutme-picture').addClass('animated fadeIn');
 		}, function() {
-		$('#aboutme-text-content').removeClass('animated fadeOut');
-		$('#aboutme-text-content').addClass('animated fadeIn');
-		
-		$('#aboutme-picture').removeClass('animated fadeIn');
-		$('#aboutme-picture').addClass('animated fadeOut');}
+			$('#aboutme-text-content .aboutme-info-container').removeClass('animated fadeOut');
+			$('#aboutme-text-content .aboutme-info-container').addClass('animated fadeIn');
+			
+			$('#aboutme-picture').removeClass('animated fadeIn');
+			$('#aboutme-picture').addClass('animated fadeOut');
+			
+			$('#aboutme-picture').bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
+				function(e){
+					$('#aboutme-picture').hide();
+					$(this).off(e);
+			});
+			 
+		}
 	);
 	
 	

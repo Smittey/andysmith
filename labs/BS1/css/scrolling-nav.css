@@ -136,7 +136,7 @@ of those sections to manage the look and feel of the site. */
 	border-radius: 10px;
 }
 
-.aboutme-info-container-profile .about-info .info-details a:link, .aboutme-info-container-profile .about-info .info-details a:visited, .aboutme-info-container-profile .about-info .info-title p 
+.aboutme-info-container-profile .about-info .info-details a:link, .aboutme-info-container-profile .about-info .info-details a:hover, .aboutme-info-container-profile .about-info .info-title p 
 {
 	color: #5e5e5e;
 }
@@ -162,7 +162,7 @@ of those sections to manage the look and feel of the site. */
 	font-size: 20px;
 }
 
-.info-details a:link
+.info-details a:link, .info-details a:visited
 {
 	color: #fff;
 }
@@ -209,7 +209,8 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
 }
 
-.row 
+
+.experience-section .row 
 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -398,6 +399,11 @@ of those sections to manage the look and feel of the site. */
 .text-muted 
 {
     color: #777;
+}
+
+.text-muted-light
+{
+    color: #C9C6C6;
 }
 
 @media (min-width: 768px) 
@@ -893,7 +899,7 @@ a.gh:hover
 
 #interests-block 
 {
-	float:right;
+	margin: 0 auto;
 	clear:both;
 	padding-right: 20px;
 }
@@ -970,6 +976,14 @@ p.text-muted span
 	font-weight:bold;
 }
 
+
+/*Container*/
+#aboutme-text-content 
+{
+}
+
+
+/*Text*/
 .aboutme-info-container 
 {
 	text-align:left;
@@ -980,22 +994,15 @@ p.text-muted span
 	border-radius: 10px;
 }
 
-#aboutme-text-container 
-{
-	position: relative;
-}
-
-#aboutme-picture, #aboutme-text-content 
-{
-  position: absolute;
-  left: 0;
-}
-
+/*Picture*/
 #aboutme-picture 
 {
-	visibility: hidden;
-	z-index:9;
+	height:100%;
+	width:100%;
+	
+  	visibility: hidden;
 }
+
  .aboutme-heading 
  {
 	 display: inline;
