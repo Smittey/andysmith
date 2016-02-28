@@ -120,53 +120,50 @@ of those sections to manage the look and feel of the site. */
 	color: #4272db;
 }
 	
-#profile-card {
+#profile-card 
+{
 	z-index:200;
-	right: 0px;
+    right: 50px;
 	min-width:auto;
 	text-align:left;
 	margin-top:150px;
 	padding:20px;
 	position: absolute;
 	overflow: auto;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	resize: vertical;
 }
 
-@media all and (max-width: 450px) {
-    #profile-card{
-        margin-left: 0px;
-        left: 50px;
-		background:rgba(255,255,255,0.8);
-		border-radius: 10px;
-		color: #5e5e5e;
-		
-		max-width:100%;
-		overflow: auto;
-
-    }
-
-	#profile-card .about-info .info-details a:link, #profile-card .about-info .info-details a:hover, #profile-card .about-info .info-title p 
-	{
-		color: #5e5e5e;
-		
-		font-size: 4vw;
-	}
+.about-info .info-details 
+{
+	white-space: nowrap;
+	display: inline-block;
 }
 
-@media all and (max-width: 850px) {
-    #profile-card{
-        margin-left: 0px;
-        right: 50px;
-		background:rgba(255,255,255,0.8);
-		border-radius: 10px;
-		color: #5e5e5e;
-    }
-
-	#profile-card .about-info .info-details a:link, #profile-card .about-info .info-details a:hover, #profile-card .about-info .info-title p 
-	{
-		color: #5e5e5e;
-	}
+.about-info .info-title
+{
+    float: left;
+    margin-right: 20px;
+    font-weight: bold;
 }
 
+
+.about-info .info-title p, 
+.about-info .info-details p
+{
+	color: #ddd;
+	font-size: 20px;
+	margin:10px;
+}
+
+.info-details a:link, 
+.info-details a:visited
+{
+	color: #fff;
+}
 
 .aboutme-info-container-profile 
 {
@@ -174,10 +171,99 @@ of those sections to manage the look and feel of the site. */
 	border-radius: 10px;
 }
 
-.aboutme-info-container-profile .about-info .info-details a:link, .aboutme-info-container-profile .about-info .info-details a:hover, .aboutme-info-container-profile .about-info .info-title p 
+.aboutme-info-container-profile .about-info .info-details a:link, 
+.aboutme-info-container-profile .about-info .info-title p 
 {
 	color: #5e5e5e;
 }
+
+.about-info .info-details a:hover
+{
+	color:#ddd;
+}
+
+
+@media all and (max-width: 450px) 
+{
+    #profile-card
+	{
+        margin-left: 0px;
+        left: 50px;
+		background:rgba(255,255,255,0.8);
+		border-radius: 10px;
+		color: #5e5e5e;
+		overflow: auto;
+    }
+	
+	#profile-card .about-info
+	{
+		white-space: nowrap;
+	}
+	
+	#profile-card .about-info .info-title
+	{
+		margin-right: 20px;
+		font-weight: bold;
+		display: inline-block;
+	}
+	
+	#profile-card .about-info .info-details 
+	{
+		display: inline-block;
+	}
+
+
+	
+	#profile-card .about-info .info-details a:link, 
+	#profile-card .about-info .info-details a:hover,
+	#profile-card .about-info .info-details p, 	
+	#profile-card .about-info .info-title p
+	{
+		color: #5e5e5e;
+		font-size: 4vw;
+		margin: 10px;
+	}
+}
+
+@media all and (max-width: 850px) 
+{
+    #profile-card
+	{
+        margin-left: 0px;
+        right: 50px;
+		background:rgba(255,255,255,0.8);
+		border-radius: 10px;
+		color: #5e5e5e;
+		
+    }
+
+
+	#profile-card .about-info .info-details p,
+	#profile-card .about-info .info-title p 
+	{
+		margin: 10px;
+	}	
+
+
+
+
+	#profile-card .about-info .info-details a:link, 
+	#profile-card .about-info .info-details a:hover, 
+	#profile-card .about-info .info-title p 
+	{
+		color: #5e5e5e;
+	}
+	
+	.parent {
+	}
+	.child {
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	}
+}
+
+
 
 /*#profile-card {
 
@@ -188,29 +274,7 @@ of those sections to manage the look and feel of the site. */
 	border-radius: 10px;
 }*/
 
-.about-info .info-details 
-{
-	white-space: nowrap;
-	display: inline-block;
-}
 
-.about-info .info-title p, .about-info .info-details p
-{
-	color: #ddd;
-	font-size: 20px;
-}
-
-.info-details a:link, .info-details a:visited
-{
-	color: #fff;
-}
-
-.about-info .info-title
-{
-    float: left;
-    margin-right: 20px;
-    font-weight: bold;
-}
 
 .about-section 
 {
@@ -326,7 +390,7 @@ of those sections to manage the look and feel of the site. */
     height: 80px;
     position: absolute;
     z-index: 100;
-    background-color: #fed136;
+    background-color: #fff;
     color: #fff;
     border-radius: 100%;
     border: 7px solid #f1f1f1;
@@ -341,7 +405,7 @@ of those sections to manage the look and feel of the site. */
     height: 80px;
     position: absolute;
     z-index: 100;
-    background-color: #fed136;
+    background-color: #fff;
     color: #fff;
     border-radius: 100%;
     border: 7px solid #f1f1f1;
@@ -833,12 +897,17 @@ of those sections to manage the look and feel of the site. */
 	padding: 50px 0 10px 0;
 }
 
-p.links 
-{
-	display: table;
-	margin: 0 auto;
-	padding: 10px 0 10px 0;
+ul#links li { 
+  position: relative; 
+  display: inline-block; 
+  text-align: center;  
 }
+
+ul#links { 
+  text-align:center; 
+  margin-left:-40px;
+}
+
 
 a.li 
 {
@@ -852,8 +921,6 @@ a.li
 	text-decoration: none;
 	background: url(../img/social.png) left top no-repeat;
 	float: left;
-	margin-right: 10px;
-	margin-left: 10px;
 	padding: 0 0 0 25px;
 }
 
@@ -875,7 +942,6 @@ a.tw
 	text-decoration: none;
 	background: url(../img/social.png) -85px top no-repeat;
 	float: left;
-	margin-right: 10px;
 	padding: 0 0 0 25px;
 }
 
@@ -897,7 +963,6 @@ a.so
 	text-decoration: none;
 	background: url(../img/social.png) -164px top no-repeat;
 	float: left;
-	margin-right: 10px;
 	padding: 0 0 0 25px;
 }
 
