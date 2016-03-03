@@ -265,30 +265,34 @@ function init() {
  /************************
  * Start About me
  ************************/
- 
+
  $(document).ready(function() {
 	
 	//Get top artists from lastfm account
 	$.getJSON("http://ws.audioscrobbler.com/2.0/?method=user.getTopArtists&user=smitteyyyy&period=1month&api_key=9ddaab7dc99dbcfb3f2ed8204ef965ce&limit=5&format=json&callback=?", function(json) {
         var html = '';
         $.each(json.topartists.artist, function(i, item) {
-            //html += "<a href=" + item.url + " target='_blank'>" + item.name + "</a>, ";
             
-			var n = item.url.lastIndexOf('/');
-			var result = item.url.substring(n + 1);
+			var songName = item.name;
+			var url = item.url;
 
-			html += "<a href='http://www.last.fm/user/Smitteyyyy/library/music/" + result + "?date_preset=LAST_30_DAYS' target='_blank'>" + item.name + "</a>, ";
+			html += "<a href='" + url + "?date_preset=LAST_30_DAYS' target='_blank'>" + songName + "</a>, ";
         });
+		
+		//Strip out the final comma
 		html = html.substring(0, html.length - 2) + ".";
+		
+		//Add result to page
         $('#topArtists').append(html);
     });
-
-	/*$(".timer").hover(function() {
-		$(this).fadeTo(500, 1);
-		}, function() {
-		$(this).fadeTo(500, 0.4);}
-	);*/
 	
+	
+	//If applicable, get the track that I'm currently listening to.
+	//Start by returning the last track that I listened to
+	getNowPlaying();
+	setInterval(getNowPlaying, 10*1000);
+	
+
 	$('.glyph-icon-large').hover(function() {
 		$(this).siblings('.timer').fadeTo(500, 1);
 		}, function() {
@@ -389,7 +393,7 @@ function init() {
 });
 
 
- (function($) {
+(function($) {
     $.fn.countTo = function(options) 
 	{
         //How many times to update the value
@@ -426,7 +430,6 @@ function init() {
 	
 	$.fn.progress = function(options) 
 	{
-
         return $(this).each(function() {
 
 			$(this).animate({
@@ -437,8 +440,6 @@ function init() {
 							
         });
     };
-
-	
 	
 	$.fn.isOnScreen = function()
 	{
@@ -459,9 +460,46 @@ function init() {
 		return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 	};
 
-
-
 })(jQuery);
+
+var currentSongName;
+function getNowPlaying() 
+{
+	$.getJSON("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=smitteyyyy&api_key=9ddaab7dc99dbcfb3f2ed8204ef965ce&limit=1&format=json&callback=?", function(json) {
+        $.each(json.recenttracks.track, function(i, item) {
+            			
+			//Limit to the first iteration. Lastfm seems to want to return at least 2
+			if(i == 0)
+			{
+				//Does the result have the attribute containing the 'nowplaying' attribute?
+				if($(this).attr('@attr') != undefined)
+				{
+					var songName = item.name;
+
+					//Does the return result match the same name as the previously changed song name? If not, we want to change the html to reflect the new song
+					if(songName != currentSongName)
+					{			
+						var html = 'Playing right now: <img src="img/sound-balance.gif"> ';
+
+						var artist = item.artist['#text'];
+						var url = item.url;
+						
+						currentSongName = songName;
+						
+						html += "<a href='" + url + "' target='_blank'>" + artist + " - " + songName + "</a>.";
+						
+						//Add result to page
+						$('#currentlyListeningTo').html(html);
+					}
+				}
+				else
+				{
+					$('#currentlyListeningTo').empty();
+				}
+			}
+        });
+    });
+}
 	
  /************************
  * End About me
@@ -508,9 +546,7 @@ $(document).ready(function() {
 
 	$(window).scroll(function() {
 		
-		var topOfTimeline = $('#experienceTimeline').offset().top;
-
-			
+		var topOfTimeline = $('#experienceTimeline').offset().top;		
 		var currentPos = $(window).scrollTop();
 		
 		var bottomOfTimeline = $('#experienceTimeline').offset().top + $('#experienceTimeline').height();
@@ -518,9 +554,6 @@ $(document).ready(function() {
 		var heightOfSidebar = $('#sticker').height();
 		var bottomOfSidebar = currentPos + $('#sticker').height() + 100; 
 		var scrollBottom = $(window).scrollTop() + $(window).height();
-
-		//$('#debug').html("Current position: " + currentPos + "<br/>Bottom of window: " + scrollBottom + "<br/>Bottom of Timeline: " + bottomOfTimeline + "<br/>Bottom of Sidebar: " + bottomOfSidebar);
-		//console.log("Current position: " + currentPos + "\nBottom of window: " + scrollBottom + "\nBottom of Timeline: " + bottomOfTimeline + "\nBottom of Sidebar: " + bottomOfSidebar);
 
 		if((currentPos >= topOfSidebar) && (bottomOfSidebar <= bottomOfTimeline))	//Within the boundaries
 		{
@@ -631,8 +664,10 @@ function filterTags(elem)
 		$(elem).addClass("experienceItemSelected");
 	}
 	
+	//Return the tags currently selected
 	var filteredTags = $('#sideBar #sticker .experienceItemSelected').map(function(){ return "." + $(this).attr('class').split(' ')[0]; }).get().join();
 	
+	//If no tags are selected, un-grey all of the menu tags by giving them the correct label class based on the name 
 	if(filteredTags == "")
 	{
 		$('#sticker .skillTag').addClass (function (){
@@ -641,31 +676,33 @@ function filterTags(elem)
 	}
 	else
 	{
+		//Remove the colours from all tags at first
 		$('#sticker .skillTag').removeClass (function (index, css) {
 		   return (css.match (/(^|\s)label-\S+/g) || []).join(' ');
 		});
 		
+		//Give all tags the grey colour
 		$('#sticker .skillTag').addClass('label-grey');
 		
+		//Give the selected tag(s) colour
 		$('#sticker .experienceItemSelected').addClass (function (){
 		   return 'label-' + $(this).attr('class').split(' ')[0].substr(0, $(this).attr('class').split(' ')[0].indexOf('Tag'));
 		});
 	}
 	
 
-	// start with all experience blocks
+	//Start the actual filtering by selecting all experience blocks
 	var experienceBlocks =  $('.timeline li .timeline-panel').parent();
 
 	if(filteredTags)
 	{
+		//Based on the experience blocks that have been selected, select their main parent
 		experienceBlocks = experienceBlocks.find('.timeline-body').find(filteredTags).parent().parent().parent();
 	}
 
-	// hide everything      
+	//Hide all experience panels/rows      
 	$('.timeline li .timeline-panel').parent().hide();	
 	 
-
-	$('#experience5').parent().prevAll(".experienceCategory:first");
 	 
 	//Show the experience items depicted by the filters
 	experienceBlocks.show();
@@ -673,13 +710,18 @@ function filterTags(elem)
 	var hasWork = false;
 	var hasEducation= false;
 	
+	//Look at all visible experience
 	$('.timeline-panel:visible').each(function() {
+		
+		//What categories do the shown experience belong to?
 		if($(this).parent().prevAll(".experienceCategory:first").attr('id') == 'educationCategory')
 		{
+			//Education experience is shown
 			hasEducation = true;
 		}			
 		else
 		{
+			//Work experience is shown
 			hasWork = true;
 		}
 	});
@@ -701,17 +743,6 @@ function filterTags(elem)
 	{
 		$('#educationCategory').show();		
 	}
-
-	
-	//Check to see if there are any selected tags. If there aren't, make the 'clear filters' link inactive and colourise icons 
-	/*if(filteredTags == "")
-	{
-		$('#clearFilters').disabled=true;
-	}
-	else
-	{
-		//Loop through and make all icons grey except those that are selected
-	}*/
 }	
 
 function clearFilters()
