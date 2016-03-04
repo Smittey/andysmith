@@ -273,10 +273,17 @@ function init() {
         var html = '';
         $.each(json.topartists.artist, function(i, item) {
             
-			var songName = item.name;
+			/*var songName = item.name;
 			var url = item.url;
 
-			html += "<a href='" + url + "?date_preset=LAST_30_DAYS' target='_blank'>" + songName + "</a>, ";
+			html += "<a href='" + url + "?date_preset=LAST_30_DAYS' target='_blank'>" + songName + "</a>, ";*/
+			
+			var n = item.url.lastIndexOf('/');
+ 			var result = item.url.substring(n + 1);
+ 			var songName = item.name;
+ 			var url = item.url;
+  
+ 			html += "<a href='http://www.last.fm/user/Smitteyyyy/library/music/" + result + "?date_preset=LAST_30_DAYS' target='_blank'>" + item.name + "</a>, ";
         });
 		
 		//Strip out the final comma
@@ -479,7 +486,7 @@ function getNowPlaying()
 					//Does the return result match the same name as the previously changed song name? If not, we want to change the html to reflect the new song
 					if(songName != currentSongName)
 					{			
-						var html = 'Playing right now: <img src="img/sound-balance.gif"> ';
+						var html = 'Listening to right now: <img src="img/sound-balance.gif"> ';
 
 						var artist = item.artist['#text'];
 						var url = item.url;
