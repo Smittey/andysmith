@@ -1247,3 +1247,141 @@ p.text-muted span
 {
 	margin-top: 50px;
 }
+
+
+
+
+/*Start projects thumbnail section*/
+.grid {
+	padding: 20px 20px 50px 20px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+
+.grid li {
+	display: inline-block;
+	margin: 0;
+	padding: 20px;
+	position: relative;
+}
+
+.grid figure {
+	margin: 0;
+	position: relative;
+	width: auto;
+	display: inline-block;
+
+}
+
+.grid figure img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.grid figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0px;
+	background: rgba(44,63,82,0.8);/*#2c3f52;*/
+	color: #ddd;
+}
+
+.grid figcaption h3 {
+	margin: 0;
+	padding: 0;
+	color: #ddd;
+}
+
+.grid figcaption span:before {
+	content: '';
+}
+
+.grid figcaption a {
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 5px;
+	background: #ddd;
+	color: #4875b4;
+	text-decoration: none;
+}
+
+.grid figcaption .link 
+{
+	margin-top:20px;
+	clear:both;
+}
+
+.grid figcaption .desc 
+{
+	margin-top:20px;
+	clear:both;
+}
+
+.grid figcaption span {
+	/*padding-right:50px;*/
+
+}
+
+
+
+
+figcaption .details {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 10% 0 10%;
+}
+
+.cs-style-3 figure {
+	overflow: hidden;
+	position: relative;
+}
+
+.cs-style-3 figure img {
+	transition: transform 0.4s;
+}
+
+
+.cs-style-3 figure.cs-hover img {
+	transform: translateY(-50px);
+}
+
+.cs-style-3 figure:hover img {
+	transform:scale(1.1);
+    -ms-transform:scale(1.1); /* IE 9 */
+    -moz-transform:scale(1.1); /* Firefox */
+    -webkit-transform:scale(1.1); /* Safari and Chrome */
+    -o-transform:scale(1.1); /* Opera */
+}
+
+.cs-style-3 figcaption {
+	height: 100%;
+	width: 100%;
+	bottom: 0;
+	opacity: 0;
+	transform: translateY(100%);
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+	
+	  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  
+	text-align: center;
+}
+
+.cs-style-3 figure:hover figcaption,
+.cs-style-3 figure.cs-hover figcaption {
+	opacity: 1;
+	transform: translateY(0px);
+	transition: transform 0.4s, opacity 0.1s;
+}
+
+.cs-style-3 figcaption a {
+
+	/*position: absolute;
+	bottom: 10px;
+	right: 50px;*/
+}
