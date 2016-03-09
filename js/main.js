@@ -357,7 +357,7 @@ function init() {
 
 				$('.progress-bar').each(function(){
 					
-					var percentage = $(this).attr('percent');
+					var percentage = $(this).attr('data-percent');
 					$(this).html(percentage);
 					
 					/*$(this).progress({           
@@ -380,8 +380,8 @@ function init() {
 
 				$('.timer').each(function(){
 					
-					var max = $(this).attr('value');
-					var unit = $(this).attr('unit');
+					var max = $(this).attr('data-value');
+					var unit = $(this).attr('data-unit');
 						
 					$(this).countTo({           
 						from: 0,
