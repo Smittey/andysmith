@@ -1243,17 +1243,16 @@ p.text-muted span
 	padding:10px;
 }
 
-#projects-wrapper
-{
-	margin-top: 50px;
-}
+
+
+
 
 
 
 
 /*Start projects thumbnail section*/
 .grid {
-	padding: 20px 20px 50px 20px;
+	padding: 20px 40px 100px 20px;
 	margin: 0 auto;
 	list-style: none;
 	text-align: center;
@@ -1267,7 +1266,7 @@ p.text-muted span
 }
 
 .grid figure {
-	margin: 0;
+	margin: 20px;
 	position: relative;
 	width: auto;
 	display: inline-block;
@@ -1335,21 +1334,21 @@ figcaption .details {
   padding: 0 10% 0 10%;
 }
 
-.cs-style-3 figure {
+.cs-style figure {
 	overflow: hidden;
 	position: relative;
 }
 
-.cs-style-3 figure img {
+.cs-style figure img {
 	transition: transform 0.4s;
 }
 
 
-.cs-style-3 figure.cs-hover img {
+.cs-style figure.cs-hover img {
 	transform: translateY(-50px);
 }
 
-.cs-style-3 figure:hover img {
+.cs-style figure:hover img {
 	transform:scale(1.1);
     -ms-transform:scale(1.1); /* IE 9 */
     -moz-transform:scale(1.1); /* Firefox */
@@ -1357,7 +1356,7 @@ figcaption .details {
     -o-transform:scale(1.1); /* Opera */
 }
 
-.cs-style-3 figcaption {
+.cs-style figcaption {
 	height: 100%;
 	width: 100%;
 	bottom: 0;
@@ -1365,21 +1364,21 @@ figcaption .details {
 	transform: translateY(100%);
 	transition: transform 0.4s, opacity 0.1s 0.3s;
 	
-	  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
   
 	text-align: center;
 }
 
-.cs-style-3 figure:hover figcaption,
-.cs-style-3 figure.cs-hover figcaption {
+.cs-style figure:hover figcaption,
+.cs-style figure.cs-hover figcaption {
 	opacity: 1;
 	transform: translateY(0px);
 	transition: transform 0.4s, opacity 0.1s;
 }
 
-.cs-style-3 figcaption a {
+.cs-style figcaption a {
 
 	/*position: absolute;
 	bottom: 10px;
