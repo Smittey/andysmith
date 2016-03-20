@@ -1388,12 +1388,38 @@ figcaption .details {
 	right: 50px;*/
 }
 
-#contact-form
+@media (min-width: 450px) 
 {
-	width:50%;
-	margin:0 auto;
-	padding-top:50px;
+	#contact-form
+	{
+		width:95%;
+		margin:0 auto;
+		padding-top:50px;
+	}
 }
+
+
+@media (min-width: 750px) 
+{
+	#contact-form
+	{
+		width:75%;
+		margin:0 auto;
+		padding-top:50px;
+	}
+}
+
+
+@media (min-width: 1281px) 
+{
+	#contact-form
+	{
+		width:50%;
+		margin:0 auto;
+		padding-top:50px;
+	}
+}
+
 
 
 
