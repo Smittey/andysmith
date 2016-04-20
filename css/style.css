@@ -796,6 +796,8 @@ of those sections to manage the look and feel of the site. */
 	overflow:hidden;
 }
 
+#projects h3{ display:inline; !important}
+
 .stick 
 {
 	position:fixed;
