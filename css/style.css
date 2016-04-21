@@ -1512,3 +1512,42 @@ input:-webkit-autofill:active {
     -webkit-transition-delay: 9999s;
     -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
 }
+
+
+
+/*Projects start*/
+
+.container{
+  position: relative;
+  
+  
+  -webkit-backface-visibility: hidden;
+}
+
+#projects h3{ display:inline; !important}
+
+
+.container .mix{
+
+  display: none;
+}
+
+.label-web { 
+  color: #ffffff; 
+  background-color: #3168A3; 
+  border-color: #130269; 
+} 
+
+.label-apps { 
+  color: #ffffff; 
+  background-color: #54918C; 
+  border-color: #130269; 
+} 
+
+.label-music { 
+  color: #ffffff; 
+  background-color: #874587; 
+  border-color: #130269; 
+} 
+
+/*Projects end*/

@@ -20,25 +20,30 @@
 
 
 <div class="controls">
-  <label>Filter:</label>
-  
-  <button class="filter" data-filter=".web">Websites</button>
-  <button class="filter" data-filter=".apps">Applications</button>
-  <button class="filter" data-filter=".music">Music</button>
-  
+ 
   <button onclick="$('#Container').mixItUp('filter','')">Reset</button>
+
+
 </div>
 <div id="Container" class="container">
-  <div class="fail-message"><span>No items were found matching the current filters.</span></div>
   
-  
-  
-  
-  
+
   
 		<section id="projects" class="projects-section">
 			<div class="container-fluid">
 
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="category-heading" style="text-align:center">
+						
+  
+							<a class="filter" data-filter=".web" href="#/"><h3><span class="label label-default">Websites</span></h3></a>
+							<a class="filter" data-filter=".apps" href="#/"><h3><span class="label label-default">Applications</span></h3></a>
+							<a class="filter" data-filter=".music" href="#/"><h3><span class="label label-default">Music</span></h3></a>
+
+						</div>
+					</div>
+				</div>
   				<div class="row">
 					<div class="col-md-12">
 						<div class="grid cs-style">
@@ -129,19 +134,7 @@
 			</div>
 		</section>
   
-  <!--
-  
-  
-  <div class="mix category-1 category-2"></div>
-  <div class="mix category-2"></div>
-  <div class="mix category-1 category-2"></div>
-  <div class="mix category-1 category-3"></div>
-  <div class="mix category-3"></div>
-  
-  <div class="gap"></div>
-  <div class="gap"></div>
-  
-  -->
+ 
 </div>
 
 

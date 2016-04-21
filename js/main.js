@@ -772,7 +772,99 @@ function clearFilters()
  * End Timeline 
  ************************/
  
- // Floating label headings for the contact form
+ /************************
+ * Start projects 
+ ************************/
+
+$(document).ready(function() {
+	
+	//Filter by tags
+	$("#projects-tags-bar").on('click', '.projectTag', function() {			
+		filterProject(this);
+	});
+	
+});
+
+
+function filterProject(elem)
+{
+	if($(elem).hasClass("experienceItemSelected"))
+	{
+		$(elem).removeClass("experienceItemSelected");
+	}
+	else
+	{
+		$(elem).addClass("experienceItemSelected");
+	}
+	
+	//Return the tags currently selected
+	var filteredTags = $('#projects-tags-bar .experienceItemSelected').map(function(){ return "." + $(this).attr('class').split(' ')[0]; }).get().join();
+	
+	var filteredTagNames = $('#projects-tags-bar .experienceItemSelected').parent().parent().map(function(){ return $(this).attr("data-filter")}).get().join();
+	
+	//If no tags are selected, un-grey all of the menu tags by giving them the correct label class based on the name 
+	if(filteredTags == "")
+	{
+		$('#projects-tags-bar .projectTag').addClass (function (){
+			return 'label-' + $(this).attr('class').split(' ')[0].substr(0, $(this).attr('class').split(' ')[0].indexOf('Tag'));
+		});
+			
+		$('#Container').mixItUp('filter','.apps,.web,.music')
+	}
+	else
+	{
+		//Remove the colours from all tags at first
+		$('#projects-tags-bar .projectTag').removeClass (function (index, css) {
+		   return (css.match (/(^|\s)label-\S+/g) || []).join(' ');
+		});
+		
+		//Give all tags the grey colour
+		$('#projects-tags-bar .projectTag').addClass('label-grey');
+		
+		//Give the selected tag(s) colour
+		$('#projects-tags-bar .experienceItemSelected').addClass (function (){
+		   return 'label-' + $(this).attr('class').split(' ')[0].substr(0, $(this).attr('class').split(' ')[0].indexOf('Tag'));
+		});
+	}
+	
+	$('#Container').mixItUp('filter',filteredTagNames)
+	
+	
+}
+
+
+$(function(){
+	$('#Container').mixItUp({
+		load: 
+		{
+			filter: '.web, .apps, .music' 
+		},
+		controls: 
+		{
+			toggleFilterButtons: true,
+			toggleLogic: 'or'
+		},
+		callbacks: 
+		{
+			onMixEnd: function(state)
+			{
+				console.log(state.activeFilter)
+			}
+		}
+	});
+});
+
+
+
+ /************************
+ * End Projects 
+ ************************/
+ 
+ /************************
+ * Start Contact 
+ ************************/
+ 
+// Floating label headings for the contact form
 $(function() {
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
         $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
@@ -782,3 +874,7 @@ $(function() {
         $(this).removeClass("floating-label-form-group-with-focus");
     });
 });
+
+ /************************
+ * End Contact 
+ ************************/

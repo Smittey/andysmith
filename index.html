@@ -46,6 +46,8 @@
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 
 	<script type="text/javascript" src="js/main.js"></script>
+	<script src="http://cdn.jsdelivr.net/jquery.mixitup/2.0.4/jquery.mixitup.min.js"></script>
+
 
 	  
 </head>
@@ -572,114 +574,119 @@
 
 	    <!-- Projects Section -->
     <section id="projects" class="projects-section">
-        <div class="container-fluid">
+		<div id="Container" class="container">
 
-            <div class="row">
-                <div class="col-lg-12">
-					<div class="category-heading" style="text-align:center">
-						<div id="projects-heading" class="glyph">
-							<div class="glyph-icon flaticon-computer"><h3 class="aboutme-heading">Projects</h3></div>
+			<div class="container-fluid">
+
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="category-heading" style="text-align:center">
+							<div id="projects-heading" class="glyph">
+								<div class="glyph-icon flaticon-computer"><h3 class="aboutme-heading">Projects</h3></div>
+							</div>
 						</div>
 					</div>
 				</div>
-            </div>
-			<div class="row">
-                <div class="col-lg-12">
-					<div class="category-heading" style="text-align:center">
-					
-						<h3><span class="label label-default">Websites</span></h3>
-						<h3><span class="label label-default">Applications</span></h3>
-						<h3><span class="label label-default">Music</span></h3>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="category-heading" style="text-align:center">
+						
+							<div id="projects-tags-bar">
+								<a class="filter" data-filter=".web" href="#/"><h3><span class="webTag label label-web projectTag">Websites</span></h3></a>
+								<a class="filter" data-filter=".apps" href="#/"><h3><span class="appsTag label label-apps projectTag">Applications</span></h3></a>
+								<a class="filter" data-filter=".music" href="#/"><h3><span class="musicTag label label-music projectTag">Music</span></h3></a>
+							</div>
+						</div>
 					</div>
 				</div>
-            </div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="grid cs-style">
-						<figure>
-							<img src="http://andysmith.me/img/projects-littlefarnhampianists.jpg" alt="img01">
-							<figcaption>
-								<div class="details">
-									<h3>Hannah Hawley Piano</h3>
-									<div class="desc">							
-										<span>A website for a local music business</span>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="grid cs-style">
+							<figure class="mix web">
+								<img src="http://andysmith.me/img/projects-littlefarnhampianists.jpg" alt="img01">
+								<figcaption>
+									<div class="details">
+										<h3>Hannah Hawley Piano</h3>
+										<div class="desc">							
+											<span>A website for a local music business</span>
+										</div>
+										<div class="link">
+											<a href="http://www.littlefarnhampianists.co.uk/">Take a look</a>
+										</div>
 									</div>
-									<div class="link">
-										<a href="http://www.littlefarnhampianists.co.uk/">Take a look</a>
-									</div>
-								</div>
-							</figcaption>
-						</figure>
+								</figcaption>
+							</figure>
 
-						<figure>
-							<img src="http://andysmith.me/img/projects-mygymjournal.jpg" alt="img01">
-							<figcaption>
-								<div class="details">
-									<h3>My Gym Journal</h3>
-									<div class="desc">
-										<span>An application targetted at Android 2.2, designed to help bodybuilders keep track of their progress.</span>
+							<figure class="mix apps">
+								<img src="http://andysmith.me/img/projects-mygymjournal.jpg" alt="img01">
+								<figcaption>
+									<div class="details">
+										<h3>My Gym Journal</h3>
+										<div class="desc">
+											<span>An application targetted at Android 2.2, designed to help bodybuilders keep track of their progress.</span>
+										</div>
+										<div class="link">
+											<a href="https://play.google.com/store/apps/details?id=my.gym.journal">Take a look</a>
+										</div>
 									</div>
-									<div class="link">
-										<a href="https://play.google.com/store/apps/details?id=my.gym.journal">Take a look</a>
-									</div>
-								</div>
-							</figcaption>
-						</figure>
-
-
-						<figure>
-							<img src="img/projects-blog1.jpg" alt="img01">
-							<figcaption>
-								<div class="details">
-									<h3>My Blog</h3>
-									<div class="desc">							
-										<span>A blog by Andy Smith, a Software Developer based in the UK</span>
-									</div>
-									<div class="link">
-										<a href="http://www.smittey.co.uk/">Take a look</a>
-									</div>
-								</div>
-							</figcaption>
-						</figure>
-						
-						
-						<figure>
-							<img src="img/projects-slack.jpg" alt="img01">
-							<figcaption>
-								<div class="details">
-									<h3>Music Suggester for Slack</h3>
-									<div class="desc">							
-										<span>A slash command plugin for Slack which returns a list of similar artists</span>
-									</div>
-									<div class="link">
-										<a href="https://github.com/Smittey/Slack-apps">Take a look</a>
-									</div>
-								</div>
-							</figcaption>
-						</figure>
+								</figcaption>
+							</figure>
 
 
-						<figure>
-							<img src="img/projects-composition1.jpg" alt="img01">
-							<figcaption>
-								<div class="details">
-									<h3>Tempête</h3>
-									<div class="desc">							
-										<span>"Storm". A composition for piano</span>
+							<figure class="mix web">
+								<img src="img/projects-blog1.jpg" alt="img01">
+								<figcaption>
+									<div class="details">
+										<h3>My Blog</h3>
+										<div class="desc">							
+											<span>A blog by Andy Smith, a Software Developer based in the UK</span>
+										</div>
+										<div class="link">
+											<a href="http://www.smittey.co.uk/">Take a look</a>
+										</div>
 									</div>
-									<div class="link">
-										<a href="https://soundcloud.com/smitteyy/tempete">Take a look</a>
+								</figcaption>
+							</figure>
+							
+							
+							<figure class="mix apps">
+								<img src="img/projects-slack.jpg" alt="img01">
+								<figcaption>
+									<div class="details">
+										<h3>Music Suggester for Slack</h3>
+										<div class="desc">							
+											<span>A slash command plugin for Slack which returns a list of similar artists</span>
+										</div>
+										<div class="link">
+											<a href="https://github.com/Smittey/Slack-apps">Take a look</a>
+										</div>
 									</div>
-								</div>
-							</figcaption>
-						</figure>
-					</div>			
+								</figcaption>
+							</figure>
+
+
+							<figure class="mix music">
+								<img src="img/projects-composition1.jpg" alt="img01">
+								<figcaption>
+									<div class="details">
+										<h3>Tempête</h3>
+										<div class="desc">							
+											<span>"Storm". A composition for piano</span>
+										</div>
+										<div class="link">
+											<a href="https://soundcloud.com/smitteyy/tempete">Take a look</a>
+										</div>
+									</div>
+								</figcaption>
+							</figure>
+						</div>			
+					</div>
 				</div>
+
 			</div>
-
-        </div>
-
+		</div>
     </section> 
+
 	
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
