@@ -783,6 +783,7 @@ $(document).ready(function() {
 		filterProject(this);
 	});
 	
+
 });
 
 
@@ -802,7 +803,7 @@ function filterProject(elem)
 	
 	var filteredTagNames = $('#projects-tags-bar .experienceItemSelected').parent().parent().map(function(){ return $(this).attr("data-filter")}).get().join();
 	
-	//If no tags are selected, un-grey all of the menu tags by giving them the correct label class based on the name 
+	//If no tags are selected, un-grey all of the project tags by giving them the correct label class based on the name 
 	if(filteredTags == "")
 	{
 		$('#projects-tags-bar .projectTag').addClass (function (){
@@ -827,8 +828,8 @@ function filterProject(elem)
 		});
 	}
 	
-	$('#Container').mixItUp('filter',filteredTagNames)
-	
+	//Filter and move the tags based on the selection
+	$('#Container').mixItUp('filter', filteredTagNames)
 	
 }
 
@@ -848,10 +849,14 @@ $(function(){
 		{
 			onMixEnd: function(state)
 			{
-				console.log(state.activeFilter)
+				//console.log(state.activeFilter)
 			}
 		}
 	});
+	
+	//Initialise again to stop double-mixing
+	$('#Container').mixItUp('filter','.apps,.web,.music')
+
 });
 
 
