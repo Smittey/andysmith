@@ -967,6 +967,12 @@ of those sections to manage the look and feel of the site. */
   border-color: #130269; 
 } 
 
+.label-python { 
+  color: #ffffff; 
+  background-color: #557B87; 
+  border-color: #130269; 
+} 
+
 
 .complete
 {
