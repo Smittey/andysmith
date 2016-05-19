@@ -84,7 +84,10 @@ of those sections to manage the look and feel of the site. */
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	position: relative;
+	
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment:fixed;
 }
 
 #map-container 
