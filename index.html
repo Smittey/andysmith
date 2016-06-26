@@ -344,11 +344,11 @@
 							</div>
 						</div>
 						<div class="aboutme-info-container">
+							<p class="text-muted"><a href="http://smittey.co.uk/do-you-need-a-new-job/" target="_blank">Do you need a new job?</a></p>
 							<p class="text-muted"><a href="http://smittey.co.uk/using-meteor-offline/" target="_blank">Using Meteor Offline</a></p>
 							<p class="text-muted"><a href="http://smittey.co.uk/backend-vs-frontend-learning-curves/" target="_blank">Backend vs Frontend Learning Curves</a></p>
 							<p class="text-muted"><a href="http://smittey.co.uk/silicon-milkroundabout-11-round-up/" target="_blank">Silicon Milkroundabout 11 Round-up</a></p>
 							<p class="text-muted"><a href="http://smittey.co.uk/datarize-my-life/" target="_blank">Datarize My Life</a></p>
-							<p class="text-muted"><a href="http://smittey.co.uk/raspberry-pi-and-the-impulse-buy/" target="_blank">Raspberry Pi and the Impulse Buy</a></p>
 						</div>
 					</div>
 				</div>	
@@ -803,14 +803,17 @@
     </section> 
 	
 	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		var devCookie = "my websites cookie=123";
+		if (document.cookie.indexOf(devCookie) === -1) 
+		{
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		ga('create', 'UA-74354041-1', 'auto');
-		ga('send', 'pageview');
-
+			ga('create', 'UA-74354041-1', 'auto');
+			ga('send', 'pageview');
+		}
 	</script>
 	  
 </body>
