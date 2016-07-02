@@ -268,15 +268,14 @@ function init() {
 
  $(document).ready(function() {
 	
+    var html = '';
+	var musicFound = false;
+	
 	//Get top artists from lastfm account
 	$.getJSON("http://ws.audioscrobbler.com/2.0/?method=user.getTopArtists&user=smitteyyyy&period=1month&api_key=9ddaab7dc99dbcfb3f2ed8204ef965ce&limit=5&format=json&callback=?", function(json) {
-        var html = '';
         $.each(json.topartists.artist, function(i, item) {
-            
-			/*var songName = item.name;
-			var url = item.url;
-
-			html += "<a href='" + url + "?date_preset=LAST_30_DAYS' target='_blank'>" + songName + "</a>, ";*/
+			
+			musicFound = true;
 			
 			var n = item.url.lastIndexOf('/');
  			var result = item.url.substring(n + 1);
@@ -287,11 +286,43 @@ function init() {
         });
 		
 		//Strip out the final comma
-		html = html.substring(0, html.length - 2) + ".";
+		html = html.substring(0, html.length - 2) + '.';
 		
 		//Add result to page
-        $('#topArtists').append(html);
+		if(html.indexOf(",") > -1)
+		{
+			$('#topArtists').append(html);
+		}
+		
+		if(!musicFound)
+		{
+			$.getJSON("http://ws.audioscrobbler.com/2.0/?method=user.getTopArtists&user=smitteyyyy&period=3month&api_key=9ddaab7dc99dbcfb3f2ed8204ef965ce&limit=5&format=json&callback=?", function(json) {
+				html = '';
+
+				$.each(json.topartists.artist, function(i, item) {
+					
+					musicFound = true;
+					
+					var n = item.url.lastIndexOf('/');
+					var result = item.url.substring(n + 1);
+					var songName = item.name;
+					var url = item.url;
+		  
+					html += "<a href='http://www.last.fm/user/Smitteyyyy/library/music/" + result + "?date_preset=LAST_90_DAYS' target='_blank'>" + item.name + "</a>, ";
+				});
+				
+				//Strip out the final comma
+				html = html.substring(0, html.length - 2) + '.';
+				
+				//Add result to page
+				$('#topArtists').append(html);
+			
+			});
+		}
     });
+	
+	
+	
 	
 	
 	//If applicable, get the track that I'm currently listening to.
