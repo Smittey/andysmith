@@ -983,6 +983,25 @@ of those sections to manage the look and feel of the site. */
   border-color: #130269; 
 } 
 
+.label-meteorjs { 
+  color: #ffffff; 
+  background-color: #424242; 
+  border-color: #130269; 
+} 
+
+.label-elasticsearch { 
+  color: #ffffff; 
+  background-color: #24BBB1; 
+  border-color: #130269; 
+} 
+
+.label-mongodb { 
+  color: #ffffff; 
+  background-color: #52B441; 
+  border-color: #130269; 
+} 
+
+
 
 .complete
 {
