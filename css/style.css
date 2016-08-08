@@ -834,7 +834,7 @@ of those sections to manage the look and feel of the site. */
 .label-html 
 { 
   color: #ffffff; 
-  background-color: #674587; 
+  background-color: #E44D26; 
   border-color: #130269; 
 } 
 
@@ -848,75 +848,75 @@ of those sections to manage the look and feel of the site. */
 .label-javascript 
 { 
   color: #ffffff; 
-  background-color: #FFB700; 
+  background-color: #F0DB4F; 
   border-color: #130269; 
 } 
 
 .label-css 
 { 
   color: #ffffff; 
-  background-color: #877445; 
+  background-color: #0070BA; 
   border-color: #130269; 
 }
 
 .label-jekyll 
 { 
   color: #ffffff; 
-  background-color: #457F87; 
+  background-color: #DE4C4D; 
   border-color: #130269; 
 } 
 
 .label-markdown { 
   color: #ffffff; 
-  background-color: #1B49BD; 
+  background-color: #000000; 
   border-color: #130269; 
 } 
 
 .label-java 
 { 
   color: #ffffff; 
-  background-color: #DDE089; 
+  background-color: #EA2D2F; 
   border-color: #130269; 
 } 
 
 .label-documentum 
 { 
   color: #ffffff; 
-  background-color: #BD0000; 
+  background-color: #378FCE; 
   border-color: #130269; 
 } 
 
 .label-xcp 
 { 
   color: #ffffff; 
-  background-color: #B4D687; 
+  background-color: #0FC2B0; 
   border-color: #130269; 
 } 
 
 .label-agile 
 { 
   color: #ffffff; 
-  background-color: #00BD42; 
+  background-color: #245BA7; 
   border-color: #130269; 
 } 
 
 .label-svn 
 { 
   color: #ffffff; 
-  background-color: #87D6CB; 
+  background-color: #809CC8; 
   border-color: #130269; 
 } 
 
 .label-android 
 { 
   color: #ffffff; 
-  background-color: #90E864; 
+  background-color: #A4CA39; 
   border-color: #130269; 
 } 
 
 .label-mysql { 
   color: #ffffff; 
-  background-color: #2E78B8; 
+  background-color: #E58E00; 
   border-color: #130269; 
 } 
 
@@ -924,62 +924,62 @@ of those sections to manage the look and feel of the site. */
 .label-shell 
 { 
   color: #ffffff; 
-  background-color: #5AC7B5; 
+  background-color: #05BA05; 
   border-color: #130269; 
 } 
 
 .label-jenkins 
 { 
   color: #ffffff; 
-  background-color: #B85A2E; 
+  background-color: #D33833; 
   border-color: #130269; 
 } 
 
 .label-oracle 
 { 
   color: #ffffff; 
-  background-color: #B1A3C4; 
+  background-color: #FF0000; 
   border-color: #130269; 
 } 
 
 .label-junit 
 { 
   color: #ffffff; 
-  background-color: #08635B; 
+  background-color: #1F8C00; 
   border-color: #130269; 
 } 
 
 .label-jmock 
 { 
   color: #ffffff; 
-  background-color: #370863; 
+  background-color: #826565; 
   border-color: #130269; 
 } 
 
 .label-hpqualitycenter 
 { 
   color: #ffffff; 
-  background-color: #630808; 
+  background-color: #630808; /*004E90*/
   border-color: #130269; 
 } 
 
 .label-php 
 { 
   color: #ffffff; 
-  background-color: #467042; 
+  background-color: #617CBE; 
   border-color: #130269; 
 }
 
 .label-git 
 { 
   color: #ffffff; 
-  background-color: #70426D; 
+  background-color: #F34F29; 
   border-color: #130269; 
 } 
 
 .label-python { 
   color: #ffffff; 
-  background-color: #557B87; 
+  background-color: #FFD639; 
   border-color: #130269; 
 } 
 
