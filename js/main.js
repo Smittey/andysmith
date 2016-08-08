@@ -266,6 +266,17 @@ function init() {
  * Start About me
  ************************/
 
+ 
+ $( document ).ready(function() {
+    var heights = $(".skills-section .aboutme-info-container").map(function() {
+        return $(this).height();
+    }).get(),
+
+    maxHeight = Math.max.apply(null, heights);
+
+    $(".skills-section .aboutme-info-container").height(maxHeight);
+});
+
  $(document).ready(function() {
 	
     var html = '';
@@ -389,12 +400,9 @@ function init() {
 				$('.progress-bar').each(function(){
 					
 					var percentage = $(this).attr('data-percent');
-					$(this).html(percentage);
-					
-					/*$(this).progress({           
-						percentage: percentage,
-						speed: 2500,
-					});*/
+					var description = $(this).attr('description');
+                    
+					$(this).html(percentage + ' - ' + description);
 					
 					$(this).animate({
 						width: percentage
