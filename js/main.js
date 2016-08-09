@@ -564,13 +564,11 @@ $(document).ready(function() {
 		$(this).parent().closest('.experienceBlockHead').find('.timeline-image').css({'border': ''})}
 	);*/
 	
-
 	//If the users window is smaller than 600 pixels, give the timeline sticker an overflow property so that the tags will wrap/all be seen at once
-	if($(window).height() <  600)
+	/*if($(window).height() <  500)
 	{
 		$('#sticker').addClass('div-overflow');
-	}
-	
+	}*/
 
 	//Filter by tags
 	$("#sideBar").on('click', '.skillTag', function() {			
@@ -584,10 +582,8 @@ $(document).ready(function() {
 
 	
 	$(window).on('resize', function(){
-		//var win = $(this); //this = window
 		sticker = $("#sticker");
-		topOfSidebar = $('#sticker').offset().top - 100;
-	
+		topOfSidebar = $('#sticker').offset().top - 100;	
 	});
 
 	$(window).scroll(function() {
@@ -674,8 +670,9 @@ function move(elem)
 		
 		//Move/fade skill into the menu. thread timeout needed to nicely update the UI. Moved the fading action into a separate method for easier viewing
 		setTimeout(function () {
-			fade(skillTag);
+			fade(skillTag);         
 		}, index*400);
+        
 	});
 }
 
@@ -689,9 +686,13 @@ function fade(elem)
 	{ 
 		var clone = $(elem).clone();
 		
-		if($(window).height() < 600)
+		if($(window).height() - 100 < $('#sticker').height())
 		{
 			clone.addClass('span-tag-Inline');
+            
+            $('#sideBar .skillTag').addClass('span-tag-Inline');
+            $('#sticker').addClass('div-overflow');
+
 		}
 		
 		//Make a duplicate of the element as we don't want the element to actually move, but replicated. Make it into a link so that the filter can be selected
