@@ -41,7 +41,7 @@ body {
 }
 
 .bg-img-1 {
-  background: url("http://coderthemes.com/metrico_1.3/images/bg-2.jpg") center;
+  background: url("../img/bg.jpg") center;
   position: relative;
   background-size: cover;
 }
