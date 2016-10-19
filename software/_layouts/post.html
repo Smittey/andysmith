@@ -1,0 +1,73 @@
+---
+layout: default
+---
+ 
+
+<section class="section-lg home-alt bg-img-1">
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-sm-offset-1">
+                <div class="home-wrapper text-center">
+                    <p id="category" class="text-muted">Plugins</p>
+                    <h1>View on White Pages</h1>
+                    <p id="description" class="text-muted">A Microsoft Outlook plugin to allow you to right-click on a contact to take you straight to their Intranet page</p>
+                    <a href="#" class="download-btn btn btn-custom">Download latest version</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-offset-3">
+                <div class="information-box text-center">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2>{{ page.version }}</h2>
+                            <p class="text-muted">Release</p>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <h2>5</h2>  
+                            <p class="text-muted">Downloads</p>
+                        </div>
+
+                    </div>                                                  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="clearfix"></div>
+
+
+<section id="versions-table">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">    
+            
+                {{ content }}
+
+                <div class="signature-container">
+                    <img class="avatar img-circle" src="http://www.gravatar.com/avatar/2336ccd6a816e8582b8e9770f3eacadd?s=150"/>
+                    <br/>
+                    <a href="https://ko-fi.com/A14212M" target='_blank' class="btn btn-custom"><i class="fa fa-coffee" aria-hidden="true"></i> Buy Me a Coffee</a>
+                    <!--<a href='https://ko-fi.com/A14212M' target='_blank'><img height='32' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=a' border='0' alt='Buy Me a Coffee' /></a>--> 
+                </div>
+            </div>
+			<div style="clear: both;"></div>
+
+			<div class="divider"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $('div.tables-begin').nextUntil('div.tables-end', 'table').addClass('table table-hover table-striped');
+    $('.table thead').addClass('thead-inverse');
+</script>

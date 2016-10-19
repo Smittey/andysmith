@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Return Rambling</title>
+    <description></description>
+    <link>http://Smittey.co.uk</link>
+    <atom:link href="http://Smittey.co.uk/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+		<author>Andy Smith</author>
+        <title>View on White Pages</title>
+        <description>&lt;div class=&quot;tables-begin&quot;&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 16 Oct 2016 00:00:00 +0100</pubDate>
+        <link>http://Smittey.co.uk/view-on-white-pages/</link>
+        <guid isPermaLink="true">http://Smittey.co.uk/view-on-white-pages/</guid>
+      </item>
+    
+  </channel>
+</rss>

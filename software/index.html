@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<!-- Page Header -->
+<section class="section-lg home-alt bg-img-1" style="background-image: url('/{{ site.img }}/indexbg.jpg')">
+    <!--<div class="bg-overlay"></div>-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-sm-offset-1">
+                <div class="home-wrapper text-center">
+                    <h1>Software</h1>
+                    <p id="description" class="text-muted">Projects created and maintained by Andy Smith that unfortunately cannot be open sourced </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="clearfix"></div>
+
+<div id="wrapper" class="grid clearfix">
+ 
+
+    <ol id="repos">
+        {% for post in site.posts %}
+            <li class="repo grid-4">
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                    <h2>{{ post.title }}</h2>
+                    <h3>{{ post.tags }}</h3>
+                    <p class="index-subtitle">{{ post.sub-title }}</p>
+                    <p>Version: {{ post.version }} | Updated on:{{ post.updated-on }} | Contributors: {{ post.contributors }}</p>
+                </a>
+            </li>
+        {% endfor %}
+    </ol>
+</div>
+
+
