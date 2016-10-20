@@ -4,5 +4,5 @@ img: "img"
 js: "js"
 css: "css"
 #url: "#"
-permalink: "/:title"
+permalink: "/:title/"
 parse_block_html: true
