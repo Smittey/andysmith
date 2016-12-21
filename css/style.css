@@ -79,7 +79,7 @@ of those sections to manage the look and feel of the site. */
     height: 100%;
 	width:100%;
     text-align: center;
-	background-image: url('https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xap1/n31.0-8/54901_10151462824973619_1281853463_o.jpg');
+	background-image: url('../img/landing2.jpg');
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
