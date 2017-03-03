@@ -1001,7 +1001,35 @@ of those sections to manage the look and feel of the site. */
   border-color: #130269; 
 } 
 
+.label-hadoop { 
+  color: #ffffff; 
+  background-color: #D3E356; 
+  border-color: #130269; 
+} 
 
+.label-accumulo { 
+  color: #ffffff; 
+  background-color: #383837; 
+  border-color: #130269; 
+} 
+
+.label-kafka { 
+  color: #ffffff; 
+  background-color: #797A71; 
+  border-color: #130269; 
+} 
+ 
+ .label-spark { 
+  color: #ffffff; 
+  background-color: #CC8406; 
+  border-color: #130269; 
+} 
+ 
+ .label-bigdata { 
+  color: #ffffff; 
+  background-color: #253266; 
+  border-color: #130269; 
+} 
 
 .complete
 {
