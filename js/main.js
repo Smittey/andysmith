@@ -84,9 +84,9 @@ google.maps.event.addDomListener(window, 'load', init);
 var map;
 
 function init() {
-	var mapOptions = {
-		center: new google.maps.LatLng(51.46, -0.14),
-		zoom: 10,
+	var mapOptions = {		
+		center: new google.maps.LatLng(51.46,-0.14),
+		zoom: 12,
 		zoomControl: false,
 		disableDoubleClickZoom: true,
 		mapTypeControl: true,
@@ -198,7 +198,7 @@ function init() {
 	}
 	var mapElement = document.getElementById('map');
 	var map = new google.maps.Map(mapElement, mapOptions);
-	var locations = [['Farnham, Surrey', 'undefined', '', '', 'undefined', 51.2093233,  -0.8230903, 'https://mapbuildr.com/assets/img/markers/solid-pin-blue.png']];
+	var locations = [['Clapham, London', 'undefined', '', '', 'undefined', 51.46, -0.14, 'https://mapbuildr.com/assets/img/markers/solid-pin-blue.png']];
 	for (i = 0; i < locations.length; i++) 
 	{
 		if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
