@@ -85,7 +85,7 @@ var map;
 
 function init() {
 	var mapOptions = {		
-		center: new google.maps.LatLng(51.46,-0.14),
+		center: new google.maps.LatLng(51.498736, -0.069128),
 		zoom: 12,
 		zoomControl: false,
 		disableDoubleClickZoom: true,
