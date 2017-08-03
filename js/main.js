@@ -198,7 +198,7 @@ function init() {
 	}
 	var mapElement = document.getElementById('map');
 	var map = new google.maps.Map(mapElement, mapOptions);
-	var locations = [['Clapham, London', 'undefined', '', '', 'undefined', 51.46, -0.14, 'https://mapbuildr.com/assets/img/markers/solid-pin-blue.png']];
+	var locations = [['Bermondsey, London', 'undefined', '', '', 'undefined', 51.498736, -0.069128, 'https://mapbuildr.com/assets/img/markers/solid-pin-blue.png']];
 	for (i = 0; i < locations.length; i++) 
 	{
 		if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
