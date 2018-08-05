@@ -237,7 +237,7 @@ html, body {
 
 .mdl-layout__header {
     z-index: 1;
-    height: 70%;
+    height: 80%;
     background: url(../../images/landing.jpg) center;
     position: relative;
     background-size: cover;
@@ -465,8 +465,8 @@ a.gh:hover
 }*/
 
 
-#interests-container {
-    height:100%;
+#interests-container .mdl-card {
+    justify-content: center;
 }
 
 #interests-container .mdl-grid {
