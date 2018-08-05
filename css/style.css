@@ -831,6 +831,18 @@ of those sections to manage the look and feel of the site. */
   border-color: #130269; 
 }
 
+.label-dotnet { 
+  color: #ffffff; 
+  background-color: #611BBD; 
+  border-color: #130269; 
+} 
+
+.label-vsts { 
+  color: #ffffff; 
+  background-color: #1B43BD; 
+  border-color: #130269; 
+} 
+
 .label-html 
 { 
   color: #ffffff; 
@@ -920,6 +932,11 @@ of those sections to manage the look and feel of the site. */
   border-color: #130269; 
 } 
 
+.label-sql { 
+  color: #ffffff; 
+  background-color: #E58E00; 
+  border-color: #130269; 
+} 
 
 .label-shell 
 { 
