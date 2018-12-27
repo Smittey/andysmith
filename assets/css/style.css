@@ -17,39 +17,39 @@ body {
   padding-bottom:30px;
 }
 
-#sectionContact {
+#contact {
   background: #EEF9E9;
 }
 
-#sectionPosts {
+#posts {
   background: #D0DBE1;
 }
 
-#sectionTestimonials {
+#testimonials {
   background: #FFE6E6;
 }
 
-#sectionProjects {
+#projects {
   background: #F4F0EB;
 }
 
-#sectionExperience {
+#experience {
   background: #F0FCFF;
 }
 
-#sectionAbout {
+#about {
   padding-top:25px;
   padding-bottom:70px; 
   max-width: 900px;
 }
 
-#sectionAbout h2 {
+#about h2 {
     font-size: 24px;
     text-align: left;
     padding-left: 50px;
 }
 
-#sectionAbout .row {
+#about .row {
   margin-right: 0px !important;
   margin-left: 0px !important;
 }
