@@ -1,902 +1,836 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
+    <title>andysmith.me</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The portfolio of Andy Smith, a Software Developer based in the UK">
-    <meta name="author" content="Andy Smith">
-	<meta name="keywords" content="Andy,Smith,Software,Developer,Engineer,Programmer,Coder,designer,Java,JavaScript,portfolio,cv,PHP,MySQL,Git,Subversion">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://andysmith.me/js/jquery.easing.min.js"></script>
 
-    <title>AndySmith.me</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVgsu4XofoejLg8cOnAHTTi7lh8cZLR3Q"></script>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
-    <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
-	
-	<link rel="stylesheet" href="css/animate.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-	<link rel="stylesheet" type="text/css" href="css/flaticon.css"> 
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-	
-    <!-- jQuery -->
-    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Scrolling Nav JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
-	  	  
-	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVgsu4XofoejLg8cOnAHTTi7lh8cZLR3Q"></script>
-
-	<script type="text/javascript" src="js/main.js"></script>
-	<script src="http://cdn.jsdelivr.net/jquery.mixitup/2.0.4/jquery.mixitup.min.js"></script>
-
-
-	  
-</head>
-
-<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid" style="margin:0 50px 0 50px">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>					
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">AndySmith.me</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#skills">Skills</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#experience">Experience</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>                    
-                </ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-                        <a href="misc/andy-smith-cv.pdf" target="_blank"><i class="fa fa-file-text-o"></i> CV</a>
-                    </li>
-                    <li>
-                        <a href="http://www.smittey.co.uk">Blog</a>
-                    </li>
-                </ul>
-            </div>
-			
-
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script src="assets/js/main.js"></script>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a onclick="trackAnalytics('Top Nav Section', 'Anchor Link', 'Home');" class="navbar-brand" href="#">andysmith.me</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarsExample04" style="">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a onclick="trackAnalytics('Top Nav Section', 'Anchor Link', 'About');" class="nav-link page-scroll" href="#sectionAbout">About</a>
+          </li>
+          <li class="nav-item">
+            <a onclick="trackAnalytics('Top Nav Section', 'Anchor Link', 'Experience');" class="nav-link page-scroll" href="#sectionExperience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a onclick="trackAnalytics('Top Nav Section', 'Anchor Link', 'Projects');" class="nav-link page-scroll" href="#sectionProjects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a onclick="trackAnalytics('Top Nav Section', 'Anchor Link', 'Posts');" class="nav-link page-scroll" href="#sectionPosts">Posts</a>
+          </li>
+          <li class="nav-item">
+            <a onclick="trackAnalytics('Top Nav Section', 'Anchor Link', 'Testimonials');" class="nav-link page-scroll" href="#sectionTestimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a onclick="trackAnalytics('Top Nav Section', 'Anchor Link', 'Contact');" class="nav-link page-scroll" href="#sectionContact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
+    <header class="masthead text-center text-white d-flex">
+      <div id="header-title">
+        <h1>Andy Smith</h1>
+        <h3>Senior Software Engineer</h3>
+      </div>
+      <div id="header-info">
+        <ul class='fa-ul'>
+          <li>
+            <i class="fa fa-fw fa-user"></i>
+            <a onclick="trackAnalytics('Header Section', 'Anchor Link', 'About');" class="page-scroll" href="#sectionAbout">Andy Smith</a>
+          </li>
+          <li>
+            <i class="fa fa-fw fa-briefcase"></i>
+            <a onclick="trackAnalytics('Header Section', 'Anchor Link', 'Experience');" class="page-scroll" href="#sectionExperience">Senior Software Engineer</a>
+          </li>
+          <li>
+            <i class="fa fa-fw fa-map-marker"></i>
+            Bermondsey, London
+          </li>
+          <li>
+            <i class="fa fa-fw fa-envelope"></i>
+            <a onclick="trackAnalytics('Header Section', 'External Link', 'Contact');" href="mailto:hello@andysmith.me?Subject=Work-for-me" target="_top">hello@andysmith.me</a>
+          </li>
+        </ul>
+      </div>
 
-    <!-- Intro Section -->
-    <div id="intro" class="intro-section">
-		<div id="profile-card">
+      <div class="bg-overlay"></div>
+    </header>
+    <!-- About section -->
+    <div id="sectionAbout" class="container-fluid" style="padding-top:25px;padding-bottom:70px; max-width: 900px;">
+      <div class="row justify-content-center">
+        <div class="text-center about-container">
+          <div class="avatar">
+            <img src="assets/images/gravitar3.jpg" title="Andy Smith Photo">
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="about-title">
+                <h2>Hi, i’m Andy!</h2>
+                <svg class="title-underline" width="62px" height="3px" viewBox="0 0 62 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                    <g id="Artboard" transform="translate(-450.000000, -1171.000000)" stroke="#3E93E2" stroke-width="3">
+                      <path d="M452,1172.5 L510,1172.5" id="Line-2"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="about-text">
+                <p>Programmer. Pianist. Walking, talking IMDB. Traveller. Wannabe 80's keytar rockstar.</p>
+                <p>Born in Newcastle-upon Tyne, Tyne and Wear - currently living in Bermondsey, London. '14 Graduate of Newcastle University.</p>
+                <p>Addicted to technology, podcasts, travelling, Icelandic music, world food, TV & film, mechanical keyboards.</p>
+                <p id="topArtists" class="text-muted">Current top artists: </p>
+                <p id="currentlyListeningTo" class="text-muted">.</p>
+                <p>Seeking new and interesting opportunities, to network with other like-minded individuals, and to explore and develop my interests.</p>
+                <p>Stop by and <a onclick="trackAnalytics('About Me Section', 'Anchor Link', 'Contact');" href="#sectionContact" class="page-scroll">say hi</a></p>
+              </div>
+              <div class="about-icons">
+                <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - Github');" href="http://github.com/Smittey" target="_blank"> <img class="social-media-icon svg" src="assets/images/github-icon.svg"> </a>
+                <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - Stackoverflow');" href="http://stackoverflow.com/users/1295906/smittey" target="_blank"> <img class="social-media-icon svg" src="assets/images/stackoverflow-icon.svg"> </a>
+                <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - LinkedIn');" href="https://www.linkedin.com/in/smittey" target="_blank"> <img class="social-media-icon svg" src="assets/images/linkedin-icon.svg"> </a>
+                <i class="fas fa-circle"></i>
+                <a onclick="trackAnalytics('About Me Section', 'Anchor Link', 'Professional - Contact');" href="#sectionContact" class="page-scroll"> <img class="social-media-icon svg" src="assets/images/email-icon.svg"> </a>
+                <a onclick="trackAnalytics('About Me Section', 'External Link', 'Professional - Google CV');" href="https://docs.google.com/document/d/1bWrA-LyPgv2Q9XFgJeQ_BWOxwn3L3bRpdO0YLFuT6rA/edit?usp=sharing" target="_blank"> <img class="social-media-icon svg" src="assets/images/download-cv-icon.svg"> </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div id="interests-container">
+                <div class="about-title">
+                  <h2>… I’m interested in</h2>
+                  <svg class="title-underline" width="62px" height="3px" viewBox="0 0 62 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                      <g id="Artboard" transform="translate(-450.000000, -1171.000000)" stroke="#3E93E2" stroke-width="3">
+                        <path d="M452,1172.5 L510,1172.5" id="Line-2"></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <div class="interests-wrapper">
+                  <div class="box a">
+                    <div class="glyphs">
+                      <div id="weights" class="glyph">
+                        <div class="glyph-icon-large flaticon-dumbbell"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box b">
+                    <div class="glyphs">
+                      <div id="weights" class="glyph">
+                        <div class="glyph-icon-large flaticon-drink"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box c">
+                    <div class="glyphs">
+                      <div id="weights" class="glyph">
+                        <div class="glyph-icon-large flaticon-cup-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box d">
+                    <div class="glyphs">
+                      <div id="weights" class="glyph">
+                        <div class="glyph-icon-large flaticon-transport"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box e">
+                    <div class="glyphs">
+                      <div id="weights" class="glyph">
+                        <div class="glyph-icon-large flaticon-music-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box f">
+                    <div class="glyphs">
+                      <div id="weights" class="glyph">
+                        <div class="glyph-icon-large flaticon-moon"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box d">
+                    <div class="glyphs">
+                      <div id="weights" class="glyph">
+                        <div class="glyph-icon-large flaticon-music"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box e">
+                    <div class="glyphs">
+                      <div id="weights" class="glyph">
+                        <div class="glyph-icon-large flaticon-moon"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box f">
+                    <div class="glyphs">
+                      <div id="weights" class="glyph">
+                        <div class="glyph-icon-large flaticon-ice"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Experience section -->
+    <div id="sectionExperience" class="container-fluid" style="padding-top:30px; padding-bottom:30px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-title">
+              <h4>... I've worked at</h4>
+              <svg class="title-underline" width="62px" height="3px" viewBox="0 0 62 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                  <g id="Artboard" transform="translate(-450.000000, -1171.000000)" stroke="#3E93E2" stroke-width="3">
+                    <path d="M452,1172.5 L510,1172.5" id="Line-2"></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sectionWrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="sticky">
+            <span class="filterText">Filter <a href="javascript:void(0)" onClick="clearFilters()">(clear)</a></span>
+          </div>
+          <div class="col-md-12">
+            <div class="main-timeline">
 
-				<div class="about-info">
-					<div class="info-title">
-						<p class="icon"><i class="fa fa-fw fa-user"></i></p>
-						<p class="icon"><i class="fa fa-fw fa-briefcase"></i></p>
-						<p class="icon"><i class="fa fa-fw fa-map-marker"></i></p>
-						<p class="icon"><i class="fa fa-fw fa-envelope"></i></p>
-					</div> 
-					<div class="info-details">
-						<p class="info"><a class="page-scroll" href="#about">Andy Smith</a></p>
-						<p class="info"><a class="page-scroll" href="#experience">Full-Stack Software Engineer</a></p>
-						<p class="info"><a class="aboutme-location-link page-scroll" href='#'>Bermondsey, London</a></p>
-						<p class="info"><a href="mailto:hello@andysmith.me?Subject=Work-for-me" target="_top">hello@andysmith.me</a></p>
-					</div>	
-				</div>
-		</div>
-		
-		<div id="map-container">
-			<div id="map"></div>
-		</div>
+              <div class="timeline wow bounceInLeft">
+                <div class="timeline-content">
+                  <img src="assets/images/logo-anddigital.jpg" class="corner-logo">
+                  <span class="post">AND Digital, Senior Product Developer</span>
+                  <span>November 2018</span>
+                  <p class="description">Senior developer on a project in Open Banking, developing the client customer-facing API.
+                  </p>
+                  <span class="badge badge-secondary">Node.js</span>
+                  <span class="badge badge-secondary">AWS</span>
+                  <span class="badge badge-secondary">Docker</span>
+                </div>
+              </div>
 
+              <div class="timeline wow bounceInLeft">
+                <div class="timeline-content">
+                  <img src="assets/images/logo-anddigital.jpg" class="corner-logo">
+                  <span class="post">AND Digital, Product Developer and Team Lead</span>
+                  <span>August 2018</span>
+                  <p class="description">Team lead and senior engineer developing new features as well as enhancing existing features in the client customer-facing website. 
+                  </p>
+                  <span class="badge badge-secondary">Java</span>
+                  <span class="badge badge-secondary">SQL</span>
+                  <span class="badge badge-secondary">WebLogic</span>
+                  <span class="badge badge-secondary">JavaScript</span>                 
+                </div>
+              </div>              
+
+              <div class="timeline wow bounceInLeft">
+                <div class="timeline-content">
+                  <img src="assets/images/logo-anddigital.jpg" class="corner-logo">
+                  <span class="post">AND Digital, Product Developer and Team Lead</span>
+                  <span>May 2018</span>
+                  <p class="description">Team lead and senior engineer developing a clients API
+                    Worked closely with clients to re-implement their legacy API in their new core platform.
+                  </p>
+                  <span class="badge badge-secondary">.Net</span>
+                  <span class="badge badge-secondary">SQL</span>
+                  <span class="badge badge-secondary">VSTS</span>
+                </div>
+              </div>
+              <div class="timeline wow bounceInRight">
+                <div class="timeline-content">
+                  <img src="assets/images/logo-cgi1.png" class="corner-logo">
+                  <span class="post">CGI, Software Developer</span>
+                  <span>May 2016</span>
+                  <p class="description">Worked as a software engineer on a tech-refresh project. 
+                    Core developer, contributing to low-level designs both in software and data modelling, and maintining quality control through various forms of testing.
+                  </p>
+                  <span class="badge badge-secondary">Java</span>
+                  <span class="badge badge-secondary">Accumulo</span>
+                  <span class="badge badge-secondary">Hadoop</span>
+                  <span class="badge badge-secondary">Kafka</span>
+                  <span class="badge badge-secondary">Spark</span>
+                  <span class="badge badge-secondary">Big Data</span>
+                </div>
+              </div>
+              <div class="timeline wow bounceInLeft">
+                <div class="timeline-content">
+                  <img src="assets/images/logo-cgi1.png" class="corner-logo">
+                  <span class="post">CGI, UI Lead</span>
+                  <span>May 2016</span>
+                  <p class="description">I worked as a UI lead on a proof-of-concept project
+                    My responsibilities included leading the UI development (client-side and server-side), ensuring quality control, and front-end component design and integration.
+                  </p>
+                  <span class="badge badge-secondary">HTML</span>
+                  <span class="badge badge-secondary">JavaScript</span>
+                  <span class="badge badge-secondary">MeteorJS</span>
+                  <span class="badge badge-secondary">MongoDB</span>
+                  <span class="badge badge-secondary">Node.js</span>
+                  <span class="badge badge-secondary">ElasticSearch</span>
+                  <span class="badge badge-secondary">CSS</span>
+                </div>
+              </div>
+              <div class="timeline wow bounceInRight">
+                <div class="timeline-content">
+                  <img src="assets/images/logo-cgi1.png" class="corner-logo">
+                  <span class="post">CGI, Full-Stack Developer</span>
+                  <span>July 2014</span>
+                  <p class="description">The only full-stack software developer on a project in the Justice sector.
+                    I was involved with many phases of the project life-cycle including design, development and integration, and testing. Since starting on the project I have taken ownership of several areas of a complex system and constantly strive to learn more and take my skills further.
+                  </p>
+                  <span class="badge badge-secondary">Java</span>
+                  <span class="badge badge-secondary">Documentum</span>
+                  <span class="badge badge-secondary">XCP 2.1</span>
+                  <span class="badge badge-secondary">JavaScript</span>
+                  <span class="badge badge-secondary">CSS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Projects section -->
+    <div id="sectionProjects" class="container-fluid" style="padding-top:30px;padding-bottom:30px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-title">
+              <h4>... I've made</h4>
+              <svg class="title-underline" width="62px" height="3px" viewBox="0 0 62 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                  <g id="Artboard" transform="translate(-450.000000, -1171.000000)" stroke="#3E93E2" stroke-width="3">
+                    <path d="M452,1172.5 L510,1172.5" id="Line-2"></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- About Section -->	
-    <section id="about" class="about-section">
-        <div class="container-fluid">			
-
-            <div class="row">
-				<div class="col-md-4">
-					<div class="welll">
-						<div class="cont">
-							<img class="img-responsive" style="margin: 0 auto" alt="Me" src="img/gravitar3.jpg"/>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4">
-					<div class="welll" style="overflow: hidden;">
-			
-						<div class="category-heading">
-							<div id="aboutme" class="glyph">
-								<div class="glyph-icon flaticon-shapes"><h3 class="aboutme-heading">About Me </h3> </div>									
-							</div>
-						</div>
-					
-						<div id="aboutme-text-content">
-							
-							<div id="aboutme-picture"></div>
-
-							<div class="aboutme-info-container">
-								<p class="text-muted">
-									Hi, I'm Andy. 
-								</p>
-								<p class="text-muted">
-									Programmer. Pianist. Walking, talking IMDB. Traveller. Wannabe 80's keytar rockstar.  
-								</p>
-								<p class="text-muted">
-									Born in <a href="https://en.wikipedia.org/wiki/Newcastle_upon_Tyne" target="_blank">Newcastle-upon Tyne, Tyne and Wear</a> - currently living in <a href="https://en.wikipedia.org/wiki/Bermondsey" target="_blank">Bermondsey, London</a>. '14 Graduate of Newcastle University.
-								</p>
-								<p class="text-muted">
-									Addicted to technology, podcasts, travelling, Icelandic music, world food, TV & film, anything sport.	
-								</p>
-								<p id="topArtists" class="text-muted">Current top artists: </p>
-								<p id="currentlyListeningTo" class="text-muted">.</p>
-								<p class="text-muted">
-									Seeking new and interesting opportunities, to network with other like-minded individuals, and to explore and develop my interests. 
-								</p>
-								<p class="text-muted">
-									Stop by and <a class="page-scroll" href="#contact">say hi</a>
-								</p>
-							</div>
-
-
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="welll">
-
-						<div id="interests-block">
-						
-							<div class="glyphs">
-								<div id="weights" class="glyph">
-									<div class="glyph-icon flaticon-dumbbell"></div>
-								</div>	
-								
-								<div id="swimming" class="glyph">
-									<div class="glyph-icon flaticon-sport"></div>
-								</div>
-
-							</div>
-							<div class="glyphs">
-								<div class="timers">
-
-									<div id="flying" class="glyph">
-										<div class="glyph-icon-large flaticon-transport"></div>
-										<span class="timer" data-value="53534" data-unit="km"></span>
-									</div>
-
-									<div id="concerts" class="glyph">
-										<div class="glyph-icon-large flaticon-music-1"></div>									
-										<span class="timer" data-value="86" data-unit="concerts"></span>
-									</div>								
-
-									<div id="travelling" class="glyph">
-										<div class="glyph-icon-large flaticon-transport-1"></div>
-										<span class="timer" data-value="19" data-unit="countries"></span>	
-									</div>
-
-
-								</div>
-							</div>
-							
-							<div id="interests-middle-text">
-								<!--<div id="bracket-above"></div>-->
-								<h3 id="handi-text">Hobbies & Interests</h3>
-								<!--<div id="bracket-below"></div>-->
-							</div>
-							
-							<div class="glyphs">
-								<div class="timers">
-
-
-									<div id="instruments" class="glyph">
-										<span class="timer" data-value="3" data-unit="instruments"></span>												
-										<div class="glyph-icon-large flaticon-music"></div>									
-									</div>
-
-
-									<div id="expeditions" class="glyph">
-										<span class="timer" data-value="15" data-unit="expeditions"></span>	
-										<div class="glyph-icon-large flaticon-moon"></div>									
-										
-									</div>
-
-									<div id="skiing" class="glyph">
-										<span class="timer" data-value="82" data-unit="km/h"></span>	
-										<div class="glyph-icon-large flaticon-ice"></div>
-									</div>
-								</div>
-							</div>
-
-							<div class="glyphs">
-								<div id="coffee" class="glyph">
-									<div class="glyph-icon flaticon-cup-1"></div>
-								</div>
-								
-								
-								<div id="beer" class="glyph">
-									<div class="glyph-icon flaticon-drink"></div>
-								</div>		
-
-							</div>
-
-						</div>
-					</div>
+    <div id="sectionWrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <!--<div class="projects-filters">
+              <a class="btn btn-primary" href="#" role="button">Web</a>
+              <a class="btn btn-primary" href="#" role="button">Applications</a>
+              <a class="btn btn-primary" href="#" role="button">Music</a>
+            </div>-->
+            <div class="project-grid-container">
+              <div class="grid">
+                <div class="project-item wow zoomIn">
+                  <div class="content">
+                    <a onclick="trackAnalytics('Projects Section', 'External Link', 'Smittey.co.uk');" href="http://www.smittey.co.uk/" target="_blank">
+                      <div class="content-overlay"></div>
+                      <img class="content-image" src="assets/images/projects-blog1.jpg">
+                      <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">My Blog</h3>
+                        <p class="content-text">A blog by me, Andy Smith, a Software Developer based in the UK</p>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </section>
-	
-	<section id="skills" class="skills-section">
-        <div class="container-fluid">			
-			<div class="row">
-				<div class="col-lg-4">
-					<div class="service-box">
-						<div class="category-heading">
-							<div id="qualifications-sub" class="glyph">
-								<div class="glyph-icon flaticon-cup"><h3 class="aboutme-heading">Qualifications</h3></div>
-							</div>
-						</div>
-						<div class="aboutme-info-container">
-							<p class="text-muted"><i class="fa fa-caret-right"> </i> Computer Science with Industrial Placement BSc Hons</p>
-							<p class="text-muted"><i class="fa fa-caret-right"> </i> AWS Technical Professional (Digital)</p>
-							<p class="text-muted"><i class="fa fa-caret-right"> </i> Google Analytics Individual Qualification (IQ)</p>
-							<p class="text-muted"><i class="fa fa-caret-right"> </i> RLSS UK National Pool Lifeguard Qualification</p>
-							<p class="text-muted"><i class="fa fa-caret-right"> </i> Music Theory Grade 5 - With Merit (ABRSM)</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="service-box">
-
-						<div class="category-heading">
-							<div id="skills-sub" class="glyph">
-								<div class="glyph-icon flaticon-fashion"><h3 class="aboutme-heading">Skills</h3></div>
-							</div>
-						</div>
-						<div class="aboutme-info-container">
-							<div id="progress-container">
-								<div class="progress">
-								  <div class="progress-bar progress-bar-success" description="Back-End Development" role="progressbar" style="width: 0%" data-percent="60%">
-								  60%
-								  </div>
-                                  
-								  <div class="progress-bar progress-bar-warning" description="Front-End Development" role="progressbar" style="width: 0%" data-percent="40%">
-								  40%
-								  </div>
-								</div>
-
-								
-								<div class="progress">
-								  <div class="progress-bar progress-bar-info" description="Teamwork" role="progressbar" style="width: 0%" data-percent="80%">
-								  80%
-								  </div>
-								</div>
-
-								<div class="progress">
-								  <div class="progress-bar progress-bar-default" description="Communication" role="progressbar" style="width: 0%" data-percent="75%">
-								  75%
-								  </div>
-								</div>
-
-								<div class="progress">
-								  <div class="progress-bar progress-bar-danger" description="Drive" role="progressbar" style="width: 0%" data-percent="100%">
-								  100%
-								  </div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>			
-				<div class="col-lg-4">
-					<div class="service-box">
-
-						<div class="category-heading">
-							<div id="blog-sub" class="glyph">
-								<div class="glyph-icon flaticon-pen"><h3 class="aboutme-heading">Recent Posts</h3></div>
-							</div>
-						</div>
-						<div class="aboutme-info-container">
-   							<p class="text-muted"><a href="http://smittey.co.uk/the-planck-key-theory/" target="_blank">The Planck - Key Theory</a></p>
-   							<p class="text-muted"><a href="http://smittey.co.uk/the-planck-build-log/" target="_blank">The Planck</a></p>
-                            <p class="text-muted"><a href="http://smittey.co.uk/debugging-101/" target="_blank">Debugging 101</a></p>                                                        
-                            <p class="text-muted"><a href="http://smittey.co.uk/lets-talk-keyboards/" target="_blank">Let's Talk Keyboards</a></p>                            
-                            <p class="text-muted"><a href="http://smittey.co.uk/the-art-of-greenfield/" target="_blank">The Art of Greenfield</a></p>
-						</div>
-					</div>
-				</div>	
-			</div>
-		</div>
-	</section>
-	
-
-    <!-- Work and Education Section -->
-    <section id="experience" class="experience-section">
-
-        <div class="container-fluid">
-
-
-            <div class="row">
-                <div class="col-lg-10">
-					<!--<div class="category-heading" style="text-align:center">
-						<h3 class="aboutme-heading">Experience</h3>
-					</div>-->
-					
-					<div class="category-heading" style="text-align:center">
-						<div id="experience-heading" class="glyph">
-							<div class="glyph-icon flaticon-clock"><h3 class="aboutme-heading">Experience</h3></div>
-						</div>
-					</div>
-						
-					<ul id="experienceTimeline" class="timeline">
-                        <li id="workCategory" class="experienceCategory">
-                            <div class="timeline-image-head">
-                                <img class="circle-image" src="http://i.imgur.com/VzATqxR.png" alt="">
-                            </div>
-                        </li>
-                        <li class="timeline-inverted experienceBlockHead">
-                            <div class="timeline-image">
-                                <img class="circle-image" src="https://www.womenintech.co.uk/wp-content/uploads/2017/12/bQo96WcS.jpg" alt="">
-                            </div>
-                            <div id="experience1" class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>Feb 2018</h4>
-                                    <h4 class="subheading">AND Digital, Product Developer and Team Lead</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Team lead and senior engineer developing a clients API</p>
-                                    <p class="complete">Worked closely with clients to re-implement their legacy API in their new core platform. </p>
-
-                                    <p class="timeline-more">More...</p>                                     
-                                    
-                                    <br>
-                                    <span class="dotnetTag            label label-dotnet            skillTag buttonPadding">Net</span>
-                                    <span class="sqlTag               label label-sql               skillTag buttonPadding">SQL</span>
-                                    <span class="vstsTag            label label-vsts            skillTag buttonPadding">VSTS</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline experienceBlockHead">
-                            <div class="timeline-image">
-                                <img class="circle-image" src="http://i.imgur.com/bKmhvZb.png" alt="">
-                            </div>
-                            <div id="experience2" class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>May 2016</h4>
-                                    <h4 class="subheading">CGI, Software Developer</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Worked as a software engineer on a tech-refresh project</p>
-									<p class="complete">Core developer, contributing to low-level designs both in software and data modelling, and maintining quality control through various forms of testing.</p>
-
-									<p class="timeline-more">More...</p>									 
-									
-									<br>
-									<span class="javaTag 			label label-java 			skillTag buttonPadding">Java</span>
-									<span class="hadoopTag 			label label-hadoop 			skillTag buttonPadding">Hadoop</span>
-									<span class="accumuloTag 		label label-accumulo 		skillTag buttonPadding">Accumulo</span>
-									<span class="kafkaTag 			label label-kafka 			skillTag buttonPadding">Kafka</span>
-									<span class="sparkTag 			label label-spark 			skillTag buttonPadding">Spark</span>
-									<span class="bigdataTag 		label label-bigdata			skillTag buttonPadding">Big Data</span>
-								</div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted experienceBlockHead">
-                            <div id="experience3" class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>May 2016</h4>
-                                    <h4 class="subheading">CGI, UI Lead</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">I worked as a UI lead on a proof-of-concept project</p>
-									<p class="complete">My responsibilities included leading the UI development (client-side and server-side), ensuring quality control, and front-end component design and integration.</p>
-
-									<p class="timeline-more">More...</p>									 
-									
-									<br>
-									<span class="htmlTag 			label label-html 			skillTag buttonPadding">HTML</span>
-									<span class="javascriptTag 		label label-javascript 		skillTag buttonPadding">JavaScript</span>
-									<span class="meteorjsTag 		label label-meteorjs 		skillTag buttonPadding">MeteorJS</span>
-									<span class="mongodbTag 		label label-mongodb 		skillTag buttonPadding">MongoDB</span>
-									<span class="nodejsTag 		    label label-nodejs 		    skillTag buttonPadding">Node.js</span>
-									<span class="elasticsearchTag   label label-elasticsearch   skillTag buttonPadding">Elasticsearch</span>
-									<span class="cssTag 			label label-css 			skillTag buttonPadding">CSS</span>
-								</div>
-                            </div>
-                        </li>
-						<li class="experienceBlockHead">
-                            <div id="experience4" class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>July 2014</h4>
-                                    <h4 class="subheading">CGI, Full-Stack Developer</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">The only full-stack software developer on a project in the Justice sector.</p>
-									<p class="complete">I was involved with many phases of the project life-cycle including design, development and integration, and testing. Since starting on the project I have taken ownership of several areas of a complex system and constantly strive to learn more and take my skills further.</p>
-
-									<p class="timeline-more">More...</p>									 
-									
-									<br>
-									<span class="javaTag 		label label-java 		skillTag buttonPadding">Java</span>
-									<span class="documentumTag 	label label-documentum	skillTag buttonPadding">Documentum</span>
-									<span class="xcpTag 		label label-xcp 		skillTag buttonPadding">XCP 2.1</span>
-									<span class="javascriptTag 	label label-javascript 	skillTag buttonPadding">JavaScript</span>
-                                    <span class="cssTag 		label label-css 		skillTag buttonPadding">CSS</span>
-									<span class="agileTag 		label label-agile 		skillTag buttonPadding">Agile</span>
-									<span class="svnTag 		label label-svn			skillTag buttonPadding">Svn</span>
-                                </div>
-                            </div>
-                        </li>
-						<li class="timeline-inverted experienceBlockHead">
-                            <div class="timeline-image">
-                                <img class="circle-image" src="http://www.gravatar.com/avatar/2336ccd6a816e8582b8e9770f3eacadd?s=146" alt="">
-                            </div>
-                            <div id="experience5" class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>May 2014</h4>
-                                    <h4 class="subheading">Self, Android Developer</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">I released my first app to the Android app store.</p>
-									<p class="complete">An application targetted at Android 2.2, designed to help bodybuilders keep track of their progress. <a href="https://play.google.com/store/apps/details?id=my.gym.journal">My Gym Journal</a></p>
-
-									<p class="timeline-more">More...</p>									 
-									
-									<br>
-									<span class="androidTag 		label label-android 		skillTag buttonPadding">Java Android</span>
-									<span class="javaTag 			label label-java 			skillTag buttonPadding">Java</span>
-									<span class="mysqlTag 			label label-mysql 			skillTag buttonPadding">MySQL</span>  
-								</div>
-                            </div>
-                        </li>
-                        <li class="experienceBlockHead">
-                            <div class="timeline-image">
-                                <img class="circle-image" src="http://i.imgur.com/s5N9It9.png" alt="">
-                            </div>
-                            <div id="experience6" class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>December 2012</h4>
-                                    <h4 class="subheading">Logica, Junior Technical Architect/Developer</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">I worked on system modernization with a team to assist in the specification and development of the client's security.</p>
-									<p class="complete">
-										This role is mainly focused on technical architecture and development. My main responsibilities center around the development and maintenance of tools to support event analysis and alerting functions such as reporting and log parsing.				
-										<br><br>
-										Other duties include liaising with the requirements team to discuss new business rules that have been agreed on for integration.</p>
-									
-									<p class="timeline-more">More...</p>
-									
-									<br>
-                                	<span class="shellTag 	label label-shell 	skillTag buttonPadding">Shell</span>
-                                	<span class="jenkinsTag label label-jenkins skillTag buttonPadding">Jenkins</span>
-									<span class="javaTag 	label label-java 	skillTag buttonPadding">Java</span>
-									<span class="mysqlTag 	label label-mysql 	skillTag buttonPadding">MySQL</span>
-									<span class="oracleTag 	label label-oracle 	skillTag buttonPadding">Oracle</span>
-									<span class="junitTag 	label label-junit 	skillTag buttonPadding">jUnit</span>
-									<span class="jmockTag 	label label-jmock 	skillTag buttonPadding">jMock</span>
-									<span class="svnTag 	label label-svn 	skillTag buttonPadding">Svn</span>
-								</div>
-                            </div>
-		
-                        </li>
-                        <li class="timeline-inverted experienceBlockHead">
-							<div id="experience7" class="timeline-panel">
-								<div class="timeline-heading">
-									<h4>July 2012</h4>
-									<h4 class="subheading">Logica, Test Analyst</h4>
-								</div>
-								<div class="timeline-body">
-									<p class="text-muted">I worked as a test analyst on a modernization project for a complex solution targeted at the companies internal asset delivery system.</p>
-									<p class="complete">
-									<br>				
-									I worked closely with the testing and development team to effectively execute and edit test scripts based on the solution requirements specification. I used the HP Quality Center to handle and report system defects.
-									<br><br>
-									Other duties include liaising with the requirements team to discuss new business rules that have been agreed on for integration.</p>
-								
-									<p class="timeline-more">More...</p>
-									
-									<br>
-									<span class="hpqualitycenterTag label label-hpqualitycenter skillTag buttonPadding">HP Quality Center</span>
-								</div>
-							</div>	
-                        </li>
-						
-						<!--Education-->
-						<li id="educationCategory" class="experienceCategory ">
-                            <div class="timeline-image-head">
-                                <img class="circle-image" src="img/education.jpg" alt="">
-                            </div>
-                            
-                        </li>
-						<li class="experienceBlockHead">
-                            <div class="timeline-image">
-                                <img class="circle-image" src="http://i.imgur.com/Yzgg918.png" alt="">
-                            </div>
-                            <div id="experience6" class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>June 2014</h4>
-                                    <h4 class="subheading">BSc Hons Computer Science, Newcastle University</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Graduated with a degree in Computer Science with experience in the following modules:</p>
-                                </div>
-                            </div>
-							
-							
-
-                        </li>
-						<li class="timeline-inverted experienceBlockHead">
-							<div id="experience7" class="timeline-panel">
-								<div class="timeline-heading">
-									<h4>May 2014</h4>
-									<h4 class="subheading">Completed Dissertation</h4>
-								</div>
-								<div class="timeline-body">
-									<p class="text-muted">My dissertation was on how technology can impact the effectiveness on treatment for mental illnesses such as anxiety and depression.</p>
-									<p class="complete">
-										<br>
-										Talk about it a bit more......</p>
-									
-									<p class="timeline-more">More...</p>
-											
-									<br>
-									<span class="javaTag 	label label-java 	skillTag buttonPadding">Java</span>
-									<span class="androidTag label label-android skillTag buttonPadding">Java Android</span>
-									<span class="mysqlTag 	label label-mysql 	skillTag buttonPadding">MySQL</span>
-									<span class="phpTag 	label label-php 	skillTag buttonPadding">PHP</span>
-									<span class="gitTag 	label label-git 	skillTag buttonPadding">Git</span>
-								</div>
-							</div>
-                        </li>			
-							
-						<li class="timeline-inverted">
-							<div class="timeline-image-head">
-								<h4>Use the menu to filter by skills!</h4>
-							</div>
-						</li>
-						
-						
-                    </ul>
-  	
-					
+                <div class="project-item wow zoomIn">
+                  <div class="content">
+                    <a onclick="trackAnalytics('Projects Section', 'External Link', 'Jetsettr');" href="https://github.com/Smittey/Jetsettr" target="_blank">
+                      <div class="content-overlay"></div>
+                      <img class="content-image" src="assets/images/projects-jetsettr.jpg">
+                      <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">Jetsettr</h3>
+                        <p class="content-text">Visualise your Foursquare checkins and unique metrics</p>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-				<div class="col-lg-2">
-					<div id="sideBar">
-						<div id="sticker"><a onClick="clearFilters()" id="clearFilters">[Clear Filters]</a></div>
-						
-					</div>
-				</div>
+                <div class="project-item wow zoomIn">
+                  <div class="content">
+                    <a onclick="trackAnalytics('Projects Section', 'External Link', 'Raspberry Pi Analytics');" href="https://github.com/Smittey/RaspberryPi-Projects/tree/master/Analytics" target="_blank">
+                      <div class="content-overlay"></div>
+                      <img class="content-image" src="assets/images/projects-raspberry-pi-anybody-on.png">
+                      <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">Anybody On?</h3>
+                        <p class="content-text">A Raspberry Pi application to let you know if your media is being viewed</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="project-item wow zoomIn">
+                  <div class="content">
+                    <a onclick="trackAnalytics('Projects Section', 'External Link', 'Tempete');" href="https://soundcloud.com/smitteyy/tempete" target="_blank">
+                      <div class="content-overlay"></div>
+                      <img class="content-image" src="assets/images/projects-composition1.jpg">
+                      <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">Tempête</h3>
+                        <p class="content-text">"Storm". A composition for piano</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="project-item wow zoomIn">
+                  <div class="content">
+                    <a onclick="trackAnalytics('Projects Section', 'External Link', 'Little Farnham Pianists');" href="http://smittey.github.io/LittleFarnhamPianists" target="_blank">
+                      <div class="content-overlay"></div>
+                      <img class="content-image" src="assets/images/projects-littlefarnhampianists.jpg">
+                      <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">Hannah Hawley Piano</h3>
+                        <p class="content-text">A website for a local music business</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="project-item wow zoomIn">
+                  <div class="content">
+                    <a onclick="trackAnalytics('Projects Section', 'External Link', 'My Gym Journal');" href="https://play.google.com/store/apps/details?id=my.gym.journal" target="_blank">
+                      <div class="content-overlay"></div>
+                      <img class="content-image" src="assets/images/projects-mygymjournal.jpg">
+                      <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">My Gym Journal</h3>
+                        <p class="content-text">An application targetted at Android 2.2, designed to help bodybuilders keep track of their progress</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="project-item wow zoomIn">
+                  <div class="content">
+                    <a onclick="trackAnalytics('Projects Section', 'External Link', 'Slack Apps');" href="https://github.com/Smittey/Slack-apps" target="_blank">
+                      <div class="content-overlay"></div>
+                      <img class="content-image" src="assets/images/projects-slack.jpg">
+                      <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">Music Suggester</h3>
+                        <p class="content-text">A slash command plugin for Slack which returns a list of similar artists</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="project-item wow zoomIn">
+                  <div class="content">
+                    <a onclick="trackAnalytics('Projects Section', 'External Link', 'Npm Registry Publisher');" href="https://github.com/Smittey/Node.js-Projects/tree/master/npm-registry-publisher" target="_blank">
+                      <div class="content-overlay"></div>
+                      <img class="content-image" src="assets/images/projects-npm-registry-publisher.jpg">
+                      <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">Npm Registry Publisher</h3>
+                        <p class="content-text">Publish all used node.js dependencies to your offline registry</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-
-	    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-		<div id="Container" class="container">
-
-			<div class="container-fluid">
-
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="category-heading" style="text-align:center">
-							<div id="projects-heading" class="glyph">
-								<div class="glyph-icon flaticon-computer"><h3 class="aboutme-heading">Projects</h3></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="category-heading" style="text-align:center">
-						
-							<div id="projects-tags-bar">
-								<a class="filter" data-filter=".web" href="#/"><h3><span class="webTag label label-web projectTag">Websites</span></h3></a>
-								<a class="filter" data-filter=".apps" href="#/"><h3><span class="appsTag label label-apps projectTag">Applications</span></h3></a>
-								<a class="filter" data-filter=".music" href="#/"><h3><span class="musicTag label label-music projectTag">Music</span></h3></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="grid cs-style">
-							<figure class="mix web">
-								<img src="http://andysmith.me/img/projects-littlefarnhampianists.jpg" alt="Little Farnham Pianists">
-								<figcaption>
-									<div class="details">
-										<h3>Hannah Hawley Piano</h3>
-										<div class="desc">							
-											<span>A website for a local music business</span>
-										</div>
-										<div class="link">
-											<a href="http://www.littlefarnhampianists.co.uk/" target="_blank">Take a look</a>
-										</div>
-										<div class="link">
-											<span class="htmlTag 			label label-html 			skillTag buttonPadding">HTML</span>
-											<span class="cssTag 			label label-css 			skillTag buttonPadding">CSS</span>
-											<span class="javascriptTag 		label label-javascript 		skillTag buttonPadding">JavaScript</span>  										
-										</div>										
-									</div>
-								</figcaption>
-							</figure>
-
-							<figure class="mix apps">
-								<img src="http://andysmith.me/img/projects-mygymjournal.jpg" alt="My Gym Journal">
-								<figcaption>
-									<div class="details">
-										<h3>My Gym Journal</h3>
-										<div class="desc">
-											<span>An application targetted at Android 2.2, designed to help bodybuilders keep track of their progress.</span>
-										</div>
-										<div class="link">
-											<a href="https://play.google.com/store/apps/details?id=my.gym.journal" target="_blank">Take a look</a>
-										</div>
-										<div class="link">
-											<span class="androidTag 		label label-android 		skillTag buttonPadding">Java Android</span>
-											<span class="javaTag 			label label-java 			skillTag buttonPadding">Java</span>
-											<span class="mysqlTag 			label label-mysql 			skillTag buttonPadding">MySQL</span>  										
-										</div>
-									</div>
-								</figcaption>
-							</figure>
-
-
-							<figure class="mix web">
-								<img src="img/projects-blog1.jpg" alt="Return Rambling blog">
-								<figcaption>
-									<div class="details">
-										<h3>My Blog</h3>
-										<div class="desc">							
-											<span>A blog by Andy Smith, a Software Developer based in the UK</span>
-										</div>
-										<div class="link">
-											<a href="http://www.smittey.co.uk/" target="_blank">Take a look</a>
-										</div>
-										<div class="link">
-											<span class="htmlTag 			label label-html 			skillTag buttonPadding">HTML</span>
-											<span class="javascriptTag 		label label-javascript 		skillTag buttonPadding">JavaScript</span>
-											<span class="cssTag 			label label-css 			skillTag buttonPadding">CSS</span>
-											<span class="jekyllTag 			label label-jekyll 			skillTag buttonPadding">Jekyll</span>  
-											<span class="markdownTag 		label label-markdown		skillTag buttonPadding">Markdown</span> 
-										</div>
-									</div>
-								</figcaption>
-							</figure>
-							
-							
-							<figure class="mix apps">
-								<img src="img/projects-slack.jpg" alt="Slack music suggester ">
-								<figcaption>
-									<div class="details">
-										<h3>Music Suggester for Slack</h3>
-										<div class="desc">							
-											<span>A slash command plugin for Slack which returns a list of similar artists</span>
-										</div>
-										<div class="link">
-											<a href="https://github.com/Smittey/Slack-apps" target="_blank">Take a look</a>
-										</div>
-										<div class="link">
-											<span class="phpTag 			label label-php 			skillTag buttonPadding">PHP</span>
-										</div>										
-									</div>
-								</figcaption>
-							</figure>
-
-
-							<figure class="mix music">
-								<img src="img/projects-composition1.jpg" alt="Music composition">
-								<figcaption>
-									<div class="details">
-										<h3>Tempête</h3>
-										<div class="desc">							
-											<span>"Storm". A composition for piano</span>
-										</div>
-										<div class="link">
-											<a href="https://soundcloud.com/smitteyy/tempete" target="_blank">Take a look</a>
-										</div>
-									</div>
-								</figcaption>
-							</figure>
-							
-							<figure class="mix apps">
-								<img src="img/projects-anybodyon.jpg" alt="Raspberry Pi - Anybody On?">
-								<figcaption>
-									<div class="details">
-										<h3>Anybody On?</h3>
-										<div class="desc">							
-											<span>A Raspberry Pi application to let you know if your media is being viewed</span>
-										</div>
-										<div class="link">
-											<a href="https://github.com/Smittey/RaspberryPi-Projects/tree/master/Analytics" target="_blank">Take a look</a>
-										</div>
-										<div class="link">
-											<span class="pythonTag 			label label-python 			skillTag buttonPadding">Python</span>
-										</div>											
-									</div>
-								</figcaption>
-							</figure>
-                            
-                            <figure class="mix apps">
-								<img src="img/projects-npm-registry-publisher.jpg" alt="npm-registry-publisher">
-								<figcaption>
-									<div class="details">
-										<h3>npm-registry-publisher</h3>
-										<div class="desc">							
-											<span>Publish all used node.js dependencies to your offline registry</span>
-										</div>
-										<div class="link">
-											<a href="https://github.com/Smittey/Node.js-Projects/tree/master/npm-registry-publisher" target="_blank">Take a look</a>
-										</div>
-										<div class="link">
-											<span class="nodejsTag 			label label-nodejs 			skillTag buttonPadding">node.js</span>
-										</div>											
-									</div>
-								</figcaption>
-							</figure>
-                            
-                            <figure class="mix web">
-								<img src="img/projects-jetsettr.jpg" alt="Jetsettr">
-								<figcaption>
-									<div class="details">
-										<h3>Jetsettr</h3>
-										<div class="desc">							
-											<span>Visualise your Foursquare checkins and unique metrics</span>
-										</div>
-										<div class="link">
-											<a href="https://github.com/Smittey/Jetsettr" target="_blank">Take a look</a>
-										</div>
-										<div class="link">
-                                            <span class="htmlTag 			label label-html 			skillTag buttonPadding">HTML</span>
-                                            <span class="meteorjsTag 		label label-meteorjs 		skillTag buttonPadding">MeteorJS</span>
-                                            <span class="javascriptTag 		label label-javascript 		skillTag buttonPadding">JavaScript</span>
-                                            <span class="cssTag 			label label-css 			skillTag buttonPadding">CSS</span>
-                                        </div>											
-									</div>
-								</figcaption>
-							</figure>
-						</div>			
-					</div>
-				</div>
-
-			</div>
-		</div>
-    </section> 
-
-	
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-			<div class="category-heading" style="text-align:center">
-				<div id="contact-heading" class="glyph">
-					<div class="glyph-icon flaticon-hand"><h3 class="aboutme-heading">Thanks for stopping by!</h3></div>
-				</div>
-			</div>
-            <div class="row">
-                <div class="col-lg-12">
-						<p class="text-muted findme-text">Have a question or just something you want to tell me? Get in touch using the form below! I'll get back to you as soon as possible</p>
-
-					<div id="contact-form">
-						<form action="//formspree.io/hello@andysmith.me" method="POST">
-
-							<div class="form-group col-xs-12 floating-label-form-group controls"  style="background-color:#fff">
-								<label>Name</label>
-								<input type="text" class="form-control" name="name" placeholder="Name" id="name" required="" data-validation-required-message="Please enter your name">
-								<p class="help-block text-danger"></p>
-							</div>
-
-							<div class="form-group col-xs-12 floating-label-form-group controls" style="background-color:#fff">
-								<label>Email Address</label>
-								<input type="email" class="form-control" name="_replyto" placeholder="Email Address" id="email" required="" data-validation-required-message="Please enter your email address">
-								<p class="help-block text-danger"></p>
-							</div>
-
-							<input type="hidden" name="_subject" value="AndySmith.me Contact">
-
-							<div class="form-group col-xs-12 floating-label-form-group controls" style="background-color:#fff">
-								<label>Message</label>
-								<textarea data-type="text" class="form-control" name="message" placeholder="Message" id="message" required="" data-validation-required-message="Write to me" rows="4"></textarea>
-								<p class="help-block text-danger"></p>
-							</div>
-								
-							<input type="text" name="_gotcha" style="display:none" />
-							<input type="hidden" name="_next" value="http://www.andysmith.me">
-							
-							<div class="row">
-								<div class="form-group col-xs-12" style="text-align:centre">
-								<br>
-									<button type="submit" value="Send" class="btn btn-default">Send</button>
-								</div>
-							</div>
-							
-						</form>
-					</div>
-					<p class="text-muted findme-text">
-						You can also find me on the following:
-					</p>	
-					<ul id="links">
-						<li><a href="https://www.linkedin.com/in/smittey" class="li" target="_blank">Linked In</a></li>
-						<li><a href="http://stackoverflow.com/users/1295906/smittey" class="so" target="_blank">Stack Overflow</a></li>
-						<li><a href="https://twitter.com/smittey" class="tw" target="_blank">Twitter</a></li>
-						<li><a href="http://github.com/Smittey" class="gh" target="_blank">Github</a></li>
-
-					</ul>
-					<p class="text-muted">
-						<i class="fa fa-coffee"></i>
-					</p>
-					<p class="text-muted">
-						Handcrafted in the UK. Photography, code & design by Andy Smith
-					</p>
-					<p class="text-muted">
-						Font generated by <a href="http://www.flaticon.com" target="_blank">flaticon.com</a> under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY</a>. The authors are: <a href="http://www.freepik.com" target="_blank">Freepik</a>, <a href="http://www.simpleicon.com" target="_blank">SimpleIcon</a>.
-					</p>
-				</div>
+      </div>
+    </div>
+    <!-- Posts section -->
+    <div id="sectionPosts" class="container-fluid" style="padding-top:30px;padding-bottom:30px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-title">
+              <h4>... I've written</h4>
+              <svg class="title-underline" width="62px" height="3px" viewBox="0 0 62 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                  <g id="Artboard" transform="translate(-450.000000, -1171.000000)" stroke="#3E93E2" stroke-width="3">
+                    <path d="M452,1172.5 L510,1172.5" id="Line-2"></path>
+                  </g>
+                </g>
+              </svg>
             </div>
-
+          </div>
         </div>
+      </div>
+    </div>
+    <div id="sectionWrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="blog-grid-container">
+              <div class="grid">
 
-    </section> 
-	
-	<script>
-		var devCookie = "my websites cookie=123";
-		if (document.cookie.indexOf(devCookie) === -1) 
-		{
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+                <div class="blog-item">
+                  <div class="content">
+                    <a onclick="trackAnalytics('Blog Posts Section', 'External Link', 'Post - The Planck - Key Theory');" href="http://smittey.co.uk/the-planck-key-theory/" target="_blank">
+                      <div class="content-overlay"></div>
 
-			ga('create', 'UA-74354041-1', 'auto');
-			ga('send', 'pageview');
-		}
-	</script>
-	  
-</body>
+                      <div class="blog-title" style="background-image: url('http://smittey.co.uk/img/post-planck.jpg');">
+                        <div class="blog-header">
+                          <p class="blog-header-title">The Planck - Key Theory</p>
+                          <p class="blog-header-sub">Part 2, How I approached and adapted the layout of the Planck</p>
+                        </div>
+                      </div>
+                      
+                      <div class="blog-sub-title-info">
+                        <p class="date">August 25th, 2018</p>
+                        <span class="badge badge-secondary">Keyboards</span>
+                        <span class="badge badge-secondary">DIY</span>
+                      </div>
 
+                      <div class="content-details fadeIn-bottom">
+                        <p class="content-text">I’ve written a lot about Mechanical keyboards, and if it wasn’t already clear, I’m somewhat of an enthusiast.
+                          This hobby and interest exposes you to a range of keyboards that you didn’t previously know existed with an array of layouts, sizes, and colours. I became particularly intrigued by tiny keyboards as they not only look weird, but supposedly can help with both typing efficiency and RSI. After many months of browsing enthusiast forums I came across a Planck. Looking down at your keyboard now you’ll notice that the layout is staggered, meaning the keys aren’t all aligned. The Planck on the other hand is ‘Ortholinear’; the keys are in a columnar fashion! Weird. I like it!
+                        </p>
+                        <p>Read on...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="blog-item">
+                  <div class="content">
+                    <a onclick="trackAnalytics('Blog Posts Section', 'External Link', 'Post - The Planck - Build Log');" href="http://smittey.co.uk/the-planck-build-log/" target="_blank">
+                      <div class="content-overlay"></div>
+
+                      <div class="blog-title" style="background-image: url('http://smittey.co.uk/img/post-planck-layout.jpg');">
+                        <div class="blog-header">
+                          <p class="blog-header-title">The Planck - Build Log</p>
+                          <p class="blog-header-sub">Part 1, My build log of the 40% Planck Keyboard</p> 
+                        </div>
+                      </div>
+                      
+                      <div class="blog-sub-title-info">
+                        <p class="date">September 3rd, 2018</p>
+                        <span class="badge badge-secondary">Keyboards</span>
+                      </div>
+
+                      <div class="content-details fadeIn-bottom">
+                        <p class="content-text">Part one of this two part series talked about the building of this Planck keyboard. It concluded by mentioning the full programmability aspect of one of these things, allowing you to customise every aspect of it. Every single key can be mapped to pretty much whatever you want whether it’s the desire to set every key to the ‘A’ key, or creating a new function key/layer. Given this ability, it only makes sense to organise these layers in a sensible way! This post will explore the layers that I created and my thinking behind them.</p>
+                        <p>Read on...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="blog-item">
+                  <div class="content">
+                    <a onclick="trackAnalytics('Blog Posts Section', 'External Link', 'Post - Debugging 101');" href="http://smittey.co.uk/debugging-101/" target="_blank">
+                      <div class="content-overlay"></div>
+
+                      <div class="blog-title" style="background-image: url('http://smittey.co.uk/img/posts-debugging.jpg');">
+                        <div class="blog-header">
+                          <p class="blog-header-title">Debugging 101</p>
+                          <p class="blog-header-sub">A how-to guide on code debugging techniques</p>
+                        </div>
+                      </div>
+                      
+                      <div class="blog-sub-title-info">
+                        <p class="date">August 2nd, 2018</p>
+                        <span class="badge badge-secondary">Keyboards</span>
+                        <span class="badge badge-secondary">How-to</span>
+                      </div>
+
+                      <div class="content-details fadeIn-bottom">
+                        <p class="content-text">“Nobody can write perfect code every single time. You will make errors” warned my Computer Science lecturer. Not that I doubted him, but he couldn’t have been more correct.</p>
+                        <p>Read on...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="blog-item">
+                  <div class="content">
+                    <a onclick="trackAnalytics('Blog Posts Section', 'External Link', 'Post - Lets Talk Keyboards');" href="http://smittey.co.uk/lets-talk-keyboards/" target="_blank">
+                      <div class="content-overlay"></div>
+
+                      <div class="blog-title" style="background-image: url('http://smittey.co.uk/img/posts-lets-talk-keyboards.jpeg');">
+                        <div class="blog-header">
+                          <p class="blog-header-title">Let's Talk Keyboards</p>
+                          <p class="blog-header-sub">Membrane vs Mechanical. Which is the right one for you?</p>
+                        </div>
+                      </div>
+                      
+                      <div class="blog-sub-title-info">
+                        <p class="date">June 28th, 2018</p>
+                        <span class="badge badge-secondary">Keyboards</span>
+                      </div>
+
+                      <div class="content-details fadeIn-bottom">
+                        <p class="content-text">For all of the time that folk spend in front of the computer whether it be professional, recreational or both; the keyboard, as important as it is, is often overlooked.</p>
+                        <p>Read on...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="blog-item">
+                  <div class="content">
+                    <a onclick="trackAnalytics('Blog Posts Section', 'External Link', 'Post - The Art of Greenfield');" href="http://smittey.co.uk/the-art-of-greenfield/" target="_blank">
+                      <div class="content-overlay"></div>
+
+                      <div class="blog-title" style="background-image: url('http://smittey.co.uk/img/post-art-of-greenfield.jpg');">
+                        <div class="blog-header">
+                          <p class="blog-header-title">The Art of Greenfield</p>
+                          <p class="blog-header-sub">What to think about when starting a brand new software project</p>
+                        </div>
+                      </div>
+                      
+                      <div class="blog-sub-title-info">
+                        <p class="date">July 20th, 2018</p>
+                        <span class="badge badge-secondary">How-to</span>
+                      </div>
+
+                      <div class="content-details fadeIn-bottom">
+                        <p class="content-text">Software is everywhere. Broadly speaking, successful companies are either technology-first that know how to market ‘x’ well, or currently sell ‘y’ and are learning how to utilise software to keep up with the market.</p>
+                        <p>Read on...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="blog-item">
+                  <div class="content">
+                    <a onclick="trackAnalytics('Blog Posts Section', 'External Link', 'Post - Building a Custom Keyboard Case');" href="http://smittey.co.uk/building-a-custom-keyboard-case/" target="_blank">                      
+                      <div class="content-overlay"></div>
+
+                      <div class="blog-title" style="background-image: url('http://smittey.co.uk/img/post-custom-keyboard-case.jpg');">
+                        <div class="blog-header">
+                          <p class="blog-header-title">Building a Custom Keyboard Case</p>
+                          <p class="blog-header-sub">My build log of a custom oak keyboard case</p>
+                        </div>
+                      </div>
+                      
+                      <div class="blog-sub-title-info">
+                        <p class="date">February 26th, 2017</p>
+                        <span class="badge badge-secondary">Keyboards</span>
+                        <span class="badge badge-secondary">DIY</span>
+                      </div>
+
+                      <div class="content-details fadeIn-bottom">
+                        <p class="content-text">I’ve talked before about my weird hobbies and interests. I have a collection of random impulse buys that would probably baffle future archiologists if the earths population and records were almost completely erased. One of these interests is the wonderful land of mechanical keyboards.</p>
+                        <p>Read on...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                
+              </div>
+            </div>
+            <p class="blog-read-more"><a onclick="trackAnalytics('Blog Posts Section', 'External Link', 'Read more');" href="http://smittey.co.uk">Read more...</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonials section -->
+    <div id="sectionTestimonials" class="container-fluid" style="padding-top:30px;padding-bottom:30px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-title">
+              <h4>... People say</h4>
+              <svg class="title-underline" width="62px" height="3px" viewBox="0 0 62 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                  <g id="Artboard" transform="translate(-450.000000, -1171.000000)" stroke="#3E93E2" stroke-width="3">
+                    <path d="M452,1172.5 L510,1172.5" id="Line-2"></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sectionWrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="testimonialsCarousel" class="carousel slide w-100" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#testimonialsCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#testimonialsCarousel" data-slide-to="1"></li>
+                <li data-target="#testimonialsCarousel" data-slide-to="2"></li>
+                <li data-target="#testimonialsCarousel" data-slide-to="3"></li>
+                <li data-target="#testimonialsCarousel" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner w-100" role="listbox">
+                <div class="carousel-item active">
+                  <div class="text-center quote-box">
+                    <div class="upper_left">
+                      <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="quote-text">
+                      Andy is managing on his own the relationship with senior clients, and not have met them once. Ability to manage multiple team members, distribute the work and allocate tasks according to people's ability. Highly flexible and adaptable.
+                    </p>
+                    <div class="lower_right">
+                      <i class="fas fa-quote-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="text-center quote-box">
+                    <div class="upper_left">
+                      <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="quote-text">
+                      Andy has great leadership skills and helped the team to achieve its goals. Supported his colleagues when they needed help and has high quality standards.
+                    </p>
+                    <div class="lower_right">
+                      <i class="fas fa-quote-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="text-center quote-box">
+                    <div class="upper_left">
+                      <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="quote-text">
+                      He is knowledgeable in many different areas and also always very willing to learn new skills and develop existing ones. He has contributed significantly and positively to every project he's worked on and has provided strong leadership where necessary.
+                    </p>
+                    <div class="lower_right">
+                      <i class="fas fa-quote-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="text-center quote-box">
+                    <div class="upper_left">
+                      <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="quote-text">
+                      Andy is very proactive, professional and focused in his work. Despite the difficulties we faced with the client's old tech stack and commutes he maintained a positive attitude. He is capable of getting people to work together and communicate which helps in managing stakeholders effectively.
+                    </p>
+                    <div class="lower_right">
+                      <i class="fas fa-quote-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="text-center quote-box">
+                    <div class="upper_left">
+                      <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="quote-text">
+                      Andy was a joy to work with. He showed company by being open to colleagues from the client and engaging with them, both professionally and socially. He wasn't hesitant to ask them for support when we needed it, and continually used his initiative to solve issues we were facing. He helped a lot with multiple issues I was finding with using Docker, and always made himself available to help, which I really appreciated.
+                    </p>
+                    <div class="lower_right">
+                      <i class="fas fa-quote-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a onclick="trackAnalytics('Testimonials Section', 'Interaction', 'Previous Button');" class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a onclick="trackAnalytics('Testimonials Section', 'Interaction', 'Next Button');" class="carousel-control-next" href="#testimonialsCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact section -->
+    <div id="sectionContact" class="container-fluid" style="padding-top:30px;padding-bottom:30px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-title">
+              <h4>... Say hi</h4>
+              <svg class="title-underline" width="62px" height="3px" viewBox="0 0 62 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                  <g id="Artboard" transform="translate(-450.000000, -1171.000000)" stroke="#3E93E2" stroke-width="3">
+                    <path d="M452,1172.5 L510,1172.5" id="Line-2"></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sectionWrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+
+            <div id="map-container">
+              <div id="map"></div>
+                <div id="contact-form">
+                  <form action="//formspree.io/hello@andysmith.me" method="POST">
+
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                      <label>Name</label>
+                      <input type="text" class="form-control" name="name" placeholder="Name" id="name" required="" data-validation-required-message="Please enter your name">
+                      <p class="help-block text-danger"></p>
+                    </div>
+
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                      <label>Email Address</label>
+                      <input type="email" class="form-control" name="_replyto" placeholder="Email Address" id="email" required="" data-validation-required-message="Please enter your email address">
+                      <p class="help-block text-danger"></p>
+                    </div>
+
+                    <input type="hidden" name="_subject" value="AndySmith.me Contact">
+
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                      <label>Message</label>
+                      <textarea data-type="text" class="form-control" name="message" placeholder="Message" id="message" required="" data-validation-required-message="Write to me" rows="4"></textarea>
+                      <p class="help-block text-danger"></p>
+                    </div>
+                      
+                    <input type="text" name="_gotcha" style="display:none">
+                    <input type="hidden" name="_next" value="http://www.andysmith.me">
+                    
+                      <div class="form-group col-xs-12" style="text-align:centre">
+                      <br>
+                        <button onclick="trackAnalytics('Contact Section', 'Button Click', 'Form Submit');" type="submit" value="Send" class="btn btn-default">Send</button>
+                      </div>
+                    
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-footer text-center">
+      <hr>
+      Designed and made with <i class="fas fa-heart"></i> in London, 2018
+    </div>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-74354041-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </body>
 </html>
