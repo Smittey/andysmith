@@ -33,11 +33,12 @@
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a onclick="trackAnalytics('Top Nav Section', 'Anchor Link', 'Home');" class="navbar-brand" href="http://andysmith.me">andysmith.me</a>
-      {% if page.url == "/" %}
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-	      <div class="navbar-collapse collapse" id="navbar" style="">
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbar" style="">
+        {% if page.url == "/" %}
 	        <ul class="navbar-nav mr-auto">
 	          <li class="nav-item">
 	            <a onclick="trackAnalytics('Top Nav Section', 'Anchor Link', 'About');" class="nav-link page-scroll" href="#about">About</a>
@@ -58,18 +59,21 @@
 	            <a onclick="trackAnalytics('Top Nav Section', 'Anchor Link', 'Contact');" class="nav-link page-scroll" href="#contact">Contact</a>
 	          </li>
 	        </ul>
+        {% endif %}
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a onclick="trackAnalytics('Top Nav Section', 'External Link', 'Blog');" class="nav-link" href="http://smittey.co.uk">Blog</a>
+              <a onclick="trackAnalytics('Top Nav Section', 'External Link', 'Read');" class="nav-link" href="/read">README</a>
+            </li>
+            <li class="nav-item">
+              <a onclick="trackAnalytics('Top Nav Section', 'External Link', 'Blog');" class="nav-link" href="http://smittey.co.uk" target="_blank">Blog</a>
             </li>
           </ul>
 	      </div>
-	    {% endif %}
     </nav>
 	
     {{ content }}
  
-	<div class="page-footer text-center">
+	  <div class="page-footer text-center">
       <hr>
       Designed and made with <i class="fas fa-heart"></i> in London, 2018
     </div>
