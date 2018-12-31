@@ -7,26 +7,26 @@ custom_js:
 
 <header class="header text-center text-white d-flex">
   <div id="header-title">
-    <h1>Andy Smith</h1>
-    <h3>Senior Software Engineer</h3>
+    <h1>{{ site.name }}</h1>
+    <h3>{{ site.job-title }}</h3>
   </div>
   <div id="header-info">
     <ul class='fa-ul'>
       <li class="info-name">
         <i class="fa fa-fw fa-user"></i>
-        <a onclick="trackAnalytics('Header Section', 'Anchor Link', 'About');" class="page-scroll" href="#about">Andy Smith</a>
+        <a onclick="trackAnalytics('Header Section', 'Anchor Link', 'About');" class="page-scroll" href="#about">{{ site.name }}</a>
       </li>
       <li class="info-title">
         <i class="fa fa-fw fa-briefcase"></i>
-        <a onclick="trackAnalytics('Header Section', 'Anchor Link', 'Experience');" class="page-scroll" href="#experience">Senior Software Engineer</a>
+        <a onclick="trackAnalytics('Header Section', 'Anchor Link', 'Experience');" class="page-scroll" href="#experience">{{ site.job-title }}</a>
       </li>
       <li>
         <i class="fa fa-fw fa-map-marker"></i>
-        Bermondsey, London
+        {{ site.location }}
       </li>
       <li>
         <i class="fa fa-fw fa-envelope"></i>
-        <a onclick="trackAnalytics('Header Section', 'External Link', 'Contact');" href="mailto:hello@andysmith.me?Subject=Work-for-me" target="_top">hello@andysmith.me</a>
+        <a onclick="trackAnalytics('Header Section', 'External Link', 'Contact');" href="mailto:hello@andysmith.me?Subject=Work-for-me" target="_top">{{ site.contact }}</a>
       </li>
     </ul>
   </div>
@@ -63,9 +63,9 @@ custom_js:
             <p>Stop by and <a onclick="trackAnalytics('About Me Section', 'Anchor Link', 'Contact');" href="#contact" class="page-scroll">say hi</a></p>
           </div>
           <div class="about-icons">
-            <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - Github');" href="http://github.com/Smittey" target="_blank"> <img class="social-media-icon svg" src="assets/images/github-icon.svg"> </a>
-            <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - Stackoverflow');" href="http://stackoverflow.com/users/1295906/smittey" target="_blank"> <img class="social-media-icon svg" src="assets/images/stackoverflow-icon.svg"> </a>
-            <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - LinkedIn');" href="https://www.linkedin.com/in/smittey" target="_blank"> <img class="social-media-icon svg" src="assets/images/linkedin-icon.svg"> </a>
+            <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - Github');" href="http://github.com/{{ site.social-media.github }}" target="_blank"> <img class="social-media-icon svg" src="assets/images/github-icon.svg"> </a>
+            <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - Stackoverflow');" href="http://stackoverflow.com/users/{{ site.social-media.stackoverflow }}" target="_blank"> <img class="social-media-icon svg" src="assets/images/stackoverflow-icon.svg"> </a>
+            <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - LinkedIn');" href="https://www.linkedin.com/in/{{ site.social-media.linkedin }}" target="_blank"> <img class="social-media-icon svg" src="assets/images/linkedin-icon.svg"> </a>
             <i class="fas fa-circle"></i>
             <a onclick="trackAnalytics('About Me Section', 'Anchor Link', 'Professional - Contact');" href="#contact" class="page-scroll"> <img class="social-media-icon svg" src="assets/images/email-icon.svg"> </a>
             <a onclick="trackAnalytics('About Me Section', 'External Link', 'Professional - Google CV');" href="https://docs.google.com/document/d/1bWrA-LyPgv2Q9XFgJeQ_BWOxwn3L3bRpdO0YLFuT6rA/edit?usp=sharing" target="_blank"> <img class="social-media-icon svg" src="assets/images/download-cv-icon.svg"> </a>

@@ -32,7 +32,7 @@
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a onclick="trackAnalytics('Top Nav Section', 'Anchor Link', 'Home');" class="navbar-brand" href="http://andysmith.me">andysmith.me</a>
+      <a onclick="trackAnalytics('Top Nav Section', 'Anchor Link', 'Home');" class="navbar-brand" href="http://andysmith.me">{{ site.site-name }}</a>
       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="true" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -75,7 +75,7 @@
  
 	  <div class="page-footer text-center">
       <hr>
-      Designed and made with <i class="fas fa-heart"></i> in London, 2018
+      Designed and made with <i class="fas fa-heart"></i> in London, {{ 'now' | date: "%Y" }}
     </div>
 
     <script>

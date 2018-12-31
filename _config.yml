@@ -1,3 +1,14 @@
+site-name: andysmith.me
+name: Andy Smith
+job-title: Senior Software Engineer
+location: Bermondsey, London
+contact: hello@andysmith.me
+
+social-media:
+    linkedin: smittey
+    github: smittey
+    stackoverflow: 1295906/smittey
+
 sass:
     style: compressed
     sass_dir: ./assets/stylesheets
