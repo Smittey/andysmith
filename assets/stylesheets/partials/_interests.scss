@@ -1,0 +1,17 @@
+#interests-container {
+  .interests-wrapper {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    color: #444;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .box {
+    color: #fff;
+    border-radius: 5px;
+    font-size: 150%;
+  }
+
+}
