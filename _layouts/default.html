@@ -22,7 +22,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-    <script src="assets/js/main.js"></script>
+
+    {% if page.custom_js %}
+      {% for js_file in page.custom_js %}
+          <script src="assets/js/{{ js_file }}.js"></script>
+      {% endfor %}
+    {% endif %}
+
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
