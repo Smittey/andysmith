@@ -1,0 +1,111 @@
+#contact {
+  background: #EEF9E9;
+}
+
+#map-container 
+{
+  height:500px;
+  width:100%;
+  z-index: 0;
+
+  #map 
+  {
+    height:100%;
+    width:100%;
+    float:left;
+  }
+
+  #contact-form {
+    position: relative; 
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 75%;
+
+    .btn {
+      border-radius: 0px;
+      height:40px;
+      background-color: rgba(255, 255, 255, 0.9);
+
+      &:hover {
+        border-radius: 0px;
+        height:40px;
+        color: $accent-color;
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+    }
+
+    .form-group {
+      margin-bottom: 0;
+
+      &.floating-label-form-group {
+        font-size: 14px;
+        position: relative;
+        margin-bottom: 0;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid #eeeeee;
+        background-color: rgba(255, 255, 255, 0.9);
+
+        input, textarea {
+          z-index: 1;
+          position: relative;
+          padding-right: 0;
+          border: none;
+          border-radius: 0;
+          font-size: 1.5em;
+          background: none;
+          box-shadow: none !important;
+          resize: none;
+          color: $font-colour;
+        }
+
+        label {
+          display: block;
+          z-index: 0;
+          position: relative;
+          color: $font-colour;
+          top: 2em;
+          margin: 0;
+          font-size: 0.85em;
+          line-height: 1.764705882em;
+          vertical-align: middle;
+          vertical-align: baseline;
+          opacity: 0;
+          text-align:left;
+          -webkit-transition: top 0.3s ease,opacity 0.3s ease;
+          -moz-transition: top 0.3s ease,opacity 0.3s ease;
+          -ms-transition: top 0.3s ease,opacity 0.3s ease;
+          transition: top 0.3s ease,opacity 0.3s ease;
+        }
+
+        &.floating-label-form-group-with-value {
+
+          label {
+            top: 0;
+            opacity: 1;
+            padding: .375rem .75rem;
+          }
+        }
+
+        &.floating-label-form-group-with-focus {
+
+          label {
+            color: $accent-color;
+          }
+        }
+      }
+
+      /*Stop the autofill setting the background to yellow*/
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+          -webkit-transition-delay: 9999s;
+          -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
+      }
+    }
+  }
+}

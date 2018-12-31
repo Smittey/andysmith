@@ -1,0 +1,17 @@
+.page-footer {
+  font-size: 12px;
+  margin-bottom:20px;
+  color: #7a7e82;
+
+  hr {
+	  margin-top: 1rem;
+	  margin-bottom: 1rem;
+	  border: 0;
+	  border-top: 1px solid rgba(0,0,0,.1); 
+	  width: 50%;
+	}
+
+	.fas {
+	  color: $link-colour;
+	}
+}
