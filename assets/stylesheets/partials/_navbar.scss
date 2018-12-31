@@ -1,0 +1,18 @@
+.navbar {
+	padding-top: 0rem;
+    padding-right: 1rem;
+    padding-bottom: 0rem;
+    padding-left: 1rem;
+
+	.navbar-nav {
+
+		.nav-link {
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+
+			&.active {
+				background-color: #318fe8;
+			}
+		}
+	}
+}
