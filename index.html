@@ -43,16 +43,16 @@ custom_js:
   <div class="row justify-content-center">
     <div class="text-center about-container">
       <div class="avatar">
-        <img src="assets/images/gravitar3.jpg" title="Andy Smith Photo">
+        <img src="assets/images/gravitar3.jpg" alt="Profile picture" title="Andy Smith Photo">
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="about-title">
             <h2>Hi, i’m Andy!</h2>
             <svg class="title-underline" width="62px" height="3px" viewBox="0 0 62 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-                <g id="Artboard" transform="translate(-450.000000, -1171.000000)" stroke-width="3">
-                  <path d="M452,1172.5 L510,1172.5" id="Line-2"></path>
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                <g class="artboard" transform="translate(-450.000000, -1171.000000)" stroke-width="3">
+                  <path d="M452,1172.5 L510,1172.5" ></path>
                 </g>
               </g>
             </svg>
@@ -67,12 +67,12 @@ custom_js:
             <p>Stop by and <a onclick="trackAnalytics('About Me Section', 'Anchor Link', 'Contact');" href="#contact" class="page-scroll">say hi</a></p>
           </div>
           <div class="about-icons">
-            <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - Github');" href="http://github.com/{{ site.social-media.github }}" target="_blank"> <img class="social-media-icon svg" src="assets/images/github-icon.svg"> </a>
-            <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - Stackoverflow');" href="http://stackoverflow.com/users/{{ site.social-media.stackoverflow }}" target="_blank"> <img class="social-media-icon svg" src="assets/images/stackoverflow-icon.svg"> </a>
-            <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - LinkedIn');" href="https://www.linkedin.com/in/{{ site.social-media.linkedin }}" target="_blank"> <img class="social-media-icon svg" src="assets/images/linkedin-icon.svg"> </a>
+            <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - Github');" href="http://github.com/{{ site.social-media.github }}" target="_blank"> <img class="social-media-icon svg" alt="Github social media icon" src="assets/images/github-icon.svg"> </a>
+            <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - Stackoverflow');" href="http://stackoverflow.com/users/{{ site.social-media.stackoverflow }}" target="_blank"> <img class="social-media-icon svg" alt="Stackoverflow social media icon" src="assets/images/stackoverflow-icon.svg"> </a>
+            <a onclick="trackAnalytics('About Me Section', 'External Link', 'Social Media - LinkedIn');" href="https://www.linkedin.com/in/{{ site.social-media.linkedin }}" target="_blank"> <img class="social-media-icon svg" alt="Linkedin social media icon" src="assets/images/linkedin-icon.svg"> </a>
             <i class="fas fa-circle"></i>
-            <a onclick="trackAnalytics('About Me Section', 'Anchor Link', 'Professional - Contact');" href="#contact" class="page-scroll"> <img class="social-media-icon svg" src="assets/images/email-icon.svg"> </a>
-            <a onclick="trackAnalytics('About Me Section', 'External Link', 'Professional - Google CV');" href="https://docs.google.com/document/d/1bWrA-LyPgv2Q9XFgJeQ_BWOxwn3L3bRpdO0YLFuT6rA/edit?usp=sharing" target="_blank"> <img class="social-media-icon svg" src="assets/images/download-cv-icon.svg"> </a>
+            <a onclick="trackAnalytics('About Me Section', 'Anchor Link', 'Professional - Contact');" href="#contact" class="page-scroll"> <img class="social-media-icon svg" alt="Email me icon" src="assets/images/email-icon.svg"> </a>
+            <a onclick="trackAnalytics('About Me Section', 'External Link', 'Professional - Google CV');" href="https://docs.google.com/document/d/1bWrA-LyPgv2Q9XFgJeQ_BWOxwn3L3bRpdO0YLFuT6rA/edit?usp=sharing" target="_blank"> <img class="social-media-icon svg" alt="Download my CV icon" src="assets/images/download-cv-icon.svg"> </a>
           </div>
         </div>
         <div class="col-md-6">
@@ -80,9 +80,9 @@ custom_js:
             <div class="about-title">
               <h2>… I’m interested in</h2>
               <svg class="title-underline" width="62px" height="3px" viewBox="0 0 62 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-                  <g id="Artboard" transform="translate(-450.000000, -1171.000000)"  stroke-width="3">
-                    <path d="M452,1172.5 L510,1172.5" id="Line-2"></path>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                  <g class="artboard" transform="translate(-450.000000, -1171.000000)"  stroke-width="3">
+                    <path d="M452,1172.5 L510,1172.5" ></path>
                   </g>
                 </g>
               </svg>
@@ -90,63 +90,63 @@ custom_js:
             <div class="interests-wrapper">
               <div class="box a">
                 <div class="glyphs">
-                  <div id="weights" class="glyph">
+                  <div class="glyph">
                     <div class="glyph-icon-large flaticon-dumbbell"></div>
                   </div>
                 </div>
               </div>
               <div class="box b">
                 <div class="glyphs">
-                  <div id="weights" class="glyph">
+                  <div class="glyph">
                     <div class="glyph-icon-large flaticon-drink"></div>
                   </div>
                 </div>
               </div>
               <div class="box c">
                 <div class="glyphs">
-                  <div id="weights" class="glyph">
+                  <div class="glyph">
                     <div class="glyph-icon-large flaticon-cup-1"></div>
                   </div>
                 </div>
               </div>
               <div class="box d">
                 <div class="glyphs">
-                  <div id="weights" class="glyph">
+                  <div class="glyph">
                     <div class="glyph-icon-large flaticon-transport"></div>
                   </div>
                 </div>
               </div>
               <div class="box e">
                 <div class="glyphs">
-                  <div id="weights" class="glyph">
+                  <div class="glyph">
                     <div class="glyph-icon-large flaticon-music-1"></div>
                   </div>
                 </div>
               </div>
               <div class="box f">
                 <div class="glyphs">
-                  <div id="weights" class="glyph">
+                  <div class="glyph">
                     <div class="glyph-icon-large flaticon-sport"></div>
                   </div>
                 </div>
               </div>
               <div class="box d">
                 <div class="glyphs">
-                  <div id="weights" class="glyph">
+                  <div class="glyph">
                     <div class="glyph-icon-large flaticon-music"></div>
                   </div>
                 </div>
               </div>
               <div class="box e">
                 <div class="glyphs">
-                  <div id="weights" class="glyph">
+                  <div class="glyph">
                     <div class="glyph-icon-large flaticon-moon"></div>
                   </div>
                 </div>
               </div>
               <div class="box f">
                 <div class="glyphs">
-                  <div id="weights" class="glyph">
+                  <div class="glyph">
                     <div class="glyph-icon-large flaticon-ice"></div>
                   </div>
                 </div>
@@ -166,9 +166,9 @@ custom_js:
         <div class="section-title">
           <h4>... I've worked at</h4>
           <svg class="title-underline" width="62px" height="3px" viewBox="0 0 62 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-              <g id="Artboard" transform="translate(-450.000000, -1171.000000)"  stroke-width="3">
-                <path d="M452,1172.5 L510,1172.5" id="Line-2"></path>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+              <g class="artboard" transform="translate(-450.000000, -1171.000000)"  stroke-width="3">
+                <path d="M452,1172.5 L510,1172.5" ></path>
               </g>
             </g>
           </svg>
@@ -177,7 +177,7 @@ custom_js:
     </div>
   </div>
 </div>
-<div id="sectionWrapper">
+<div class="sectionWrapper">
   <div class="container-fluid">
     <div class="row">
       <div id="sticky">
@@ -188,7 +188,7 @@ custom_js:
 
           <div class="timeline wow bounceInLeft">
             <div class="timeline-content">
-              <img src="assets/images/logo-anddigital.jpg" class="corner-logo">
+              <img src="assets/images/logo-anddigital.jpg" alt="AND Digital company logo" class="corner-logo">
               <span class="post">AND Digital, Senior Product Developer</span>
               <span>November 2018</span>
               <p class="description">Senior developer on a project in Open Banking, developing the client customer-facing API.
@@ -201,7 +201,7 @@ custom_js:
 
           <div class="timeline wow bounceInLeft">
             <div class="timeline-content">
-              <img src="assets/images/logo-anddigital.jpg" class="corner-logo">
+              <img src="assets/images/logo-anddigital.jpg" alt="AND Digital company logo" class="corner-logo">
               <span class="post">AND Digital, Product Developer and Team Lead</span>
               <span>August 2018</span>
               <p class="description">Team lead and senior engineer developing new features as well as enhancing existing features in the client customer-facing website. 
@@ -215,7 +215,7 @@ custom_js:
 
           <div class="timeline wow bounceInLeft">
             <div class="timeline-content">
-              <img src="assets/images/logo-anddigital.jpg" class="corner-logo">
+              <img src="assets/images/logo-anddigital.jpg" alt="AND Digital company logo" class="corner-logo">
               <span class="post">AND Digital, Product Developer and Team Lead</span>
               <span>May 2018</span>
               <p class="description">Team lead and senior engineer developing a clients API
@@ -228,7 +228,7 @@ custom_js:
           </div>
           <div class="timeline wow bounceInRight">
             <div class="timeline-content">
-              <img src="assets/images/logo-cgi1.png" class="corner-logo">
+              <img src="assets/images/logo-cgi1.png" alt="CGI company logo" class="corner-logo">
               <span class="post">CGI, Software Developer</span>
               <span>May 2016</span>
               <p class="description">Worked as a software engineer on a tech-refresh project. 
@@ -244,7 +244,7 @@ custom_js:
           </div>
           <div class="timeline wow bounceInLeft">
             <div class="timeline-content">
-              <img src="assets/images/logo-cgi1.png" class="corner-logo">
+              <img src="assets/images/logo-cgi1.png" alt="CGI company logo" class="corner-logo">
               <span class="post">CGI, UI Lead</span>
               <span>May 2016</span>
               <p class="description">I worked as a UI lead on a proof-of-concept project
@@ -261,7 +261,7 @@ custom_js:
           </div>
           <div class="timeline wow bounceInRight">
             <div class="timeline-content">
-              <img src="assets/images/logo-cgi1.png" class="corner-logo">
+              <img src="assets/images/logo-cgi1.png" alt="CGI company logo" class="corner-logo">
               <span class="post">CGI, Full-Stack Developer</span>
               <span>July 2014</span>
               <p class="description">The only full-stack software developer on a project in the Justice sector.
@@ -287,9 +287,9 @@ custom_js:
         <div class="section-title">
           <h4>... I've made</h4>
           <svg class="title-underline" width="62px" height="3px" viewBox="0 0 62 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-              <g id="Artboard" transform="translate(-450.000000, -1171.000000)"  stroke-width="3">
-                <path d="M452,1172.5 L510,1172.5" id="Line-2"></path>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+              <g class="artboard" transform="translate(-450.000000, -1171.000000)"  stroke-width="3">
+                <path d="M452,1172.5 L510,1172.5" ></path>
               </g>
             </g>
           </svg>
@@ -299,7 +299,7 @@ custom_js:
   </div>
 </div>
 
-<div id="sectionWrapper">
+<div class="sectionWrapper">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
@@ -314,7 +314,7 @@ custom_js:
               <div class="content">
                 <a onclick="trackAnalytics('Projects Section', 'External Link', 'Smittey.co.uk');" href="http://www.smittey.co.uk/" target="_blank">
                   <div class="content-overlay"></div>
-                  <img class="content-image" src="assets/images/projects-blog1.jpg">
+                  <img class="content-image" alt="Blog project picture" src="assets/images/projects-blog1.jpg">
                   <div class="content-details fadeIn-bottom">
                     <h3 class="content-title">My Blog</h3>
                     <p class="content-text">A blog by me, Andy Smith, a Software Developer based in the UK</p>
@@ -326,7 +326,7 @@ custom_js:
               <div class="content">
                 <a onclick="trackAnalytics('Projects Section', 'External Link', 'Jetsettr');" href="https://github.com/Smittey/Jetsettr" target="_blank">
                   <div class="content-overlay"></div>
-                  <img class="content-image" src="assets/images/projects-jetsettr.jpg">
+                  <img class="content-image" alt="Jetsettr project picture" src="assets/images/projects-jetsettr.jpg">
                   <div class="content-details fadeIn-bottom">
                     <h3 class="content-title">Jetsettr</h3>
                     <p class="content-text">Visualise your Foursquare checkins and unique metrics</p>
@@ -338,7 +338,7 @@ custom_js:
               <div class="content">
                 <a onclick="trackAnalytics('Projects Section', 'External Link', 'Raspberry Pi Analytics');" href="https://github.com/Smittey/RaspberryPi-Projects/tree/master/Analytics" target="_blank">
                   <div class="content-overlay"></div>
-                  <img class="content-image" src="assets/images/projects-raspberry-pi-anybody-on.png">
+                  <img class="content-image" alt="Raspberry Pi Analytics project picture" src="assets/images/projects-raspberry-pi-anybody-on.png">
                   <div class="content-details fadeIn-bottom">
                     <h3 class="content-title">Anybody On?</h3>
                     <p class="content-text">A Raspberry Pi application to let you know if your media is being viewed</p>
@@ -350,7 +350,7 @@ custom_js:
               <div class="content">
                 <a onclick="trackAnalytics('Projects Section', 'External Link', 'Tempete');" href="https://soundcloud.com/smitteyy/tempete" target="_blank">
                   <div class="content-overlay"></div>
-                  <img class="content-image" src="assets/images/projects-composition1.jpg">
+                  <img class="content-image" alt="Tempete music project picture" src="assets/images/projects-composition1.jpg">
                   <div class="content-details fadeIn-bottom">
                     <h3 class="content-title">Tempête</h3>
                     <p class="content-text">"Storm". A composition for piano</p>
@@ -362,7 +362,7 @@ custom_js:
               <div class="content">
                 <a onclick="trackAnalytics('Projects Section', 'External Link', 'Little Farnham Pianists');" href="http://smittey.github.io/LittleFarnhamPianists" target="_blank">
                   <div class="content-overlay"></div>
-                  <img class="content-image" src="assets/images/projects-littlefarnhampianists.jpg">
+                  <img class="content-image" alt="Little Farnham Pianists project picture" src="assets/images/projects-littlefarnhampianists.jpg">
                   <div class="content-details fadeIn-bottom">
                     <h3 class="content-title">Hannah Hawley Piano</h3>
                     <p class="content-text">A website for a local music business</p>
@@ -374,7 +374,7 @@ custom_js:
               <div class="content">
                 <a onclick="trackAnalytics('Projects Section', 'External Link', 'My Gym Journal');" href="https://play.google.com/store/apps/details?id=my.gym.journal" target="_blank">
                   <div class="content-overlay"></div>
-                  <img class="content-image" src="assets/images/projects-mygymjournal.jpg">
+                  <img class="content-image" alt="My Gym Journal project picture" src="assets/images/projects-mygymjournal.jpg">
                   <div class="content-details fadeIn-bottom">
                     <h3 class="content-title">My Gym Journal</h3>
                     <p class="content-text">An application targetted at Android 2.2, designed to help bodybuilders keep track of their progress</p>
@@ -386,7 +386,7 @@ custom_js:
               <div class="content">
                 <a onclick="trackAnalytics('Projects Section', 'External Link', 'Slack Apps');" href="https://github.com/Smittey/Slack-apps" target="_blank">
                   <div class="content-overlay"></div>
-                  <img class="content-image" src="assets/images/projects-slack.jpg">
+                  <img class="content-image" alt="Slack apps project picture" src="assets/images/projects-slack.jpg">
                   <div class="content-details fadeIn-bottom">
                     <h3 class="content-title">Music Suggester</h3>
                     <p class="content-text">A slash command plugin for Slack which returns a list of similar artists</p>
@@ -398,7 +398,7 @@ custom_js:
               <div class="content">
                 <a onclick="trackAnalytics('Projects Section', 'External Link', 'Npm Registry Publisher');" href="https://github.com/Smittey/Node.js-Projects/tree/master/npm-registry-publisher" target="_blank">
                   <div class="content-overlay"></div>
-                  <img class="content-image" src="assets/images/projects-npm-registry-publisher.jpg">
+                  <img class="content-image" alt="Npm Registry Publisher project picture" src="assets/images/projects-npm-registry-publisher.jpg">
                   <div class="content-details fadeIn-bottom">
                     <h3 class="content-title">Npm Registry Publisher</h3>
                     <p class="content-text">Publish all used node.js dependencies to your offline registry</p>
@@ -420,9 +420,9 @@ custom_js:
         <div class="section-title">
           <h4>... I've written</h4>
           <svg class="title-underline" width="62px" height="3px" viewBox="0 0 62 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-              <g id="Artboard" transform="translate(-450.000000, -1171.000000)"  stroke-width="3">
-                <path d="M452,1172.5 L510,1172.5" id="Line-2"></path>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+              <g class="artboard" transform="translate(-450.000000, -1171.000000)"  stroke-width="3">
+                <path d="M452,1172.5 L510,1172.5" ></path>
               </g>
             </g>
           </svg>
@@ -431,7 +431,7 @@ custom_js:
     </div>
   </div>
 </div>
-<div id="sectionWrapper">
+<div class="sectionWrapper">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
@@ -609,9 +609,9 @@ custom_js:
         <div class="section-title">
           <h4>... People say</h4>
           <svg class="title-underline" width="62px" height="3px" viewBox="0 0 62 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-              <g id="Artboard" transform="translate(-450.000000, -1171.000000)"  stroke-width="3">
-                <path d="M452,1172.5 L510,1172.5" id="Line-2"></path>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+              <g class="artboard" transform="translate(-450.000000, -1171.000000)"  stroke-width="3">
+                <path d="M452,1172.5 L510,1172.5" ></path>
               </g>
             </g>
           </svg>
@@ -620,7 +620,7 @@ custom_js:
     </div>
   </div>
 </div>
-<div id="sectionWrapper">
+<div class="sectionWrapper">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
@@ -721,9 +721,9 @@ custom_js:
         <div class="section-title">
           <h4>... Say hi</h4>
           <svg class="title-underline" width="62px" height="3px" viewBox="0 0 62 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-              <g id="Artboard" transform="translate(-450.000000, -1171.000000)"  stroke-width="3">
-                <path d="M452,1172.5 L510,1172.5" id="Line-2"></path>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+              <g class="artboard" transform="translate(-450.000000, -1171.000000)"  stroke-width="3">
+                <path d="M452,1172.5 L510,1172.5" ></path>
               </g>
             </g>
           </svg>
@@ -732,49 +732,48 @@ custom_js:
     </div>
   </div>
 </div>
-<div id="sectionWrapper">
+<div class="sectionWrapper">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-
         <div id="map-container">
           <div id="map"></div>
-            <div id="contact-form">
-              <form action="//formspree.io/hello@andysmith.me" method="POST">
+          <div id="contact-form">
+            <form action="//formspree.io/hello@andysmith.me" method="POST">
 
-                <div class="form-group col-xs-12 floating-label-form-group controls">
-                  <label>Name</label>
-                  <input type="text" class="form-control" name="name" placeholder="Name" id="name" required="" data-validation-required-message="Please enter your name">
-                  <p class="help-block text-danger"></p>
-                </div>
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Name" id="name" required="" data-validation-required-message="Please enter your name">
+                <p class="help-block text-danger"></p>
+              </div>
 
-                <div class="form-group col-xs-12 floating-label-form-group controls">
-                  <label>Email Address</label>
-                  <input type="email" class="form-control" name="_replyto" placeholder="Email Address" id="email" required="" data-validation-required-message="Please enter your email address">
-                  <p class="help-block text-danger"></p>
-                </div>
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Email Address</label>
+                <input type="email" class="form-control" name="_replyto" placeholder="Email Address" id="email" required="" data-validation-required-message="Please enter your email address">
+                <p class="help-block text-danger"></p>
+              </div>
 
-                <input type="hidden" name="_subject" value="AndySmith.me Contact">
+              <input type="hidden" name="_subject" value="AndySmith.me Contact">
 
-                <div class="form-group col-xs-12 floating-label-form-group controls">
-                  <label>Message</label>
-                  <textarea data-type="text" class="form-control" name="message" placeholder="Message" id="message" required="" data-validation-required-message="Write to me" rows="4"></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
-                  
-                <input type="text" name="_gotcha" style="display:none">
-                <input type="hidden" name="_next" value="http://www.andysmith.me">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Message</label>
+                <textarea data-type="text" class="form-control" name="message" placeholder="Message" id="message" required="" data-validation-required-message="Write to me" rows="4"></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
                 
-                  <div class="form-group col-xs-12" style="text-align:centre">
-                  <br>
-                    <button onclick="trackAnalytics('Contact Section', 'Button Click', 'Form Submit');" type="submit" value="Send" class="btn btn-default">Send</button>
-                  </div>
-                
-              </form>
-            </div>
+              <input type="text" name="_gotcha" style="display:none">
+              <input type="hidden" name="_next" value="http://www.andysmith.me">
+              
+              <div class="form-group col-xs-12">
+                <br>
+                <button onclick="trackAnalytics('Contact Section', 'Button Click', 'Form Submit');" type="submit" value="Send" class="btn btn-default">Send</button>
+              </div>
+              
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+

@@ -7,11 +7,11 @@ body {
     position: relative; 
 }
 
-#sectionWrapper {
+.sectionWrapper {
   margin: 50px 0 50px 0;
 }
 
-#sectionWrapper .container-fluid {
+.sectionWrapper .container-fluid {
   max-width: 900px;
   padding-top:30px;
   padding-bottom:30px;
@@ -47,7 +47,7 @@ body {
     float: left;
     margin-left: 50px;
 
-   #Artboard {
+   .artboard {
       stroke: $link-colour;
    }
     
