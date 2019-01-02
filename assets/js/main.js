@@ -50,7 +50,7 @@ function getTopArtists() {
   var musicFound = false;
   
   //Get top artists from lastfm account
-  $.getJSON("http://ws.audioscrobbler.com/2.0/?method=user.getTopArtists&user=smitteyyyy&period=1month&api_key=9ddaab7dc99dbcfb3f2ed8204ef965ce&limit=5&format=json&callback=?", function(json) {
+  $.getJSON("https://ws.audioscrobbler.com/2.0/?method=user.getTopArtists&user=smitteyyyy&period=1month&api_key=9ddaab7dc99dbcfb3f2ed8204ef965ce&limit=5&format=json&callback=?", function(json) {
         $.each(json.topartists.artist, function(i, item) {
       
       musicFound = true;
@@ -74,7 +74,7 @@ function getTopArtists() {
     
     if(!musicFound)
     {
-      $.getJSON("http://ws.audioscrobbler.com/2.0/?method=user.getTopArtists&user=smitteyyyy&period=3month&api_key=9ddaab7dc99dbcfb3f2ed8204ef965ce&limit=5&format=json&callback=?", function(json) {
+      $.getJSON("https://ws.audioscrobbler.com/2.0/?method=user.getTopArtists&user=smitteyyyy&period=3month&api_key=9ddaab7dc99dbcfb3f2ed8204ef965ce&limit=5&format=json&callback=?", function(json) {
         html = '';
 
         $.each(json.topartists.artist, function(i, item) {
@@ -103,7 +103,7 @@ function getTopArtists() {
 var currentSongName;
 function getNowPlaying() 
 {
-  $.getJSON("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=smitteyyyy&api_key=9ddaab7dc99dbcfb3f2ed8204ef965ce&limit=1&format=json&callback=?", function(json) {
+  $.getJSON("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=smitteyyyy&api_key=9ddaab7dc99dbcfb3f2ed8204ef965ce&limit=1&format=json&callback=?", function(json) {
         $.each(json.recenttracks.track, function(i, item) {
                   
       //Limit to the first iteration. Lastfm seems to want to return at least 2
