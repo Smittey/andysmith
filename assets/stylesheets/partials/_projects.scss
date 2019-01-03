@@ -95,7 +95,7 @@
         -moz-transition: all 0.3s ease-in-out 0s;
         transition: all 0.3s ease-in-out 0s;
 
-        h3  {
+        h3 {
           color: #fff;
           font-weight: 500;
           letter-spacing: 0.15em;
@@ -105,6 +105,11 @@
 
         p {
           color: #fff;
+        }
+
+        hr {
+          border-top: 1px solid rgb(42, 141, 235);
+          width: 50%;
         }
 
       }
