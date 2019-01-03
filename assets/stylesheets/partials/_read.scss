@@ -1,5 +1,19 @@
 #readme-timeline {
   margin-top: 70px;
+
+  a {
+    color: #7a7e82;
+    text-decoration: none;
+    background-color: transparent;
+    font-weight: bold;
+  
+    &:hover {
+      color: #3E93E2;
+      text-decoration: none;
+      background-color: transparent
+    }
+
+  }
   
   .circle {
     padding: 20px;
@@ -103,8 +117,8 @@
   }
 
   .col-6 {
-    max-width: 80%;
-    flex: 0 0 80%;
+    max-width: 75%;
+    flex: 0 0 75%;
   }
 
   .col {
