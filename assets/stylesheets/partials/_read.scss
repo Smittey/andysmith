@@ -138,6 +138,26 @@
   .col-6 {
     max-width: 75%;
     flex: 0 0 75%;
+
+    .title-underline {
+      margin-left: 0px;
+      float: none;
+      margin-top: -30px;
+    }
+
+    .heading-table {
+      @include mobile {
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+    }
+
+    .heading-table-underline {
+      @include mobile {
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+    }
   }
 
   .col {
