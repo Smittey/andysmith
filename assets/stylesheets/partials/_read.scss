@@ -67,6 +67,12 @@
       top: 0;
     }
 
+    &.top-right::after {
+      height: 50%;
+      left: calc(50% - 3px);
+      top: 0;
+    }
+
   }
 
   .timeline {
