@@ -3,45 +3,39 @@
 }
 
 #testimonialsCarousel {
-  width: 70%;
-  margin: 0 auto;
 
-  .carousel-indicators {
-    bottom:-50px;
+    .slick-next::before, .slick-prev::before {
+      color: $link-colour;
 
-    .active {
-      background-color: $link-colour;
+      @include mobile {
+        display: none;
+      }
     }
 
-    li {
-      width: 10px;
-      height: 10px;
-      border-radius: 100%;
-      background-color: $box-color;
-    }
-  }
-
-  .carousel-inner {
-    margin-bottom:50px;
-
-    .carousel-item-right.active, .carousel-item-next {
-      transform: translateX(100%);
+    .slick-dots li button:before {
+      color: $link-colour;
+      font-size: 10px;
     }
 
-    .carousel-item-left.active, .carousel-item-prev {
-      transform: translateX(-100%);
+    .slick-slide {
+      text-align: center;
     }
 
-    .carousel-item.active, .carousel-item-next, .carousel-item-prev {
+    .quote-wrapper {
+      top: 0px;
+      position: relative;
+
+    .quote-box {
+      background: $box-color;
+      position: relative;
+      margin: 15px 15px 15px 15px;
+
       display: flex;
-    }
+      display: -webkit-flex;
 
-    .carousel-item-right, .carousel-item-left { 
-      transform: translateX(0);      
-    }
+      display: table;
 
-    .carousel-item {
-      padding: 20px 0px 20px 0px;
+      box-shadow: -6px 10px 11px -7px rgba(0,0,0,0.50);
 
       .upper_left {
         position: absolute;
@@ -55,46 +49,47 @@
         position: absolute;
       }
 
-      .quote-text {
-        margin: auto; /* Important */
-        text-align: center;
-        padding: 15px 40px 15px 40px;
-        color: #7a7e82;
+      .quote.fas {
+        color: $link-colour;
+        font-size: 30px;
       }
 
-      .quote-box {
-        min-height: 200px;
-        min-width: calc(100% - 15px);
-        background: $box-color;
-        position: relative;
-        margin: 0px 0px 0px 15px;
+      .quote-text {
+        padding: 60px 40px 40px 40px;
+      }
 
-        display: flex;
-        display: -webkit-flex;
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
 
-        box-shadow: -6px 10px 11px -7px rgba(0,0,0,0.50);
-
-        .fas {
-          color: $link-colour;
-          font-size: 30px;
-        }
+      .quote-author {
+        font-style: italic;
+        color: RGB(0,0,0,0.5);
       }
     }
-  }
 
-  .carousel-control-prev {
-    left: -20%;
-  }
+    .avatar {
+      margin-top: -0px;
+      margin-bottom: -20px;
+      position: absolute;
+      z-index: 10;
 
-  .carousel-control-next {
-      right: -20%;
-  }
+      margin: 0 auto;
+      width: 100%;
 
-  .carousel-control-prev-icon {
-   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23#{$svg-link-colour}' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-  }
+      .profile-icon.fas {
+        color: $link-colour;
+        font-size: 64px;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+      
 
-  .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23#{$svg-link-colour}' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+      .quote.fas {
+        color: $link-colour;
+        font-size: 30px;
+      }
+    }
   }
 }

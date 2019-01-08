@@ -28,6 +28,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css"/>
+
+
     {% if page.custom_js %}
       {% for js_file in page.custom_js %}
     <script src="assets/js/{{ js_file }}.js"></script>
@@ -92,6 +96,7 @@
       ga('send', 'pageview');
     </script>
 
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   </body>
 </html>

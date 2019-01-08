@@ -2,21 +2,27 @@
  * Start Misc me
  ************************/
 $(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
+  $('a.page-scroll').bind('click', function(event) {
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+          scrollTop: $($anchor.attr('href')).offset().top
+      }, 1500, 'easeInOutExpo');
+      event.preventDefault();
+  });
 
-    new WOW({offset: 100}).init();
+  new WOW({offset: 100}).init();
 
 
-    setUpAbout();
-    setUpTimeline();
-    setUpTestimonials();
-    setUpContact();
+  $('.your-class').slick({
+    arrows: true, // Adds arrows to sides of slider
+    dots: true, // Adds the dots on the bottom
+    adaptiveHeight: true
+  });
+
+  setUpAbout();
+  setUpTimeline();
+  setUpTestimonials();
+  setUpContact();
 });
 
 function scroll(target) {
@@ -339,7 +345,6 @@ function setUpTestimonials() {
  /************************
  * End Testimonials
  ************************/
-
 
 
 
