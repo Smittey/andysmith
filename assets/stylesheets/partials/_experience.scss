@@ -148,7 +148,7 @@
     .corner-logo-base-company {
       position: absolute;
       top: -15px;
-      left: -25px;
+      left: -18px;
       right: auto;
       width: 50px;
       height: 50px;
@@ -158,27 +158,7 @@
     &:nth-child(2n) .corner-logo-base-company {
       position: absolute;
       top: -15px;
-      right: -25px;
-      left: auto;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-    }
-
-    .corner-logo-contract-company {
-      position: absolute;
-      top: -6px;
-      left: -16px;
-      right: auto;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-    }
-
-    &:nth-child(2n) .corner-logo-contract-company {
-      position: absolute;
-      top: -6px;
-      right: -16px;
+      right: -15px;
       left: auto;
       width: 50px;
       height: 50px;
@@ -241,26 +221,6 @@
         position: absolute;
         top: -15px;
         right: -10px;
-        left: auto;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-      }
-
-      .corner-logo-contract-company {
-        position: absolute;
-        top: -6px;
-        right: 0px;
-        left: auto;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-      }
-
-      &:nth-child(2n) .corner-logo-contract-company {
-        position: absolute;
-        top: -6px;
-        right: 0px;
         left: auto;
         width: 50px;
         height: 50px;
