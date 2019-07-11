@@ -164,7 +164,7 @@ function setUpTimeline() {
   //Filter by tags
   $("#sticky").on('click', '.badge', function() {     
     filterTags(this);
-    scroll('#experience');
+    scroll('#experience-container');
   });
   
   //sidebar scroll boundaries
@@ -302,7 +302,7 @@ function clearFilters() {
     $(this).removeClass('experienceItemSelected');
   });
   
-  scroll('#experience');
+  scroll('#experience-container');
 }
 
  /************************
