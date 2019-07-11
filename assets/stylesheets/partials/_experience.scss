@@ -9,7 +9,7 @@
   background: #fff;
   width: 100%;
   min-height: 50px;
-  top: 56px;
+  top: 55px;
   justify-content: center;
   align-items: center;
   color: #fff;
@@ -145,20 +145,40 @@
       }
     }
 
-    .corner-logo {
+    .corner-logo-base-company {
       position: absolute;
       top: -15px;
-      left: -15px;
+      left: -25px;
       right: auto;
       width: 50px;
       height: 50px;
       border-radius: 50%;
     }
 
-    &:nth-child(2n) .corner-logo {
+    &:nth-child(2n) .corner-logo-base-company {
       position: absolute;
       top: -15px;
-      right: -15px;
+      right: -25px;
+      left: auto;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .corner-logo-contract-company {
+      position: absolute;
+      top: -6px;
+      left: -16px;
+      right: auto;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    &:nth-child(2n) .corner-logo-contract-company {
+      position: absolute;
+      top: -6px;
+      right: -16px;
       left: auto;
       width: 50px;
       height: 50px;
@@ -168,6 +188,11 @@
 }
 
 @media (max-width: 767px) {
+
+  #sticky {
+    top: 40px;
+  }
+
   .main-timeline {
     &:before {
       margin: 0;
@@ -202,10 +227,40 @@
         margin-top: 0;
       }
 
-      .corner-logo {
+      .corner-logo-base-company {
         position: absolute;
         top: -15px;
-        right: -15px;
+        right: -10px;
+        left: auto;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      &:nth-child(2n) .corner-logo-base-company {
+        position: absolute;
+        top: -15px;
+        right: -10px;
+        left: auto;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      .corner-logo-contract-company {
+        position: absolute;
+        top: -6px;
+        right: 0px;
+        left: auto;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      &:nth-child(2n) .corner-logo-contract-company {
+        position: absolute;
+        top: -6px;
+        right: 0px;
         left: auto;
         width: 50px;
         height: 50px;
