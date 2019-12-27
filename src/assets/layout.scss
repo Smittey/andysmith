@@ -1,0 +1,120 @@
+@import "./colours.scss";
+@import "./font.scss";
+
+body {
+  font-family: $regular;
+  color: $primary-font-color;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  display: flex;
+}
+
+.rightNav {
+  background: $theme-color;
+  min-width:300px;
+  float:right;
+  position: relative;
+}
+
+.content {
+  flex-basis: 100%;
+  
+  height: 100vh; 
+  overflow: auto;
+  position: relative;
+
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+
+  margin-left: 10%;
+  margin-right: 15%;
+}
+
+
+.left::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+.theme-primary-colour {
+  color: $theme-color;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.bold {
+  font-family: $bold;
+}
+
+.regular {
+  font-family: $regular;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.bioBox {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom:20px;
+  }
+
+  button {
+    border: 1px solid #83D5D5;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    &:hover,&:focus {
+      background-color: $theme-color;
+      color: white;
+    }
+  }
+
+}
+
+.navMeBig {
+  left: -174px;
+}
+
+.imgContainer {
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+span {
+  display: inline-block;
+}
+img {
+  width: 75%;
+  margin-left: -25%;
+}
