@@ -7,10 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "../components/image"
-import big from "../images/me-big1.png"
-
+import Navbar from "../components/navbar";
 import "../assets/layout.scss"
 
 const Layout = ({ children, navBarWidth }) => {
@@ -23,13 +20,7 @@ const Layout = ({ children, navBarWidth }) => {
           <div className="content">
             <main>{children}</main>
           </div>
-          <div className="rightNav" style={{minWidth: navBarWidth}}>
-            <p>Stuck stuff</p>
-            <span class="imgContainer">
-              <img src={big}></img>
-            </span>
-            {/* <Image/> */}
-          </div>
+          <Navbar width={navBarWidth}/>
         </div>
 
       </div>

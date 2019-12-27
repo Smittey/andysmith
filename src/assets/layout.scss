@@ -25,6 +25,43 @@ html {
   min-width:300px;
   float:right;
   position: relative;
+
+  ul {
+
+    padding-right: 20px;
+    padding-top: 20px;
+
+    li {
+      text-align: right;
+      list-style-type:none;
+      font-size: 30px;
+      font-family: $bold;
+    }
+  }
+
+  .imgWrappers{
+    display: flex;
+    margin-left: -40%;
+
+    .bigImg {
+      display: block;
+      object-fit: contain;
+      height: 90%;
+      max-width: 100%;
+      position: absolute;
+      bottom: 0;
+      // margin-left: -25%;
+    }
+  
+    .column {
+      
+      padding: 5px;
+    }
+  
+  }
+  
+
+
 }
 
 .content {
@@ -54,6 +91,10 @@ h1 {
   font-size: 60px;
 }
 
+h2 {
+  font-size: 20px;
+}
+
 .bold {
   font-family: $bold;
 }
@@ -62,9 +103,6 @@ h1 {
   font-family: $regular;
 }
 
-h2 {
-  font-size: 20px;
-}
 
 .bioBox {
   margin: 0;
@@ -99,22 +137,4 @@ h2 {
     }
   }
 
-}
-
-.navMeBig {
-  left: -174px;
-}
-
-.imgContainer {
-    margin: 0;
-    position: absolute;
-    bottom: 0;
-}
-
-span {
-  display: inline-block;
-}
-img {
-  width: 75%;
-  margin-left: -25%;
 }
