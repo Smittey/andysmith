@@ -3,6 +3,8 @@ import React from 'react';
 // import Image from "../components/image"
 import big from "../images/me-big1.png";
 import stackoverflow from "../images/stackoverflow.svg";
+import github from "../images/github.svg";
+import linkedin from "../images/linkedin.svg";
 
 const navbar = ({width}) => {
 
@@ -17,12 +19,12 @@ const navbar = ({width}) => {
             <li>Contact.</li>
           </ul>
         <div className="imgWrappers">
-            <div className="column" style={{flex: "10%"}}>
-                <img className="social" src={stackoverflow} height="100" width="100px"></img>
+            <div className="icons">
+                <img className="social" src={stackoverflow} height="50px" width="50px"></img>
+                <img className="social" src={github} height="50px" width="50px"></img>
+                <img className="social" src={linkedin} height="50px" width="50px"></img>
             </div>
-            <div className="column" style={{flex: "90%"}}>
-                <img className="bigImg" src={big}></img>
-            </div>
+            <img className="bigImg" src={big}></img>
         </div>
         {/* <Image/> */}
 

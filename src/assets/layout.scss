@@ -40,23 +40,30 @@ html {
   }
 
   .imgWrappers{
-    display: flex;
-    margin-left: -40%;
+    margin-left: -50px;
+
+    .icons {
+      
+      position: absolute;
+      bottom: 0;
+
+      .social {
+        margin-left: -50px;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
 
     .bigImg {
       display: block;
       object-fit: contain;
-      height: 90%;
+      max-height: 90%;
       max-width: 100%;
       position: absolute;
       bottom: 0;
-      // margin-left: -25%;
     }
   
-    .column {
-      
-      padding: 5px;
-    }
+
   
   }
   
