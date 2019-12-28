@@ -1,0 +1,56 @@
+body {
+    font-family: $regular;
+    color: $primary-font-color;
+    margin: 0;
+    padding: 0;
+}
+  
+html {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.bold {
+    font-family: $bold;
+}
+
+.regular {
+    font-family: $regular;
+}
+
+.container {
+    display: flex;
+}
+
+  
+  
+.content {
+    flex-basis: 100%;
+
+    height: 100vh; 
+    overflow: auto;
+    position: relative;
+
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+
+    margin-left: 10%;
+    margin-right: 15%;
+}
+  
+  
+.left::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.theme-primary-colour {
+    color: $theme-color;
+}

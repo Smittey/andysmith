@@ -7,20 +7,21 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import Navbar from "../components/navbar";
-import "../assets/layout.scss"
+import Navbar from "./Navbar";
+import "../assets/style/main.scss"
+import Footer from "../components/Footer"
 
-const Layout = ({ children, navBarWidth }) => {
+const Layout = ({ children, isIndex }) => {
   return (
     <>
       <div>
 
         <div className="container">
-          
           <div className="content">
             <main>{children}</main>
+            <Footer />
           </div>
-          <Navbar width={navBarWidth}/>
+          <Navbar isIndex={isIndex}/>
         </div>
 
       </div>

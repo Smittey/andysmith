@@ -2,14 +2,12 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// import { useStaticQuery, graphql, Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
-import Button from '../components/Button';
 
 const IndexPage = () => {
 
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query SiteBioQuery {
       site {
         siteMetadata {
           name,
@@ -26,7 +24,7 @@ const IndexPage = () => {
 
   return (
 
-    <Layout navBarWidth='40%'>
+    <Layout isIndex="true">
       <SEO title="Home" />
       
       <div className="bioBox">
@@ -42,15 +40,13 @@ const IndexPage = () => {
           {data.site.siteMetadata.professional_tagline2}
         </p>
 
-        <Button label="Resume"/>
+        <a href="https://docs.google.com/document/d/1bWrA-LyPgv2Q9XFgJeQ_BWOxwn3L3bRpdO0YLFuT6rA/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <div className="resumeButton">
+            Resume
+          </div>
+        </a>
       </div>
 
-      {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div> */}
-      {/* <Link to="/page-2/">Go to page 2</Link> */}
-
-      
     </Layout>
   )
 }
