@@ -1,0 +1,91 @@
+.experience {
+
+    .sticky {
+        position: sticky;
+        position: -webkit-sticky;
+        background: #fff;
+        width: 100%;
+        min-height: 50px;
+        top: 55px;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        padding-bottom: 5px;
+    }
+
+    .timeline {
+        margin: 30px 0 0 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+    } 
+    
+    /* The line */
+    .timeline:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: #C9C6C6;
+        left: 20%;
+        margin-left: -19px;
+    }
+    
+    .timeline > li {
+        position: relative;
+    }
+
+    *, *:after, *:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* The date/time */
+    .timeline > li .time {
+        display: block;
+        width: 30%;
+        padding-right: 100px;
+        position: absolute;
+    }
+
+    .timeline > li .time span {
+        display: block;
+        text-align: left;
+        font-weight: bold;
+    }
+
+
+    /* Right content */
+    .timeline > li .label {
+        margin: 0 0 50px 25%;
+        // border: 1px solid #83D5D5;
+        position: relative;
+    }
+
+
+    .timeline > li .label h2 { 
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+    .timeline > li .label h4 { 
+        margin-top: 0px;
+    }
+
+
+
+
+    /* The icons */
+    .timeline > li .icon {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        background: $theme-color;
+        border-radius: 50%;
+        left: 20%;
+        top: 0;
+        margin: 0 0 0 -25px;
+    }
+}

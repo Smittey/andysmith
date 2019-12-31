@@ -9,7 +9,7 @@ import Image from "./image";
 const navbar = ({isIndex}) => {
     // console.log("isIndex", isIndex);
     return (
-        <div className="rightNav" style={{minWidth: isIndex ? "40%" : "25%"}}>
+        <div className="rightNav" style={{minWidth: isIndex ? "40%" : "20%"}}>
           <ul>
             <li>
                 <Link to="/" activeClassName="activeMenuLink" className="menuLink">

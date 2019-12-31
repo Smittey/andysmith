@@ -1,31 +1,34 @@
+require('dotenv').config({
+  path: `.env`
+})
+
+const contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  host: process.env.CONTENTFUL_HOST
+}
+
+const { spaceId, accessToken } = contentfulConfig
+
+if (!spaceId || !accessToken) {
+  throw new Error(
+    'Contentful spaceId and the access token need to be provided.'
+  )
+}
+
 module.exports = {
   siteMetadata: {
     name: `Andy Smith`,
-    title: `Personal website of Andy Smith`,
-    title_job: `Senior Software Engineer`,
-    title_fun: `Musician`,
+    title: `Andy Smith`,
     location: `London, UK`,
-    professional_tagline1: `I design and write clean and `,
-    professional_tagline_word: `quality`,
-    professional_tagline2: ` software, using my full-stack skills and experience in back-end, front-end, and DevOps`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    menu: [
-      {
-        label: 'Articles',
-        path: '/',
-      },
-      {
-        label: 'About me',
-        path: '/about/',
-      },
-      {
-        label: 'Contact me',
-        path: '/contact/',
-      },
-    ],
+    description: `Personal website of Andy Smith, software engineer based in London, UK`,
+    author: `@smittey`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: contentfulConfig,
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -45,7 +48,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/a-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
@@ -54,3 +57,22 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+
+
+
+// module.exports = {
+//   siteMetadata: {
+//     title: 'Gatsby Contentful starter',
+//   },
+//   pathPrefix: '/gatsby-contentful-starter',
+//   plugins: [
+//     'gatsby-transformer-remark',
+//     'gatsby-transformer-sharp',
+//     'gatsby-plugin-react-helmet',
+//     'gatsby-plugin-sharp',
+//     {
+//       resolve: 'gatsby-source-contentful',
+//       options: contentfulConfig,
+//     }
+//   ],
+// }

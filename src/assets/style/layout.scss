@@ -31,6 +31,20 @@ h2 {
     overflow: hidden;
 }
 
+.button {
+    border: 1px solid #83D5D5;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    color: $primary-font-color;
+
+    &:hover,&:focus {
+        background-color: $theme-color;
+        color: white;
+    }
+}
   
   
 .content {
@@ -40,14 +54,17 @@ h2 {
     overflow: auto;
     position: relative;
 
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-
     margin-left: 10%;
     margin-right: 15%;
+    
+    -ms-overflow-style: none;
 
     // background-color: lightblue;
 }
+
+.content::-webkit-scrollbar {
+    display: none;
+  }
   
   
 .left::-webkit-scrollbar { 

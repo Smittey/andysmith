@@ -14,7 +14,7 @@ const interestBox = ({
                 {icon} <h2>{title}</h2>
             </IconContext.Provider>
 
-            {list && (         
+            {(list && list.length) && (         
                 <ul>
                     {list.map((item, i) => <li key={i}>{item}</li>)}
                     {extra}

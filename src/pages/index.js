@@ -1,26 +1,13 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import { graphql } from "gatsby";
+import Highlighter from "react-highlight-words";
+import Button from "../components/Button";
 
-const IndexPage = () => {
-
-  const data = useStaticQuery(graphql`
-    query SiteBioQuery {
-      site {
-        siteMetadata {
-          name,
-          title_job,
-          title_fun,
-          location,
-          professional_tagline1,
-          professional_tagline_word,
-          professional_tagline2
-        }
-      }
-    }
-  `)
+const IndexPage = ({data}) => {
+  const { name, specialism, hobby, location, bio, highlightWords } = data.contentfulProfileHeader;
 
   return (
 
@@ -28,23 +15,25 @@ const IndexPage = () => {
       <SEO title="Home" />
       
       <div className="bioBox">
-        <h1>I'm <span className="theme-primary-colour bold">{data.site.siteMetadata.name}</span></h1>
+        <h1>I'm <span className="theme-primary-colour bold">{name}</span></h1>
         <h2 className="bold">
-          {data.site.siteMetadata.title_job} <span className="theme-primary-colour">and</span> {data.site.siteMetadata.title_fun}<br/>
-          living in {data.site.siteMetadata.location}
+          {specialism} <span className="theme-primary-colour">and</span> {hobby}<br/>
+          living in {location}
         </h2>
 
         <p>
-          {data.site.siteMetadata.professional_tagline1} 
-          <span className="theme-primary-colour bold">{data.site.siteMetadata.professional_tagline_word}</span>
-          {data.site.siteMetadata.professional_tagline2}
+          <Highlighter
+            highlightClassName="highlightedWord bold"
+            searchWords={highlightWords}
+            autoEscape={true}
+            textToHighlight={bio.bio}
+          />,
         </p>
 
-        <a href="https://docs.google.com/document/d/1bWrA-LyPgv2Q9XFgJeQ_BWOxwn3L3bRpdO0YLFuT6rA/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-          <div className="resumeButton">
-            Resume
-          </div>
-        </a>
+        <Button 
+          href="https://docs.google.com/document/d/1bWrA-LyPgv2Q9XFgJeQ_BWOxwn3L3bRpdO0YLFuT6rA/edit?usp=sharing"
+          label="Resume"
+        />
       </div>
 
     </Layout>
@@ -52,3 +41,18 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query HomeQuery {  
+    contentfulProfileHeader {
+      specialism
+      name
+      location
+      hobby
+      bio {
+        bio
+      }
+      highlightWords
+    }
+  }
+`

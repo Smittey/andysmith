@@ -2,17 +2,16 @@ import React from 'react';
 
 const Button = ({
     href,
-    label
+    label,
+    style
 }) => {
-    
-    function handleClick(e) {
-        return true;
-    }
 
     return (
-        <button type="button" onClick={handleClick}>
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          <div className="button" style={style}>
             {label}
-        </button>
+          </div>
+        </a> 
     )
 }
 
