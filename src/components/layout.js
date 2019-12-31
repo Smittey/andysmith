@@ -17,7 +17,7 @@ const Layout = ({ children, isIndex }) => {
       <div>
 
         <div className="container">
-          <div className="content">
+          <div className="content" style={{marginRight: isIndex ? "15%" : "10%"}}>
             <main>{children}</main>
             <Footer />
           </div>

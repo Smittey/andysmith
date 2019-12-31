@@ -19,8 +19,8 @@ const Image = ({style}) => {
     query {
       placeholderImage: file(relativePath: { eq: "me-big.png" }) {
         childImageSharp {
-          fixed(width: 300, grayscale: true) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 300, grayscale: true) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -28,16 +28,62 @@ const Image = ({style}) => {
   `)
 
   return <Img 
+
+
+
             imgStyle={{
-              display: "block",
+              position: "",
+              left: "",
               objectFit: "contain",
-              maxHeight: "90%",
-              maxWidth: "100%",
-              position: "absolute",
-              bottom: "0"
+              objectPosition: "contain",
+              bottom: "",
+              top: "",
+              width: "100%",
+              display: "block",
+              marginBottom: "-50%"
+              
             }} 
-            fixed={data.placeholderImage.childImageSharp.fixed} 
+
+            style={{
+              position: "absolute",      
+              bottom: "0",
+              // marginBottom: "-50%",
+            }}
+
+
+
+
+            // imgStyle={{
+            //   width: "100%",
+            //   objectFit: "contain",
+            //   objectPosition: "contain",
+            // }} 
+
+
+            // style={{
+            //   position: "",      
+            // }}
+
+            fluid={data.placeholderImage.childImageSharp.fluid} 
           />
 }
+
+// imgStyle={{
+//   position: "absolute",
+//   left: "",
+//   objectFit: "",
+//   objectPosition: "",
+//   display: "",
+//   bottom: "0",
+//   top: "",
+//   maxWidth: "100%"
+// }} 
+
+// style={{
+//   position: "absolute",
+//   maxHeight: "40%",
+  
+// }}
+
 
 export default Image

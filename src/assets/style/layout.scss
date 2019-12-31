@@ -28,6 +28,7 @@ h2 {
 
 .container {
     display: flex;
+    overflow: hidden;
 }
 
   
@@ -44,6 +45,8 @@ h2 {
 
     margin-left: 10%;
     margin-right: 15%;
+
+    // background-color: lightblue;
 }
   
   

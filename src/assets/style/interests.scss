@@ -1,0 +1,41 @@
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    // grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
+  }
+  
+  .box {
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    // border: 1px solid #83D5D5;
+
+    &:nth-child(odd) {
+      // border: 2px dashed red;
+      margin-right: 10px
+    }
+
+    &:nth-child(even) {
+      // border: 2px dashed red;
+      margin-left: 10px
+    }
+
+    .icon {
+      color: $theme-color;
+    }
+
+    h2 {
+      display: inline;
+    }
+
+    ul {
+      padding-inline-start: 20px;
+
+      li {
+        list-style-type: none;
+      }
+    }
+  }

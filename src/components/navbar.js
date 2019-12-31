@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 import Image from "./image";
 
 const navbar = ({isIndex}) => {
-
+    // console.log("isIndex", isIndex);
     return (
         <div className="rightNav" style={{minWidth: isIndex ? "40%" : "25%"}}>
           <ul>
@@ -42,23 +42,23 @@ const navbar = ({isIndex}) => {
                 </Link>
             </li>
           </ul>
-        <div className="imgWrappers">
+        <div className="imgWrappers" style={isIndex ? { bottom: "0"} : { position: "", bottom: "", marginLeft: "0"}}>
+        
             <div className="icons">
                 <a href="https://stackoverflow.com/users/1295906/smittey" target="_blank" rel="noopener noreferrer">
-                    <img className="social" src={stackoverflow} alt="stackoverflow icon"></img>
+                    <img className={isIndex ? "social" : "social socialNonIndex"} src={stackoverflow} alt="stackoverflow icon"></img>
                 </a>
                 <a href="https://github.com/smittey" target="_blank" rel="noopener noreferrer">
-                    <img className="social" src={github} alt="github icon"></img>
+                    <img className={isIndex ? "social" : "social socialNonIndex"} src={github} alt="github icon"></img>
                 </a>
                 <a href="https://www.linkedin.com/in/smittey" target="_blank" rel="noopener noreferrer">
-                    <img className="social" src={linkedin} alt="linkedin icon"></img>
+                    <img className={isIndex ? "social" : "social socialNonIndex"} src={linkedin} alt="linkedin icon"></img>
                 </a>            
             </div>
-            {/* <img className="bigImg" src={big} alt="Andy Smith"></img>
-            <Image /> */}
+
             {isIndex 
             ? <img className="bigImg" src={big} alt="Andy Smith"></img>
-            : <Image />
+            : <div> <Image /> </div>
             }
             
         </div>
