@@ -9,7 +9,7 @@ import { getTopArtists, getCurrentlyPlaying } from "../utils/getLastFmData";
 
 const InterestsPage = ({data}) => {
 
-  const [artistsList, setArtistsList] = useState([]);
+  const [artistsList, setArtistsList] = useState(["Loading top artists list..."]);
   const [currentlyListening, setCurrentlyListening] = useState("");
 
   const {

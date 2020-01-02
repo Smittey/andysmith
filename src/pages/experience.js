@@ -24,14 +24,15 @@ const ExperiencePage = ({data}) => {
         <div>
           <div className="sticky">
 
-            {allSkills.map(skill => 
+            {allSkills.map((skill, i) => 
               <Button 
                 label={skill} 
                 style={{padding: "2px 5px", margin: "0px 5px 5px 0px"}}
+                key={i}
               />)
             }
 
-            <span className="filterText">Filter <a href="javascript:void(0)" onclick="clearFilters()">(clear)</a></span>
+            <span className="filterText">Filter (clear)</span>
         
           </div>
         </div>

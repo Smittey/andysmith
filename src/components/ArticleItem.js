@@ -5,14 +5,10 @@ const ArticleItem = ({
     data,
     index
 }) => {
-
-    
     const { 
         title,
         description,
         previewText,
-        slug,
-        publishDate,
         heroImage,
     } = data;
 

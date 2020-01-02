@@ -17,7 +17,7 @@ const ArticlesPage = ({data}) => {
             <div className="articles">
                 {
                     articles.map((item, i) => 
-                        <div className="itemWrapper"> 
+                        <div className="itemWrapper" key={i}> 
                             <ArticleItem index={i} data={item}/> 
                         </div>
                     )

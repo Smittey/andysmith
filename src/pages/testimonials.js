@@ -20,10 +20,11 @@ const TestimonialsPage = ({data}) => {
             <div className="testimonials">
                 <div className="wrapper">
                     {
-                        testimonials.map(item => 
+                        testimonials.map((item, i) => 
                             <TestimonialItem 
                                 data={item}
                                 image={defaultProfileImage} 
+                                key={i}
                             />    
                         )
                     }
