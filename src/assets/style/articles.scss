@@ -1,0 +1,36 @@
+.articles {
+
+    .itemWrapper {
+        display: grid;
+        // grid-gap: 10px;
+        background-color: #fff;
+        color: #444;
+
+        .box {
+            border-radius: 5px;
+            padding: 20px;
+            // border: 1px solid #83D5D5;
+
+            h2 { 
+                margin-top: 0px;
+                margin-bottom: 5px;
+            }
+        
+            h4 { 
+                margin-top: 0px;
+            }
+        
+        }
+
+        &:nth-child(even) {
+            grid-template-columns: 55% 45%;
+        }
+
+        &:nth-child(odd) {
+            grid-template-columns: 45% 55%;
+        }
+    }
+
+
+
+}

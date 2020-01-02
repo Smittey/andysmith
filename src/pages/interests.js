@@ -67,19 +67,20 @@ const InterestsPage = ({data}) => {
       <SEO title="Interests" />
 
       <h1>I'm <span className="theme-primary-colour bold">interested in.</span></h1>
-             
-      <div className="wrapper">
-          <InterestBox icon={<FaHeart/>} title={lovesTitle} list={lovesList}/>
-          <InterestBox 
-            icon={<FaArrowUp/>} 
-            title={topArtistsTitle} 
-            list={artistsList} 
-            extra={currentlyListening && (<li><img src={soundGraphic} alt="Sound playing icon"/> {currentlyListening}</li>)}
-          />
-          <InterestBox icon={<FaSeedling/>} title={valuesTitle} list={valuesList}/>
-          <InterestBox icon={<FaFireAlt/>} title={hatesTitle} list={hatesList}/>
-      </div>
 
+      <div className="interests">    
+        <div className="wrapper">
+            <InterestBox icon={<FaHeart/>} title={lovesTitle} list={lovesList}/>
+            <InterestBox 
+              icon={<FaArrowUp/>} 
+              title={topArtistsTitle} 
+              list={artistsList} 
+              extra={currentlyListening && (<li><img src={soundGraphic} alt="Sound playing icon"/> {currentlyListening}</li>)}
+            />
+            <InterestBox icon={<FaSeedling/>} title={valuesTitle} list={valuesList}/>
+            <InterestBox icon={<FaFireAlt/>} title={hatesTitle} list={hatesList}/>
+        </div>
+      </div>
     </Layout>
   )
 }

@@ -29,43 +29,39 @@ const Image = ({style}) => {
 
   return <Img 
 
+    imgStyle={{
+      position: "",
+      left: "",
+      objectFit: "contain",
+      objectPosition: "contain",
+      bottom: "",
+      top: "",
+      width: "100%",
+      display: "block",
+      marginBottom: "-50%"
+      
+    }} 
+
+    style={{
+      position: "absolute",      
+      bottom: "0",
+      // marginBottom: "-50%",
+    }}
 
 
-            imgStyle={{
-              position: "",
-              left: "",
-              objectFit: "contain",
-              objectPosition: "contain",
-              bottom: "",
-              top: "",
-              width: "100%",
-              display: "block",
-              marginBottom: "-50%"
-              
-            }} 
-
-            style={{
-              position: "absolute",      
-              bottom: "0",
-              // marginBottom: "-50%",
-            }}
+    // imgStyle={{
+    //   width: "100%",
+    //   objectFit: "contain",
+    //   objectPosition: "contain",
+    // }} 
 
 
+    // style={{
+    //   position: "",      
+    // }}
 
-
-            // imgStyle={{
-            //   width: "100%",
-            //   objectFit: "contain",
-            //   objectPosition: "contain",
-            // }} 
-
-
-            // style={{
-            //   position: "",      
-            // }}
-
-            fluid={data.placeholderImage.childImageSharp.fluid} 
-          />
+      fluid={data.placeholderImage.childImageSharp.fluid} 
+    />
 }
 
 // imgStyle={{

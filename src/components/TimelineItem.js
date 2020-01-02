@@ -18,7 +18,7 @@ const TimelineItem = ({
                 <h2>{companyName}</h2>
                 <h4>{jobTitle}</h4>
                 <p>{jobDescription}</p>
-                {skills.map(skill => <Button label={skill} style={{padding: "2px 5px", marginRight: "5px"}}/>)}
+                {skills.map(skill => <Button label={skill} style={{padding: "2px 5px", margin: "0px 5px 5px 0px"}}/>)}
             </div>
         </li>
     )
