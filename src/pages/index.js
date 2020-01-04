@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
 
       <div className="bioBox">
         <h1>
-          <span>I&apos;m</span>
+          <span>I&apos;m </span>
           <span className="theme-primary-colour bold">
             {name}
           </span>
@@ -56,8 +56,6 @@ const IndexPage = ({ data }) => {
   );
 };
 
-export default IndexPage;
-
 export const pageQuery = graphql`
   query HomeQuery {  
     contentfulProfileHeader {
@@ -78,3 +76,5 @@ IndexPage.propTypes = {
     contentfulProfileHeader: PropTypes.object.isRequired,
   }),
 };
+
+export default IndexPage;

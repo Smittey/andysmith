@@ -96,8 +96,6 @@ const InterestsPage = ({ data }) => {
   );
 };
 
-export default InterestsPage;
-
 export const pageQuery = graphql`
   query InterestsQuery {  
     contentfulInterests {
@@ -125,3 +123,5 @@ InterestsPage.propTypes = {
     }.isRequired),
   }.isRequired),
 };
+
+export default InterestsPage;

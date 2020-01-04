@@ -18,10 +18,11 @@ const Timeline = ({ data }) => (
       }
   </ul>
 );
-export default Timeline;
 
 Timeline.propTypes = {
   data: PropType.shape({
     allContentfulExperience: PropType.object.isRequired,
   }).isRequired,
 };
+
+export default Timeline;

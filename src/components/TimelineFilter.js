@@ -25,10 +25,10 @@ const TimelineFilter = ({ data }) => {
   );
 };
 
-export default TimelineFilter;
-
 TimelineFilter.propTypes = {
   data: PropTypes.shape({
     allContentfulExperience: PropTypes.object.isRequired,
   }),
 };
+
+export default TimelineFilter;

@@ -33,5 +33,4 @@ InterestBox.propTypes = {
   extra: PropTypes.string,
 };
 
-
 export default InterestBox;

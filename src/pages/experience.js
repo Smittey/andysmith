@@ -23,8 +23,6 @@ const ExperiencePage = ({ data }) => (
   </Layout>
 );
 
-export default ExperiencePage;
-
 export const pageQuery = graphql`
   query ExperienceQuery {
     allContentfulExperience(sort: {order: ASC, fields: createdAt}) {
@@ -44,3 +42,5 @@ export const pageQuery = graphql`
 ExperiencePage.propTypes = {
   data: PropTypes.object.isRequired,
 };
+
+export default ExperiencePage;

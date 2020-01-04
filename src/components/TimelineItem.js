@@ -31,8 +31,6 @@ const TimelineItem = ({
   </li>
 );
 
-export default TimelineItem;
-
 TimelineItem.propTypes = {
   date: PropTypes.string.isRequired,
   companyName: PropTypes.string.isRequired,
@@ -40,3 +38,5 @@ TimelineItem.propTypes = {
   jobDescription: PropTypes.string.isRequired,
   jobTitle: PropTypes.string.isRequired,
 };
+
+export default TimelineItem;

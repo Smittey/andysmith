@@ -36,8 +36,6 @@ const TestimonialsPage = ({ data }) => {
   );
 };
 
-export default TestimonialsPage;
-
 export const pageQuery = graphql`
 query TestimonialsQuery {
     allContentfulTestimonials {
@@ -66,3 +64,5 @@ TestimonialsPage.propTypes = {
     contentfulAsset: PropTypes.object.isRequired,
   }).isRequired,
 };
+
+export default TestimonialsPage;

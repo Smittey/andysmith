@@ -30,8 +30,6 @@ const ArticlesPage = ({ data }) => {
   );
 };
 
-export default ArticlesPage;
-
 export const pageQuery = graphql`
   query ArticlesQuery {
       allContentfulBlogPost(sort: {fields: publishDate, order: DESC}) {
@@ -60,3 +58,5 @@ ArticlesPage.propTypes = {
     allContentfulBlogPost: PropTypes.object.isRequired,
   }).isRequired,
 };
+
+export default ArticlesPage;

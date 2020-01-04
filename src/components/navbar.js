@@ -113,8 +113,8 @@ const Navbar = ({ isIndex }) => {
   );
 };
 
-export default Navbar;
-
 Navbar.propTypes = {
   isIndex: PropTypes.bool,
 };
+
+export default Navbar;

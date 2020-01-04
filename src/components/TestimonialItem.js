@@ -29,8 +29,6 @@ const TestimonialItem = ({
   );
 };
 
-export default TestimonialItem;
-
 TestimonialItem.propTypes = {
   image: PropTypes.object.isRequired,
   data: PropTypes.shape({
@@ -40,3 +38,5 @@ TestimonialItem.propTypes = {
     name: PropTypes.string.isRequired,
   }).isRequired,
 };
+
+export default TestimonialItem;
