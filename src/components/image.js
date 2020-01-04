@@ -1,6 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,8 +13,7 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ({style}) => {
-
+const Image = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "me-big.png" }) {
@@ -25,44 +24,46 @@ const Image = ({style}) => {
         }
       }
     }
-  `)
+  `);
 
-  return <Img 
+  return (
+    <Img
 
-    imgStyle={{
-      position: "",
-      left: "",
-      objectFit: "contain",
-      objectPosition: "contain",
-      bottom: "",
-      top: "",
-      width: "100%",
-      display: "block",
-      marginBottom: "-50%"
-      
-    }} 
+      imgStyle={{
+        position: '',
+        left: '',
+        objectFit: 'contain',
+        objectPosition: 'contain',
+        bottom: '',
+        top: '',
+        width: '100%',
+        display: 'block',
+        marginBottom: '-50%',
 
-    style={{
-      position: "absolute",      
-      bottom: "0",
-      // marginBottom: "-50%",
-    }}
+      }}
+
+      style={{
+        position: 'absolute',
+        bottom: '0',
+        // marginBottom: "-50%",
+      }}
 
 
     // imgStyle={{
     //   width: "100%",
     //   objectFit: "contain",
     //   objectPosition: "contain",
-    // }} 
+    // }}
 
 
     // style={{
-    //   position: "",      
+    //   position: "",
     // }}
 
-      fluid={data.placeholderImage.childImageSharp.fluid} 
+      fluid={data.placeholderImage.childImageSharp.fluid}
     />
-}
+  );
+};
 
 // imgStyle={{
 //   position: "absolute",
@@ -73,13 +74,13 @@ const Image = ({style}) => {
 //   bottom: "0",
 //   top: "",
 //   maxWidth: "100%"
-// }} 
+// }}
 
 // style={{
 //   position: "absolute",
 //   maxHeight: "40%",
-  
+
 // }}
 
 
-export default Image
+export default Image;

@@ -28,7 +28,7 @@ h2 {
 
 .container {
     display: flex;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .button {
@@ -51,7 +51,7 @@ h2 {
     flex-basis: 100%;
 
     height: 100vh; 
-    overflow: auto;
+            overflow: auto;
     position: relative;
 
     margin-left: 10%;

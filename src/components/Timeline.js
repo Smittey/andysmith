@@ -1,23 +1,27 @@
 import React from 'react';
-import TimelineItem from "./TimelineItem";
+import PropType from 'prop-types';
+import TimelineItem from './TimelineItem';
 
-const Timeline = ({data}) => {
-    return (
-        <ul className="timeline">
-            {
-                data.allContentfulExperience.nodes.map((item, i) => 
-                    <TimelineItem
-                        date={item.date}
-                        companyName={item.companyName}
-                        jobTitle={item.jobTitle}
-                        jobDescription={item.jobDescription.jobDescription}
-                        skills={item.skills}
-                        key={i}
-                    />
-                )
-            }
-        </ul>
-    )
-}
-
+const Timeline = ({ data }) => (
+  <ul className="timeline">
+    {
+        data.allContentfulExperience.nodes.map((item) => (
+          <TimelineItem
+            date={item.date}
+            companyName={item.companyName}
+            jobTitle={item.jobTitle}
+            jobDescription={item.jobDescription.jobDescription}
+            skills={item.skills}
+            key={`${item.companyName} - ${item.jobTitle}`}
+          />
+        ))
+      }
+  </ul>
+);
 export default Timeline;
+
+Timeline.propTypes = {
+  data: PropType.shape({
+    allContentfulExperience: PropType.object.isRequired,
+  }).isRequired,
+};

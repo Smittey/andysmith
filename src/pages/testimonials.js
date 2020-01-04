@@ -1,41 +1,42 @@
 import React from 'react';
+import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import TestimonialItem from '../components/TestimonialItem';
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import TestimonialItem from "../components/TestimonialItem";
+const TestimonialsPage = ({ data }) => {
+  const testimonials = data.allContentfulTestimonials.nodes;
+  const defaultProfileImage = data.contentfulAsset;
 
-const TestimonialsPage = ({data}) => {
+  return (
+    <Layout>
+      <SEO title="Testimonials" />
 
-    const testimonials = data.allContentfulTestimonials.nodes;
-    const defaultProfileImage = data.contentfulAsset;
-    // debugger;
+      <h1>
+        <span>People</span>
+        <span className="theme-primary-colour bold"> say.</span>
+      </h1>
 
-    console.log('testimonials', testimonials);
-    return (
-        <Layout>
-            <SEO title="Testimonials" />
+      <div className="testimonials">
+        <div className="wrapper">
+          {
+            testimonials.map((item) => (
+              <TestimonialItem
+                data={item}
+                image={defaultProfileImage}
+                key={item.name}
+              />
+            ))
+          }
+        </div>
+      </div>
 
-            <h1>People <span className="theme-primary-colour bold">say.</span></h1>
-
-            <div className="testimonials">
-                <div className="wrapper">
-                    {
-                        testimonials.map((item, i) => 
-                            <TestimonialItem 
-                                data={item}
-                                image={defaultProfileImage} 
-                                key={i}
-                            />    
-                        )
-                    }
-                </div>
-            </div>
-           
     </Layout>
-  )
-}
+  );
+};
 
-export default TestimonialsPage
+export default TestimonialsPage;
 
 export const pageQuery = graphql`
 query TestimonialsQuery {
@@ -57,5 +58,11 @@ query TestimonialsQuery {
       
     }
   }
-`
- 
+`;
+
+TestimonialsPage.propTypes = {
+  data: PropTypes.shape({
+    allContentfulTestimonials: PropTypes.object.isRequired,
+    contentfulAsset: PropTypes.object.isRequired,
+  }).isRequired,
+};
