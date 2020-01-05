@@ -18,7 +18,6 @@ const Timeline = ({ data }) => {
 
   return (
     <ul className="timeline">
-      {state.filterTags}
       {
           experienceList.map((item) => (
             <TimelineItem
