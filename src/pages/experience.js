@@ -15,7 +15,13 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'ADD_FILTER':
       return {
-        filterTags: [...state.filterTags, action.data],
+        filterTags: [...new Set(
+          [...state.filterTags, action.data],
+        )],
+      };
+    case 'REMOVE_FILTER':
+      return {
+        filterTags: state.filterTags.filter((tag) => tag !== action.data),
       };
     case 'CLEAR_FILTER':
       return initialState;
