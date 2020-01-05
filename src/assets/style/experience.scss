@@ -11,15 +11,17 @@
         align-items: center;
         z-index: 999;
         padding-bottom: 5px;
-    }
 
-    .deselected {
-        border: 1px solid #ececec;
-        color: #c2c2c2;
-
-        &:hover {
-            color: white;
+        .deselected {
+            border: 1px solid #ececec;
+            color: #c2c2c2;
+    
+            &:hover {
+                color: white;
+            }
         }
+    
+
     }
 
     .selected {
