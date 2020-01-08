@@ -6,6 +6,14 @@
         background-color: #fff;
         color: #444;
 
+        @include mobile {
+            grid-template-columns: 100%;
+        }
+
+        @include tablet {
+            grid-template-columns: 100%;
+        }
+
         .box {
             border-radius: 5px;
             padding: 20px;
@@ -17,6 +25,12 @@
                 float: left;
                 width: 20%;
                 overflow: hidden;
+
+                @include mobile {
+                    float: none;
+                    margin: 0 auto;
+                    width: 30%;
+                }
             }
 
             .details {
@@ -51,6 +65,11 @@
                     color: $theme-color;
                     // font-weight: bold;
                     font-family: AvenirNext-Italic;
+                }
+
+                @include mobile {
+                    text-align: center;
+                    margin-top: 10px;
                 }
             }
         }

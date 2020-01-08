@@ -24,11 +24,28 @@
 
         &:nth-child(even) {
             grid-template-columns: 55% 45%;
+            @include mobile {
+                grid-template-columns: 100%;
+            }
+    
+            @include tablet {
+                grid-template-columns: 100%;
+            }
         }
 
         &:nth-child(odd) {
             grid-template-columns: 45% 55%;
+
+            @include mobile {
+                grid-template-columns: 100%;
+            }
+    
+            @include tablet {
+                grid-template-columns: 100%;
+            }
         }
+
+
     }
 
 
