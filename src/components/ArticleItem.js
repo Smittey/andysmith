@@ -1,6 +1,6 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
+import BackgroundImage from 'gatsby-background-image';
 
 const ArticleItem = ({
   data,
@@ -11,6 +11,7 @@ const ArticleItem = ({
     description,
     previewText,
     heroImage,
+    slug,
   } = data;
 
   return (
@@ -18,23 +19,41 @@ const ArticleItem = ({
       ? (
         <>
           <div className="box">
-            <h2>{title}</h2>
-            <h4>{description.description}</h4>
-            <p>{previewText.previewText}</p>
+            <a href={`http://smittey.co.uk/${slug}`}>
+              <h2>{title}</h2>
+              <h4>{description.description}</h4>
+            </a>
+            <p className="previewText">{previewText.previewText}</p>
           </div>
-          <div className="box">
-            <Img sizes={heroImage.sizes} />
-          </div>
+          <a className="imgBox" href={`http://smittey.co.uk/${slug}`}>
+            <BackgroundImage
+              Tag="section"
+              id="media-test"
+              className="heroImageGatsby"
+              fluid={heroImage.sizes}
+            >
+              <div className="box" />
+            </BackgroundImage>
+          </a>
         </>
       ) : (
         <>
+          <a href={`http://smittey.co.uk/${slug}`}>
+            <BackgroundImage
+              Tag="section"
+              id="media-test"
+              className="heroImageGatsby"
+              fluid={heroImage.sizes}
+            >
+              <div className="box" />
+            </BackgroundImage>
+          </a>
           <div className="box">
-            <Img sizes={heroImage.sizes} />
-          </div>
-          <div className="box">
-            <h2>{title}</h2>
-            <h4>{description.description}</h4>
-            <p>{previewText.previewText}</p>
+            <a href={`http://smittey.co.uk/${slug}`}>
+              <h2>{title}</h2>
+              <h4>{description.description}</h4>
+            </a>
+            <p className="previewText">{previewText.previewText}</p>
           </div>
         </>
       )
@@ -47,6 +66,7 @@ ArticleItem.propTypes = {
   index: PropTypes.number.isRequired,
   data: PropTypes.shape({
     title: PropTypes.string,
+    slug: PropTypes.string,
     description: PropTypes.object,
     previewText: PropTypes.object.isRequired,
     heroImage: PropTypes.object.isRequired,

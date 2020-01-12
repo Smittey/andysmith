@@ -18,6 +18,11 @@ h2 {
     font-size: 20px;
 }
 
+a {
+    color: $primary-font-color;
+    text-decoration: none;
+}
+
 .bold {
     font-family: $bold;
 }
