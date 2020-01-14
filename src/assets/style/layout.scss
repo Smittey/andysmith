@@ -33,7 +33,7 @@ a {
 
 .container {
     display: flex;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .button {
@@ -56,15 +56,13 @@ a {
     flex-basis: 100%;
 
     height: 100vh; 
-            overflow: auto;
+    overflow: auto;
     position: relative;
 
     margin-left: 10%;
     margin-right: 15%;
     
     -ms-overflow-style: none;
-
-    // background-color: lightblue;
 }
 
 .content::-webkit-scrollbar {

@@ -25,7 +25,7 @@
   }
 
   .menuWrapper {
-    background: $theme-color;
+    background-color: $theme-color;
     width: fit-content;
     float:right;
     position: relative;
@@ -39,6 +39,7 @@
       flex: none;
       margin-right: 20px;
       padding-top: 20px;
+      z-index: 999;
 
       li {
         text-align: right;
@@ -66,27 +67,28 @@
       } 
     }
 
-    .imgWrappers{
-      bottom: 0;
-      flex-grow: 1;
+    .indexImgWrapper {
+      height: 90%;
+      width: 100%;
 
-      .icons {
+      // .indexImg {
+      //   background-position: "center right bottom";
+      // }
+
+      @include desktop {
+        margin-left: -100px;
         position: absolute;
-        bottom: 0;
-        
-        .social {
-          display: block;
-          opacity: 0.3;
-          margin-left: -60px;
-
-          &:hover {
-            opacity: 0.4;
-            outline: 0;
-          }
-        }
       }
+      
+    }
 
-      .navImg {
+    .nonIndexImgWrapper {
+      // position: absolute;
+      height: 90%;
+      width: 100%;
+
+      .nonIndexImg {
+
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
         -ms-filter: grayscale(100%);
@@ -103,22 +105,43 @@
           filter: grayscale(0%);
           filter: gray; /* IE 6-9 */;
         }
-      }
 
-      .bigImg {
-        display: block;
-        object-fit: contain;
-        max-height: 90%;
-        max-width: 100%;
+        // @include desktop {
+        //   background-position: "center bottom -100px" !important;
+        // }
+
+        @include mobile {
+          background-position: center bottom !important;
+        }
+      }
+    }
+
+    .imgWrappers {
+      bottom: 0;
+      flex-grow: 1;
+      background-color: lightblue;
+
+      
+      .icons {
         position: absolute;
         bottom: 0;
+        
+        .social {
+          display: block;
+          opacity: 0.3;
+          margin-left: -60px;
+
+          &:hover {
+            opacity: 0.4;
+            outline: 0;
+          }
+        }
       }
+
     }
 
     @include mobile {
       display: none;
-
-      display: block;
       width: 0px;
       position: fixed;
       z-index: 1;
