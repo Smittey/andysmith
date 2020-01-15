@@ -71,9 +71,11 @@
       height: 90%;
       width: 100%;
 
-      // .indexImg {
-      //   background-position: "center right bottom";
-      // }
+      // [class^="indexImg"] {
+      //   &:before {
+      //     background-position: left bottom !important;
+      //   }
+      // } 
 
       @include desktop {
         margin-left: -100px;
@@ -87,7 +89,10 @@
       height: 90%;
       width: 100%;
 
-      .nonIndexImg {
+        [class^="nonIndexImg"] {
+          // &:before {
+          //   background-position: center bottom -100px !important;
+          // }
 
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
@@ -106,13 +111,10 @@
           filter: gray; /* IE 6-9 */;
         }
 
-        // @include desktop {
-        //   background-position: "center bottom -100px" !important;
-        // }
 
-        @include mobile {
-          background-position: center bottom !important;
-        }
+        // @include mobile {
+        //   background-position: center bottom !important;
+        // }
       }
     }
 
@@ -121,7 +123,6 @@
       flex-grow: 1;
       background-color: lightblue;
 
-      
       .icons {
         position: absolute;
         bottom: 0;
@@ -159,4 +160,7 @@
   @include mobile {
     min-width: 0% !important;
   }
+
+
 }
+
