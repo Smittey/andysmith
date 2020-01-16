@@ -1,22 +1,34 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Maps from '../components/Maps';
+import ContactForm from '../components/ContactForm';
 
-const ContactPage = () => (
-  <Layout>
-    <SEO title="Contact" />
+const ContactPage = () => {
 
-    <h1>
-      <span>Let's</span>
-      <span className="theme-primary-colour bold"> talk.</span>
-    </h1>
+  return (
+    <Layout>
+      <SEO title="Contact" />
 
-    <div className="contact">
-        Contact
-    </div>
+      <h1>
+        <span>Let's</span>
+        <span className="theme-primary-colour bold"> talk.</span>
+      </h1>
 
-  </Layout>
-);
+      <div className="contact">
+        <div className="wrapper">
+          <div className="box">
+            <ContactForm />
+          </div>
+          <div className="box">
+            <Maps isMarkerShown />
+          </div>
+        </div>
+      </div>
+
+    </Layout>
+
+  );
+}
 
 export default ContactPage;
