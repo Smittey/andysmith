@@ -52,26 +52,11 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-74354041-1',
+      },
+    },
   ],
 };
-
-
-// module.exports = {
-//   siteMetadata: {
-//     title: 'Gatsby Contentful starter',
-//   },
-//   pathPrefix: '/gatsby-contentful-starter',
-//   plugins: [
-//     'gatsby-transformer-remark',
-//     'gatsby-transformer-sharp',
-//     'gatsby-plugin-react-helmet',
-//     'gatsby-plugin-sharp',
-//     {
-//       resolve: 'gatsby-source-contentful',
-//       options: contentfulConfig,
-//     }
-//   ],
-// }

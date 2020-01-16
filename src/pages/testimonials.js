@@ -12,7 +12,6 @@ const TestimonialsPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Testimonials" />
-
       <h1>
         <span>People</span>
         <span className="theme-primary-colour bold"> say.</span>
@@ -31,7 +30,6 @@ const TestimonialsPage = ({ data }) => {
           }
         </div>
       </div>
-
     </Layout>
   );
 };

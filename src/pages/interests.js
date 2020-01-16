@@ -24,7 +24,6 @@ const InterestsPage = ({ data }) => {
     topArtistsTitle,
   } = data.contentfulInterests;
 
-
   useEffect(() => {
     const fetchData = async () => {
       try {

@@ -2,7 +2,6 @@
     .wrapper {
         display: grid;
         grid-template-columns: 50% 50%;
-        // grid-gap: 10px;
         background-color: #fff;
         color: #444;
 
@@ -17,7 +16,6 @@
         .box {
             padding: 20px;
             margin-bottom: 20px;
-            // border: 1px solid #83D5D5;
 
             .avatar {
                 border-radius: 50%;
@@ -72,7 +70,5 @@
                 }
             }
         }
-      }
-      
-
+    }
 }

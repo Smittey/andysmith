@@ -1,8 +1,6 @@
 .articles {
-
     .itemWrapper {
         display: grid;
-        // grid-gap: 10px;
         background-color: #fff;
         color: #444;
         margin-bottom: 20px;
@@ -24,12 +22,6 @@
         .box {
             padding: 20px;
 
-            // a {
-            //     &:hover {
-            //         color: $theme-color;
-            //     }
-            // }
-
             h2 { 
                 margin-top: 0px;
                 margin-bottom: 5px;
@@ -39,16 +31,6 @@
                 margin-top: 0px;
             }
 
-            // &:nth-child(even) {
-            //     @include mobile {
-            //         border-bottom: 1px solid #C9C6C6;
-            //     }
-        
-            //     @include tablet {
-            //         border-bottom: 1px solid #C9C6C6;
-            //     }
-            // }
-
             .previewText {
                 overflow: hidden;
                 display: -webkit-box;
@@ -57,7 +39,6 @@
 
                 margin-bottom: 0;
             }
-        
         }
 
         &:nth-child(even) {
@@ -88,12 +69,5 @@
             min-height: 200px;
         }
 
-        a.imgBox:hover + .box {
-            color: $theme-color;
-        }
-
     }
-
-
-
 }

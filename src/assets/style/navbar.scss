@@ -1,5 +1,4 @@
 .rightNav {
-
   .icon {
     color: $theme-color;
   }
@@ -18,10 +17,6 @@
     @include desktop {
       display: none;
     }
-
-    // @include tablet {
-    //   display: none;
-    // }
   }
 
   .menuWrapper {
@@ -71,12 +66,6 @@
       height: 90%;
       width: 100%;
 
-      // [class^="indexImg"] {
-      //   &:before {
-      //     background-position: left bottom !important;
-      //   }
-      // } 
-
       @include desktop {
         margin-left: -100px;
         position: absolute;
@@ -85,15 +74,10 @@
     }
 
     .nonIndexImgWrapper {
-      // position: absolute;
       height: 90%;
       width: 100%;
 
-        [class^="nonIndexImg"] {
-          // &:before {
-          //   background-position: center bottom -100px !important;
-          // }
-
+      [class^="nonIndexImg"] {
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
         -ms-filter: grayscale(100%);
@@ -110,18 +94,12 @@
           filter: grayscale(0%);
           filter: gray; /* IE 6-9 */;
         }
-
-
-        // @include mobile {
-        //   background-position: center bottom !important;
-        // }
       }
     }
 
     .imgWrappers {
       bottom: 0;
       flex-grow: 1;
-      // background-color: lightblue;
 
       .icons {
         position: absolute;
@@ -138,7 +116,6 @@
           }
         }
       }
-
     }
 
     @include mobile {
@@ -154,13 +131,9 @@
     @include desktop {
       display: flex !important;
     }
-
   }
 
   @include mobile {
     min-width: 0% !important;
   }
-
-
 }
-

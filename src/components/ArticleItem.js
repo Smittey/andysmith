@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BackgroundImage from 'gatsby-background-image';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const ArticleItem = ({
   data,
@@ -19,13 +20,23 @@ const ArticleItem = ({
       ? (
         <>
           <div className="box">
-            <a href={`http://smittey.co.uk/${slug}`}>
+            <OutboundLink
+              href={`http://smittey.co.uk/${slug}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <h2>{title}</h2>
               <h4>{description.description}</h4>
-            </a>
+            </OutboundLink>
             <p className="previewText">{previewText.previewText}</p>
           </div>
-          <a className="imgBox" href={`http://smittey.co.uk/${slug}`}>
+
+          <OutboundLink
+            href={`http://smittey.co.uk/${slug}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="imgBox"
+          >
             <BackgroundImage
               Tag="section"
               id="media-test"
@@ -34,11 +45,16 @@ const ArticleItem = ({
             >
               <div className="box" />
             </BackgroundImage>
-          </a>
+          </OutboundLink>
         </>
       ) : (
         <>
-          <a href={`http://smittey.co.uk/${slug}`}>
+          <OutboundLink
+            href={`http://smittey.co.uk/${slug}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="imgBox"
+          >
             <BackgroundImage
               Tag="section"
               id="media-test"
@@ -47,12 +63,17 @@ const ArticleItem = ({
             >
               <div className="box" />
             </BackgroundImage>
-          </a>
+          </OutboundLink>
+
           <div className="box">
-            <a href={`http://smittey.co.uk/${slug}`}>
+            <OutboundLink
+              href={`http://smittey.co.uk/${slug}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <h2>{title}</h2>
               <h4>{description.description}</h4>
-            </a>
+            </OutboundLink>
             <p className="previewText">{previewText.previewText}</p>
           </div>
         </>

@@ -1,15 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { trackCustomEvent, OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const Button = ({
   href,
   label,
   style,
   onClick,
-  type,
   disabled,
-  classNameProp, 
+  category,
+  type,
+  action,
+  children,
+  classNameProp,
 }) => {
   const cssClasses = classNames(
     'button',
@@ -18,31 +22,42 @@ const Button = ({
 
   return (
     !href
-    ? (
-      <button
-        type={type ? 'submit' : 'button'}
-        className={cssClasses}
-        disabled={disabled}
-        onClick={onClick}
-        style={style}
-      >
-        {label}
-      </button>
-    )
-    : (
-      <a href={href} target="_blank" rel="noopener noreferrer" onClick={onClick}>
-        <div className={cssClasses} style={style}>
+      ? (
+        // eslint-disable-next-line react/button-has-type
+        <button
+          type={type}
+          className={cssClasses}
+          disabled={disabled}
+          onClick={() => {
+            onClick();
+            trackCustomEvent({
+              category,
+              action,
+              label,
+            });
+          }}
+          style={style}
+        >
           {label}
-        </div>
-      </a>
-    )
+        </button>
+      )
+      : (
+        <OutboundLink
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className={cssClasses} style={style}>
+            {children}
+          </div>
+        </OutboundLink>
+      )
   );
 };
 
 Button.defaultProps = {
   onClick: () => { },
   href: null,
-  type: 'button',
 };
 
 Button.propTypes = {
@@ -50,9 +65,15 @@ Button.propTypes = {
   classNameProp: PropTypes.string,
   label: PropTypes.string.isRequired,
   style: PropTypes.object,
-  type: PropTypes.string,
   onClick: PropTypes.func,
-  disabled : PropTypes.func,
+  disabled: PropTypes.func,
+  category: PropTypes.string,
+  type: PropTypes.string,
+  action: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]).isRequired,
 };
 
 export default Button;

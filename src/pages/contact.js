@@ -4,31 +4,26 @@ import SEO from '../components/seo';
 import Maps from '../components/Maps';
 import ContactForm from '../components/ContactForm';
 
-const ContactPage = () => {
+const ContactPage = () => (
+  <Layout>
+    <SEO title="Contact" />
 
-  return (
-    <Layout>
-      <SEO title="Contact" />
+    <h1>
+      <span>Let&apos;s</span>
+      <span className="theme-primary-colour bold"> talk.</span>
+    </h1>
 
-      <h1>
-        <span>Let's</span>
-        <span className="theme-primary-colour bold"> talk.</span>
-      </h1>
-
-      <div className="contact">
-        <div className="wrapper">
-          <div className="box">
-            <ContactForm />
-          </div>
-          <div className="box">
-            <Maps isMarkerShown />
-          </div>
+    <div className="contact">
+      <div className="wrapper">
+        <div className="box">
+          <ContactForm />
+        </div>
+        <div className="box">
+          <Maps isMarkerShown />
         </div>
       </div>
-
-    </Layout>
-
-  );
-}
+    </div>
+  </Layout>
+);
 
 export default ContactPage;

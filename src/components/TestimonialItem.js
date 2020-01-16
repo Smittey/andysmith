@@ -14,7 +14,6 @@ const TestimonialItem = ({
   } = data;
 
   return (
-
     <div className="box" key={name}>
       <div className="avatar">
         <Img sizes={image.sizes} />

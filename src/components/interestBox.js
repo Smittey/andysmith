@@ -8,7 +8,6 @@ const InterestBox = ({
   list,
   extra,
 }) => (
-
   <div className="box">
     <IconContext.Provider value={{ className: 'icon' }}>
       {icon}
@@ -22,7 +21,6 @@ const InterestBox = ({
       {extra}
     </ul>
     )}
-
   </div>
 );
 

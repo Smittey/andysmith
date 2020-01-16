@@ -8,6 +8,25 @@ import SocialIcons from './SocialIcons';
 import NavLinks from './NavLinks';
 
 const Navbar = ({ isIndex }) => {
+  const [menuState, setMenuState] = useState('closed');
+  const [backgroundPositionStyle, setBackgroundPositionStyle] = useState('');
+
+  useEffect(() => {
+    let style;
+
+    if (isIndex && menuState === 'closed') {
+      style = 'left bottom';
+    } else if (!isIndex && menuState === 'closed') {
+      style = 'center bottom -100px';
+    } else if (!isIndex && menuState === 'open') {
+      style = 'center center';
+    } else {
+      style = 'left center';
+    }
+
+    setBackgroundPositionStyle(style);
+  }, [menuState]);
+
   const { contentfulAsset } = useStaticQuery(
     graphql`
       query {
@@ -20,36 +39,9 @@ const Navbar = ({ isIndex }) => {
     `,
   );
 
-  const [menuState, setMenuState] = useState('closed');
-  const [backgroundPositionStyle, setBackgroundPositionStyle] = useState('');
-
-
   const navToggle = () => {
     setMenuState(menuState === 'closed' ? 'open' : 'closed');
   };
-
-  useEffect(() => {
-    let style;
-
-
-    // If it's the index page and desktop
-    if(isIndex && menuState === 'closed') {
-      style = "left bottom";
-    } else if(!isIndex && menuState === 'closed') {
-      style = "center bottom -100px";
-    } else if(!isIndex && menuState === 'open') {
-      style = "center center";
-    } else {
-      style = "left center";
-    }
-
-    setBackgroundPositionStyle(style);
-
-    console.log('backgroundPositionstyle: ', style)
-  }, [menuState]);
-
-
-  
 
   return (
     <nav className="rightNav" style={{ minWidth: isIndex ? '40%' : 'fit-content' }}>
@@ -60,20 +52,11 @@ const Navbar = ({ isIndex }) => {
         </IconContext.Provider>
       </button>
 
-
-      <div
-        className="menuWrapper"
-        style={{
-          display: (menuState === 'closed') ? 'none' : 'block',
-        }}
-      >
-
+      <div className="menuWrapper" style={{ display: (menuState === 'closed') ? 'none' : 'block' }}>
         <NavLinks />
 
         <div className={isIndex ? 'imgWrappers indexImgWrapper' : 'imgWrappers nonIndexImgWrapper'}>
-
           <SocialIcons />
-
           <BackgroundImage
             Tag="section"
             id="media-test"
@@ -81,13 +64,10 @@ const Navbar = ({ isIndex }) => {
             style={{
               height: '100%',
               backgroundSize: 'contain',
-              // backgroundPosition: "bottom",
-              // backgroundPosition: isIndex ? 'left bottom' : 'center bottom -100px',
               backgroundPosition: backgroundPositionStyle,
             }}
             fluid={contentfulAsset.sizes}
           />
-
         </div>
       </div>
     </nav>

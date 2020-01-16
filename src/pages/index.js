@@ -50,7 +50,10 @@ const IndexPage = ({ data }) => {
           <Button
             href="https://docs.google.com/document/d/1bWrA-LyPgv2Q9XFgJeQ_BWOxwn3L3bRpdO0YLFuT6rA/edit?usp=sharing"
             label="Résumé"
-          />
+            type="button"
+          >
+            <span>Résumé</span>
+          </Button>
         </div>
       </div>
 

@@ -15,21 +15,20 @@ const Timeline = ({ data }) => {
       ),
     );
 
-
   return (
     <ul className="timeline">
       {
-          experienceList.map((item) => (
-            <TimelineItem
-              date={item.date}
-              companyName={item.companyName}
-              jobTitle={item.jobTitle}
-              jobDescription={item.jobDescription.jobDescription}
-              skills={item.skills}
-              key={`${item.companyName} - ${item.jobTitle}`}
-            />
-          ))
-        }
+        experienceList.map((item) => (
+          <TimelineItem
+            date={item.date}
+            companyName={item.companyName}
+            jobTitle={item.jobTitle}
+            jobDescription={item.jobDescription.jobDescription}
+            skills={item.skills}
+            key={`${item.companyName} - ${item.jobTitle}`}
+          />
+        ))
+      }
     </ul>
   );
 };

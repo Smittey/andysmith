@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
-
 import { experienceContext } from '../utils/experienceContext';
 
 const TimelineItem = ({
@@ -28,16 +27,19 @@ const TimelineItem = ({
         <h4>{jobTitle}</h4>
         <p>{jobDescription}</p>
         {
-            skills.map((skill) => (
-              <Button
-                label={skill}
-                style={{ padding: '4px 10px', margin: '0px 5px 5px 0px' }}
-                key={skill}
-                onClick={() => addFilter(skill)}
-                classNameProp={(state.filterTags.includes(skill)) ? 'selected' : 'deselected'}
-              />
-            ))
-          }
+          skills.map((skill) => (
+            <Button
+              label={skill}
+              style={{ padding: '4px 10px', margin: '0px 5px 5px 0px' }}
+              key={skill}
+              type="button"
+              category="Timeline Section"
+              action="Tag Filter"
+              onClick={() => addFilter(skill)}
+              classNameProp={(state.filterTags.includes(skill)) ? 'selected' : 'deselected'}
+            />
+          ))
+        }
       </div>
     </li>
   );

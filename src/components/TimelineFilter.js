@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
-
 import { experienceContext } from '../utils/experienceContext';
 
 const TimelineFilter = ({ data }) => {
@@ -31,13 +30,24 @@ const TimelineFilter = ({ data }) => {
         {allSkills.sort().map((skill) => (
           <Button
             label={skill}
-            style={{ padding: '4px 10px', margin: '0px 5px 5px 0px' }}
             key={skill}
+            type="button"
+            category="Timeline Section"
+            action="Tag Filter"
+            style={{ padding: '4px 10px', margin: '0px 5px 5px 0px' }}
             onClick={() => changeFilter(skill)}
             classNameProp={(state.filterTags.includes(skill)) ? 'selected' : 'deselected'}
           />
         ))}
-        <span role="button" tabIndex={0} className="filterText" onClick={() => clearFilter()} onKeyDown={() => clearFilter()}>Filter (clear)</span>
+        <span
+          role="button"
+          tabIndex={0}
+          className="filterText"
+          onClick={() => clearFilter()}
+          onKeyDown={() => clearFilter()}
+        >
+          Filter (clear)
+        </span>
       </div>
     </div>
   );

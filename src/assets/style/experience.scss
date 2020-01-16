@@ -1,5 +1,4 @@
 .experience {
-
     .sticky {
         position: sticky;
         position: -webkit-sticky;
@@ -9,7 +8,6 @@
         top: 55px;
         justify-content: center;
         align-items: center;
-        // z-index: 999;
         padding-bottom: 5px;
 
         .deselected {
@@ -20,8 +18,6 @@
                 color: white;
             }
         }
-    
-
     }
 
     .selected {
@@ -76,10 +72,8 @@
     /* Right content */
     .timeline > li .label {
         margin: 0 0 50px 25%;
-        // border: 1px solid #83D5D5;
         position: relative;
     }
-
 
     .timeline > li .label h2 { 
         margin-top: 0px;
@@ -89,9 +83,6 @@
     .timeline > li .label h4 { 
         margin-top: 0px;
     }
-
-
-
 
     /* The icons */
     .timeline > li .icon {
