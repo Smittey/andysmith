@@ -7,7 +7,9 @@ const Button = ({
   label,
   style,
   onClick,
-  classNameProp,
+  type,
+  disabled,
+  classNameProp, 
 }) => {
   const cssClasses = classNames(
     'button',
@@ -15,12 +17,32 @@ const Button = ({
   );
 
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" onClick={onClick}>
-      <div className={cssClasses} style={style}>
+    !href
+    ? (
+      <button
+        type={type ? 'submit' : 'button'}
+        className={cssClasses}
+        disabled={disabled}
+        onClick={onClick}
+        style={style}
+      >
         {label}
-      </div>
-    </a>
+      </button>
+    )
+    : (
+      <a href={href} target="_blank" rel="noopener noreferrer" onClick={onClick}>
+        <div className={cssClasses} style={style}>
+          {label}
+        </div>
+      </a>
+    )
   );
+};
+
+Button.defaultProps = {
+  onClick: () => { },
+  href: null,
+  type: 'button',
 };
 
 Button.propTypes = {
@@ -28,7 +50,9 @@ Button.propTypes = {
   classNameProp: PropTypes.string,
   label: PropTypes.string.isRequired,
   style: PropTypes.object,
+  type: PropTypes.string,
   onClick: PropTypes.func,
+  disabled : PropTypes.func,
 };
 
 export default Button;

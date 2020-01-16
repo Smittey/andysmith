@@ -31,35 +31,21 @@ const Navbar = ({ isIndex }) => {
   useEffect(() => {
     let style;
 
-    if(isIndex) { // index
-      if(menuState === 'open') { // mobile
-        style = "bottom";
-        console.log('style: ', style)
 
-      } else if(menuState === 'closed'){
-        style = "center bottom -100px";
-        console.log('style: ', style)
-
-      } else {
-        style = "left bottom";
-        console.log('style: ', style)
-
-      }
+    // If it's the index page and desktop
+    if(isIndex && menuState === 'closed') {
+      style = "left bottom";
+    } else if(!isIndex && menuState === 'closed') {
+      style = "center bottom -100px";
+    } else if(!isIndex && menuState === 'open') {
+      style = "center center";
     } else {
-      if(menuState === 'open') {
-        style = "bottom -100px";
-        console.log('style: ', style)
-
-      } else {
-        style = "center bottom -100px";
-        console.log('style: ', style)
-
-      }
-     
+      style = "left center";
     }
+
     setBackgroundPositionStyle(style);
 
-    console.log('backgroundPositionstyle: ', backgroundPositionStyle)
+    console.log('backgroundPositionstyle: ', style)
   }, [menuState]);
 
 

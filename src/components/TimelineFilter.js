@@ -31,7 +31,7 @@ const TimelineFilter = ({ data }) => {
         {allSkills.sort().map((skill) => (
           <Button
             label={skill}
-            style={{ padding: '2px 5px', margin: '0px 5px 5px 0px' }}
+            style={{ padding: '4px 10px', margin: '0px 5px 5px 0px' }}
             key={skill}
             onClick={() => changeFilter(skill)}
             classNameProp={(state.filterTags.includes(skill)) ? 'selected' : 'deselected'}

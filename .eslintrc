@@ -8,7 +8,9 @@
     "import/no-extraneous-dependencies": [
       "error",
       {"devDependencies": true}
-    ]
+    ],
+    "indent": [0, 2, {"SwitchCase": 1}],
+    "jsx-quotes": [2, "prefer-single"],
   },
   "env": {
     "es6": true,
