@@ -117,9 +117,9 @@ const Maps = compose(
       streetViewControl: false,
     }}
     defaultZoom={12}
-    defaultCenter={{ lat: 51.498736, lng: -0.069128 }}
+    defaultCenter={{ lat: 51.508894, lng: -0.127546 }}
   >
-    {props.isMarkerShown && <Marker position={{ lat: 51.498736, lng: -0.069128 }} />}
+    {props.isMarkerShown && <Marker position={{ lat: 51.508894, lng: -0.127546 }} />}
   </GoogleMap>
 ));
 
