@@ -46,11 +46,11 @@ const Navbar = ({ isIndex }) => {
   return (
     <nav className="rightNav" style={{ minWidth: isIndex ? '40%' : 'fit-content' }}>
 
-      <button type="button" className="menuIcon" onClick={() => navToggle()} tabIndex="0" onKeyDown={navToggle}>
+      <span role="button" className="menuIcon" onClick={() => navToggle()} tabIndex="0" onKeyDown={navToggle}>
         <IconContext.Provider value={{ className: (menuState === 'closed') ? 'icon' : 'iconClicked' }}>
           <FaBars />
         </IconContext.Provider>
-      </button>
+      </span>
 
       <div className="menuWrapper" style={{ display: (menuState === 'closed') ? 'none' : 'block' }}>
         <NavLinks />
