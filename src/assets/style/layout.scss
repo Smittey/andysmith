@@ -12,10 +12,23 @@ html {
 
 h1 {
     font-size: 60px;
+
+    span {
+        font-family: $bold;
+    }
 }
 
 h2 {
     font-size: 20px;
+    font-family: $bold;
+}
+
+h4 {
+    font-family: $bold;
+}
+
+h5 {
+    font-family: $bold;
 }
 
 a {

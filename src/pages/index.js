@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
       <div className="bioBox">
         <h1>
           <span>I&apos;m </span>
-          <span className="theme-primary-colour bold">
+          <span className="theme-primary-colour">
             {name}
           </span>
         </h1>
