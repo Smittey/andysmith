@@ -2,6 +2,7 @@
 
     button {
         background-color: Transparent;
+        cursor: pointer;
     }
     
     .sticky {
@@ -21,6 +22,21 @@
     
             &:hover {
                 color: white;
+            }
+
+            &:focus {
+                color: #c2c2c2;
+                background-color: white;
+            }
+        }
+
+        .filterText {
+            outline:none;
+            box-shadow:none !important;
+
+            &:hover {
+                color: #c2c2c2;
+                cursor: pointer;
             }
         }
     }

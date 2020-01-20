@@ -61,6 +61,9 @@ a {
     &:hover,&:focus {
         background-color: $theme-color;
         color: white;
+        overflow: hidden;
+        outline:none;
+        box-shadow:none !important;
     }
 }
   
@@ -74,8 +77,8 @@ a {
 
     margin-left: 10%;
     margin-right: 15%;
-    
-    -ms-overflow-style: none;
+        scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
 
     @include mobile {
         margin-left: 15%;
@@ -84,6 +87,7 @@ a {
 
 .content::-webkit-scrollbar {
     display: none;
+    width: 0px; /* For Chrome, Safari, and Opera */
 }
   
   
