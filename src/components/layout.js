@@ -6,7 +6,13 @@ import '../assets/style/main.scss';
 const Layout = ({ children, isIndex }) => (
   <div>
     <div className="container">
-      <div className="content" style={{ marginRight: isIndex ? '15%' : '10%' }}>
+      <div
+        className="content"
+        style={{
+          marginRight: isIndex ? '15%' : '10%',
+          marginLeft: isIndex ? '15%' : '10%',
+        }}
+      >
         <main>{children}</main>
       </div>
       <Navbar isIndex={isIndex} />
