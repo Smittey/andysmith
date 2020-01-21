@@ -61,7 +61,6 @@ a {
     &:hover,&:focus {
         background-color: $theme-color;
         color: white;
-        overflow: hidden;
         outline:none;
         box-shadow:none !important;
     }
