@@ -61,7 +61,9 @@ export const pageQuery = graphql`
         jobTitle
         skills
         jobDescription {
-          jobDescription
+          childMarkdownRemark {
+            html
+          }
         }
       }
     }

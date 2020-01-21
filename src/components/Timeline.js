@@ -23,7 +23,7 @@ const Timeline = ({ data }) => {
             date={item.date}
             companyName={item.companyName}
             jobTitle={item.jobTitle}
-            jobDescription={item.jobDescription.jobDescription}
+            jobDescription={item.jobDescription}
             skills={item.skills}
             key={`${item.companyName} - ${item.jobTitle}`}
           />

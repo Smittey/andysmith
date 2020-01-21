@@ -25,7 +25,13 @@ const TimelineItem = ({
       <div className="label">
         <h2>{companyName}</h2>
         <h4>{jobTitle}</h4>
-        <p>{jobDescription}</p>
+        <p
+          dangerouslySetInnerHTML={
+            {
+              __html: jobDescription.childMarkdownRemark.html,
+            }
+          }
+        />
         {
           skills.map((skill) => (
             <Button
