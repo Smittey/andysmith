@@ -25,7 +25,7 @@ const TimelineItem = ({
       <div className="label">
         <h2>{companyName}</h2>
         <h4>{jobTitle}</h4>
-        <p
+        <div
           dangerouslySetInnerHTML={
             {
               __html: jobDescription.childMarkdownRemark.html,
