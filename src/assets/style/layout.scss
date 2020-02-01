@@ -80,7 +80,8 @@ a {
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
 
     @include mobile {
-        margin-left: 15%;
+        margin-left: 10% !important;
+        margin-right: 10% !important;
     }
 
     h1 {

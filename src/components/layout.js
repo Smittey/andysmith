@@ -10,7 +10,7 @@ const Layout = ({ children, isIndex }) => (
         className="content"
         style={{
           marginRight: isIndex ? '15%' : '10%',
-          marginLeft: isIndex ? '15%' : '10%',
+          marginLeft: '10%',
         }}
       >
         <main>{children}</main>
