@@ -49,7 +49,7 @@
                 }
 
                 h2 {
-                    margin: 5px 0px 5px 0px;
+                    margin: 5px 0px 0px 0px;
                 }
 
                 .body {
@@ -60,7 +60,6 @@
                 p.body:before, p.body:after {
                     content: '"';
                     color: $theme-color;
-                    // font-weight: bold;
                     font-family: AvenirNext-Italic;
                 }
 
