@@ -5,6 +5,10 @@
         color: #444;
         margin-bottom: 20px;
 
+        .imgBox {
+            overflow: hidden;
+        }
+
         a {
             &:hover {
                 color: $theme-color;
@@ -67,6 +71,14 @@
         .heroImageGatsby {
             margin: 20px 0px;
             min-height: 200px;
+            transition: all 0.4s ease;
+            overflow: hidden;
+            
+           
+            &:hover
+            {
+                transform: scale(1.07);
+            }
         }
 
     }
