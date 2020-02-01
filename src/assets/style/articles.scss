@@ -57,6 +57,11 @@
                 padding-top: 30px;
                 padding-bottom: 30px;
             }
+
+            @include tablet {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
         }
 
         &:nth-child(even) {
