@@ -20,21 +20,27 @@ const Button = ({
     classNameProp,
   );
 
+  let shouldTrackEvent = true;
+
+  if (classNameProp && classNameProp === 'selected') {
+    shouldTrackEvent = false;
+  }
+
   return (
     !href
       ? (
-        // eslint-disable-next-line react/button-has-type
+        /* eslint-disable-next-line react/button-has-type */
         <button
           type={type}
           className={cssClasses}
           disabled={disabled}
           onClick={() => {
             onClick();
-            trackCustomEvent({
+            (shouldTrackEvent && trackCustomEvent({
               category,
               action,
               label,
-            });
+            }));
           }}
           style={style}
         >
