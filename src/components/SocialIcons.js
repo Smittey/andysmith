@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const SocialIcons = () => {
-  const { allContentfulSocialMediaIcons } = useStaticQuery(
+  const { allContentfulSocialMediaIcons, contentfulAsset, site } = useStaticQuery(
     graphql`
           query {
             allContentfulSocialMediaIcons {
@@ -17,6 +17,16 @@ const SocialIcons = () => {
                       ...GatsbyContentfulSizes
                   }
                 }
+              }
+            }
+            contentfulAsset(contentful_id: {eq: "lb7CFYVbXd8BZOHXjvwMP"}) {
+              sizes(maxHeight: 200) {
+                ...GatsbyContentfulSizes
+              }            
+            }
+            site {
+              siteMetadata {
+                blogSiteUrl
               }
             }
           }
@@ -45,6 +55,23 @@ const SocialIcons = () => {
           </OutboundLink>
         ))
       }
+      <OutboundLink
+        href={site.siteMetadata.blogSiteUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="imgBox"
+      >
+        <Img
+          className="social"
+          style={{
+            display: 'inline-block',
+            width: '50px',
+            height: '50px',
+          }}
+          sizes={contentfulAsset.sizes}
+          alt="Personal blog icon link"
+        />
+      </OutboundLink>
     </div>
   );
 };

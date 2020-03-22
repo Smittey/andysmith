@@ -23,6 +23,7 @@ module.exports = {
     location: 'London, UK',
     description: 'Personal website of Andy Smith, software engineer based in London, UK',
     author: '@smittey',
+    blogSiteUrl: 'https://www.smittey.co.uk/',
   },
   plugins: [
     {
