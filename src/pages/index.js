@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
           <span>I&apos;m </span>
           <span className="theme-primary-colour">
             {name}
-.
+            .
           </span>
         </h1>
         <h2 className="bold">

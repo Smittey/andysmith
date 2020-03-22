@@ -5,32 +5,32 @@ const NavLinks = () => (
   <ul>
     <li>
       <Link to="/" activeClassName="activeMenuLink" className="menuLink">
-                Profile.
+        Profile.
       </Link>
     </li>
     <li>
       <Link to="/interests" activeClassName="activeMenuLink" className="menuLink">
-                Interests.
+        Interests.
       </Link>
     </li>
     <li>
       <Link to="/experience" activeClassName="activeMenuLink" className="menuLink">
-                Experience.
+        Experience.
       </Link>
     </li>
     <li>
       <Link to="/articles" activeClassName="activeMenuLink" className="menuLink">
-                Articles.
+        Articles.
       </Link>
     </li>
     <li>
       <Link to="/testimonials" activeClassName="activeMenuLink" className="menuLink">
-                Testimonials.
+        Testimonials.
       </Link>
     </li>
     <li>
       <Link to="/contact" activeClassName="activeMenuLink" className="menuLink">
-                Contact.
+        Contact.
       </Link>
     </li>
   </ul>

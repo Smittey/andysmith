@@ -23,14 +23,14 @@ const Footer = () => {
     <footer>
       <div className="footerText">
         <IconContext.Provider value={{ className: 'icon' }}>
-                  Designed and made with
+          Designed and made with
           {' '}
           <FaHeart />
           {' '}
-in
+          in
           {' '}
           {dataLocation.site.siteMetadata.location}
-,
+          ,
           {' '}
           {getYear()}
         </IconContext.Provider>
