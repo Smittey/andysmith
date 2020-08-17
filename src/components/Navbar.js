@@ -19,7 +19,9 @@ const Navbar = ({ isIndex }) => {
     } else if (!isIndex && menuState === 'closed') {
       style = 'center bottom -100px';
     } else if (!isIndex && menuState === 'open') {
-      style = 'center center';
+      style = 'right';
+    } else if (isIndex && menuState === 'open') {
+      style = 'right';
     } else {
       style = 'left center';
     }

@@ -84,7 +84,6 @@
         margin-left: -100px;
         position: absolute;
       }
-      
     }
 
     .nonIndexImgWrapper {
@@ -122,7 +121,15 @@
         .social {
           display: block;
           opacity: 0.3;
-          margin-left: -60px;
+
+          @include desktop {
+            margin-left: -60px;
+          }
+
+          @include mobile {
+            margin-left: 10px;
+            margin-top: 10px;
+          }
 
           &:hover {
             opacity: 0.4;
@@ -134,7 +141,6 @@
 
     @include mobile {
       display: none;
-      width: 0px;
       position: fixed;
       z-index: 1;
       top: 0px;
