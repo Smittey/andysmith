@@ -45,6 +45,10 @@ const Button = ({
           style={style}
         >
           {label}
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       )
       : (
@@ -55,6 +59,10 @@ const Button = ({
         >
           <div className={cssClasses} style={style}>
             {children}
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </OutboundLink>
       )
@@ -79,7 +87,7 @@ Button.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.element,
-  ]).isRequired,
+  ]),
 };
 
 export default Button;

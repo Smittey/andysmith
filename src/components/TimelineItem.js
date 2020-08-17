@@ -55,7 +55,7 @@ TimelineItem.propTypes = {
   date: PropTypes.string.isRequired,
   companyName: PropTypes.string.isRequired,
   skills: PropTypes.array.isRequired,
-  jobDescription: PropTypes.string.isRequired,
+  jobDescription: PropTypes.object.isRequired,
   jobTitle: PropTypes.string.isRequired,
 };
 

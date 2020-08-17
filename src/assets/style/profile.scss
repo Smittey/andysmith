@@ -36,10 +36,9 @@
     
     .resumeButtonDiv {
       @include mobile {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+        .button {
+          margin: 0 auto;
+        }
       }
     }
   

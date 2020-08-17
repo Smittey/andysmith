@@ -49,23 +49,63 @@ a {
     overflow: hidden;
 }
 
-.button {
-    border: 1px solid #83D5D5;
-    padding: 15px 50px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    color: $primary-font-color;
+button {
+    all: unset;
+}
 
-    &:hover,&:focus {
-        background-color: $theme-color;
+.button {
+    color: $theme-color;
+    border: 2px solid $theme-color;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+
+    &:hover {
         color: white;
-        outline:none;
-        box-shadow:none !important;
+
+        span {
+            transform: translateY(0) scale(2);
+        }
+    }
+    
+    span {
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        background-color: $theme-color;
+        transform: translateY(150%);
+        border-radius: 50%;
+        left: calc((var(--n) - 1) * 25%);
+        transition: 0.5s;
+        transition-delay: calc((var(--n) - 1) * 0.1s);
+        z-index: -1;
+
+        &:nth-child(1) {
+            --n: 1;
+        }
+        
+        &:nth-child(2) {
+            --n: 2;
+        }
+
+        &:nth-child(3) {
+            --n: 3;
+        }
+
+        &:nth-child(4) {
+            --n: 4;
+        }
     }
 }
-  
+
+.buttonBig {
+    width: 4em;
+    padding: 15px 50px;
+} 
   
 .content {
     flex-basis: 100%;

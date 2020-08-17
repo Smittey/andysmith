@@ -46,10 +46,10 @@ const ContactForm = () => {
           label="Submit"
           type="submit"
           category="Contact Form"
-          action="Send Message"
-          onClick={() => {}}
-          disabled={serverState.submitting}
-        />
+          classNameProp="buttonBig"
+        >
+          Submit
+        </Button>
         {serverState.status && (
           <p className={!serverState.status.ok ? 'errorMsg' : ''}>
             {serverState.status.msg}

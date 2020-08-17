@@ -3,6 +3,9 @@
     button {
         background-color: Transparent;
         cursor: pointer;
+        font-weight: normal;
+        border: 2px solid $theme-color;
+
     }
     
     .sticky {
@@ -16,18 +19,42 @@
         align-items: center;
         padding-bottom: 5px;
 
-        .deselected {
-            border: 1px solid #ececec;
-            color: #c2c2c2;
+        .selected {
+            background-color: $theme-color;
+            color: white !important;
     
-            &:hover {
-                color: white;
+        }
+
+        .deselected {
+            border: 2px solid #ececec;
+            color: #c2c2c2;
+
+            @include desktop {
+                &:hover {
+                    color: white;
+                    border: 2px solid $theme-color;
+                }
+
+                &:focus {
+                    color: #c2c2c2;
+                }
             }
 
-            &:focus {
-                color: #c2c2c2;
-                background-color: white;
+            @include mobile {
+
+                &:hover {
+                    border: 2px solid #ececec;
+                    color: #c2c2c2 !important;
+                }
+
+                &:focus {
+                    color: #c2c2c2;
+                    span {
+                        background-color: white !important;
+                    }
+                }
             }
+    
         }
 
         .filterText {
@@ -41,9 +68,23 @@
         }
     }
 
-    .selected {
-        background-color: $theme-color;
-        color: white;
+    .label {
+        .selected {
+            background-color: $theme-color;
+            color: white;
+
+        }
+
+        .deselected {
+            border: 2px solid #ececec;
+            color: #c2c2c2;
+    
+            &:hover {
+                color: white;
+                border: 2px solid $theme-color;
+            }
+
+        }
     }
 
     .timeline {

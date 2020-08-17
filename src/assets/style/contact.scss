@@ -36,20 +36,20 @@
             border: 1px solid #ccc;
         }
 
-        button {
-            border: 1px solid #83D5D5;
-            padding: 15px 50px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            color: $primary-font-color;
+        // button {
+        //     border: 1px solid #83D5D5;
+        //     padding: 15px 50px;
+        //     text-align: center;
+        //     text-decoration: none;
+        //     display: inline-block;
+        //     font-size: 16px;
+        //     color: $primary-font-color;
 
-            &:hover,&:focus {
-                background-color: $theme-color;
-                color: white;
-            }
-        }
+        //     &:hover,&:focus {
+        //         background-color: $theme-color;
+        //         color: white;
+        //     }
+        // }
     }
     .wrapper {
         display: grid;
