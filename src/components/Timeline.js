@@ -20,7 +20,7 @@ const Timeline = ({ data }) => {
       {
         experienceList.map((item) => (
           <TimelineItem
-            date={item.date}
+            startDate={item.startDate}
             companyName={item.companyName}
             jobTitle={item.jobTitle}
             jobDescription={item.jobDescription}

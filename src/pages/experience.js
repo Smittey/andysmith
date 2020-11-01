@@ -54,10 +54,10 @@ const ExperiencePage = ({ data }) => {
 
 export const pageQuery = graphql`
   query ExperienceQuery {
-    allContentfulExperience(sort: {order: ASC, fields: createdAt}) {
+    allContentfulExperience(sort: {order: DESC, fields: startDate}) {
       nodes {
         companyName
-        date
+        startDate
         jobTitle
         skills
         jobDescription {

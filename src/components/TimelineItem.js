@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 import { experienceContext } from '../utils/experienceContext';
 
+const moment = require('moment');
+
 const TimelineItem = ({
-  date,
+  startDate,
   companyName,
   skills,
   jobDescription,
@@ -16,10 +18,12 @@ const TimelineItem = ({
     dispatch({ type: 'ADD_FILTER', data: newValue });
   };
 
+  const formattedStartDate = moment(startDate).format('MMM [\']YY');
+
   return (
     <li>
       <time className="time" dateTime="2013-04-10 18:30">
-        <span>{date}</span>
+        <span>{formattedStartDate}</span>
       </time>
       <div className="icon" />
       <div className="label">
@@ -52,7 +56,7 @@ const TimelineItem = ({
 };
 
 TimelineItem.propTypes = {
-  date: PropTypes.string.isRequired,
+  startDate: PropTypes.string.isRequired,
   companyName: PropTypes.string.isRequired,
   skills: PropTypes.array.isRequired,
   jobDescription: PropTypes.object.isRequired,
