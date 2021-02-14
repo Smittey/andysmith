@@ -42,6 +42,7 @@ function SEO({
 
   const metaImage = contentfulAsset.fixed.src;
   const metaImageurl = `https:${metaImage}`;
+  const url = [siteUrl, title].join('/').toLowerCase();
 
   const metaDescription = description || metadataDescription;
 
@@ -59,7 +60,7 @@ function SEO({
         },
         {
           property: 'og:url',
-          content: siteUrl,
+          content: url,
         },
         {
           property: 'og:title',
@@ -124,7 +125,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };
 
 export default SEO;

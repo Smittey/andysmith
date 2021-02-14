@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
   return (
 
     <Layout isIndex>
-      <SEO title="Home" />
+      <SEO />
 
       <div className="bioBox">
         <h1>
