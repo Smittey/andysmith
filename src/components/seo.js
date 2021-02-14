@@ -45,14 +45,13 @@ function SEO({
   const url = [siteUrl, title].join('/').toLowerCase();
 
   const metaDescription = description || metadataDescription;
-
+  const fullPageTitle = (title ? `${metadataTitle} | ${title}` : `${metadataTitle} | Home`);
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`${metadataTitle} | %s`}
+      title={fullPageTitle}
       meta={[
         {
           name: 'description',
@@ -64,7 +63,7 @@ function SEO({
         },
         {
           property: 'og:title',
-          content: `${metadataTitle} | ${title}`,
+          content: fullPageTitle,
         },
         {
           property: 'og:description',
@@ -92,7 +91,7 @@ function SEO({
         },
         {
           name: 'twitter:title',
-          content: `${metadataTitle} | ${title}`,
+          content: fullPageTitle,
         },
         {
           name: 'twitter:description',
