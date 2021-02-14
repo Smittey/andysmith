@@ -6,6 +6,7 @@ const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   host: process.env.CONTENTFUL_HOST,
+  downloadLocal: true,
 };
 
 const { spaceId, accessToken } = contentfulConfig;
@@ -21,7 +22,7 @@ module.exports = {
     name: 'Andy Smith',
     title: 'Andy Smith',
     location: 'London, UK',
-    description: 'Personal website of Andy Smith, software engineer based in London, UK',
+    description: 'Personal website of Andy Smith, Senior Software Engineer based in London, UK',
     author: '@smittey',
     blogSiteUrl: 'https://www.smittey.co.uk/',
   },
