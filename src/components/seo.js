@@ -74,6 +74,10 @@ function SEO({
           content: 'website',
         },
         {
+          property: 'og:image',
+          content: metaImageurl,
+        },
+        {
           property: 'og:image:secure_url',
           content: metaImageurl,
         },
