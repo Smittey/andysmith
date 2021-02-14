@@ -13,21 +13,37 @@ import { useStaticQuery, graphql } from 'gatsby';
 function SEO({
   description, lang, meta, title,
 }) {
-  const { site } = useStaticQuery(
+  const { site, contentfulAsset } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
             description
             author
+            siteUrl
+            title
+          }
+        }
+        contentfulAsset(contentful_id: {eq: "4lKopBwBTzByQLvoCs6UrQ"}) {
+          fixed(quality: 100, width: 800) {
+            src
           }
         }
       }
     `,
   );
 
-  const metaDescription = description || site.siteMetadata.description;
+  const {
+    description: metadataDescription,
+    author,
+    siteUrl,
+    title: metadataTitle,
+  } = site.siteMetadata;
+
+  const metaImage = contentfulAsset.fixed.src;
+  const metaImageurl = `https:${metaImage}`;
+
+  const metaDescription = description || metadataDescription;
 
   return (
     <Helmet
@@ -35,15 +51,19 @@ function SEO({
         lang,
       }}
       title={title}
-      titleTemplate={`${site.siteMetadata.title} | %s`}
+      titleTemplate={`${metadataTitle} | %s`}
       meta={[
         {
           name: 'description',
           content: metaDescription,
         },
         {
+          property: 'og:url',
+          content: siteUrl,
+        },
+        {
           property: 'og:title',
-          content: title,
+          content: `${metadataTitle} | ${title}`,
         },
         {
           property: 'og:description',
@@ -54,20 +74,40 @@ function SEO({
           content: 'website',
         },
         {
+          property: 'og:image:secure_url',
+          content: metaImageurl,
+        },
+        {
+          property: 'og:locale',
+          content: 'en_GB',
+        },
+        {
           name: 'twitter:card',
           content: 'summary',
         },
         {
           name: 'twitter:creator',
-          content: site.siteMetadata.author,
+          content: author,
         },
         {
           name: 'twitter:title',
-          content: title,
+          content: `${metadataTitle} | ${title}`,
         },
         {
           name: 'twitter:description',
           content: metaDescription,
+        },
+        {
+          name: 'twitter:site',
+          content: author,
+        },
+        {
+          name: 'twitter:image',
+          content: metaImageurl,
+        },
+        {
+          name: 'twitter:image:alt',
+          content: 'Title image for the personal website of Andy Smith',
         },
       ].concat(meta)}
     />

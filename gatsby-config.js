@@ -24,6 +24,7 @@ module.exports = {
     location: 'London, UK',
     description: 'Personal website of Andy Smith, Senior Software Engineer based in London, UK',
     author: '@smittey',
+    siteUrl: 'https://www.andysmith.me/',
     blogSiteUrl: 'https://www.smittey.co.uk/',
   },
   plugins: [
