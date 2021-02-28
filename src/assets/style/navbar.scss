@@ -1,6 +1,10 @@
 .rightNav {
   .icon {
     color: $theme-color;
+
+    .dark-theme & {
+      color: rgb(185, 216, 192);
+    }
   }
 
   .iconClicked {
