@@ -2,8 +2,11 @@
     .wrapper {
         display: grid;
         grid-template-columns: 50% 50%;
-        background-color: #fff;
         color: #444;
+
+        .dark-theme & {
+            color: var(--dark-color);
+        }
 
         @include mobile {
             grid-template-columns: 100%;
@@ -36,6 +39,11 @@
 
                 .company {
                     color: $theme-color;
+
+                    .dark-theme & {
+                        color: rgb(185, 216, 192);
+                    }
+
                     margin-top: 0px;
                     margin-bottom: 0;
                     padding-bottom: 5px;
@@ -60,6 +68,11 @@
                 p.body:before, p.body:after {
                     content: '"';
                     color: $theme-color;
+
+                    .dark-theme & {
+                        color: rgb(185, 216, 192);
+                    }
+                    
                     font-family: AvenirNext-Italic;
                 }
 

@@ -1,8 +1,11 @@
 .articles {
     .itemWrapper {
         display: grid;
-        background-color: #fff;
         color: #444;
+
+        .dark-theme & {
+            color: var(--dark-color);
+        }
 
         @include desktop {
             padding-top: 30px;
@@ -21,6 +24,10 @@
         a {
             &:hover {
                 color: $theme-color;
+    
+                .dark-theme & {
+                    color: rgb(185, 216, 192);
+                }
             }
         }
 

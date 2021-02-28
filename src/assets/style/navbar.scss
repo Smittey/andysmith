@@ -44,6 +44,10 @@
     height: 100vh;
     width: 100%;
 
+    .dark-theme & {
+      background-color: rgb(71, 98, 87);
+    }
+
     ul {
       flex: none;
       margin-right: 20px;
@@ -62,6 +66,12 @@
         text-decoration: none;
         opacity: 0.22;
 
+
+        .dark-theme & {
+          color: var(--dark-color);
+          opacity: 1;
+        }
+
         &:hover {
           opacity: 0.4;
         }
@@ -69,6 +79,10 @@
 
       .activeMenuLink {
         opacity: 1;
+
+        .dark-theme & {
+          color: var(--dark-background);
+        }
       }
 
       @include mobile {
