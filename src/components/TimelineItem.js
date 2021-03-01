@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import DOMPurify from 'dompurify';
 import Button from './Button';
 import { experienceContext } from '../utils/experienceContext';
 
@@ -32,7 +33,7 @@ const TimelineItem = ({
         <div
           dangerouslySetInnerHTML={
             {
-              __html: jobDescription.childMarkdownRemark.html,
+              __html: DOMPurify.sanitize(jobDescription.childMarkdownRemark.html),
             }
           }
         />

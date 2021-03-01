@@ -4,14 +4,17 @@ import Img from 'gatsby-image';
 
 const TestimonialItem = ({
   data,
-  image,
+  defaultImage,
 }) => {
   const {
     company,
     jobTitle,
     body,
     name,
+    displayPicture,
   } = data;
+
+  const image = displayPicture || defaultImage;
 
   return (
     <div className="box" key={name}>
@@ -29,12 +32,13 @@ const TestimonialItem = ({
 };
 
 TestimonialItem.propTypes = {
-  image: PropTypes.object.isRequired,
+  defaultImage: PropTypes.object.isRequired,
   data: PropTypes.shape({
     company: PropTypes.string,
     jobTitle: PropTypes.string,
     body: PropTypes.object.isRequired,
     name: PropTypes.string.isRequired,
+    displayPicture: PropTypes.object,
   }).isRequired,
 };
 

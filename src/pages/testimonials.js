@@ -8,6 +8,12 @@ import TestimonialItem from '../components/TestimonialItem';
 const TestimonialsPage = ({ data }) => {
   const testimonials = data.allContentfulTestimonials.nodes;
   const defaultProfileImage = data.contentfulAsset;
+  const listSize = 6;
+
+  const shuffledNodes = testimonials
+    .map((a) => ({ sort: Math.random(), value: a }))
+    .sort((a, b) => a.sort - b.sort)
+    .map((a) => a.value);
 
   return (
     <Layout>
@@ -20,11 +26,11 @@ const TestimonialsPage = ({ data }) => {
       <div className="testimonials">
         <div className="wrapper">
           {
-            testimonials.map((item) => (
+            shuffledNodes.slice(0, listSize).map((testimonial) => (
               <TestimonialItem
-                data={item}
-                image={defaultProfileImage}
-                key={item.name}
+                data={testimonial}
+                defaultImage={defaultProfileImage}
+                key={testimonial.name}
               />
             ))
           }
@@ -41,6 +47,11 @@ query TestimonialsQuery {
         name
         company
         jobTitle
+        displayPicture {
+          sizes(maxHeight: 200, cropFocus: CENTER) {
+            ...GatsbyContentfulSizes
+          }
+        }
         body {
           body
         }
