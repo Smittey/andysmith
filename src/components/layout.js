@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
@@ -13,12 +13,20 @@ const Layout = ({ children, isIndex }) => {
   const dispatch = useContext(GlobalDispatchContext);
   const state = useContext(GlobalStateContext);
 
+  useEffect(() => {
+    if (localStorage.getItem('themeColour')) {
+      dispatch({ type: 'SET_THEME', payload: localStorage.getItem('themeColour') });
+    }
+  }, []);
+
   const themeToggleHandler = () => {
+    const toggleTo = state.theme === 'light' ? 'dark' : 'light';
     dispatch({ type: 'TOGGLE_THEME' });
+    localStorage.setItem('themeColour', toggleTo);
     trackCustomEvent({
       category: 'Toggle Theme',
       action: 'Change Theme',
-      label: state.theme === 'light' ? 'dark' : 'light',
+      label: toggleTo,
     });
   };
 
