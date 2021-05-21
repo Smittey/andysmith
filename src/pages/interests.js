@@ -42,25 +42,24 @@ const InterestsPage = ({ data }) => {
   }, []);
 
   useEffect(() => {
-    const fetchData = () => {
-      setInterval(async () => {
-        const fmDataCurrentResult = await getCurrentlyPlaying({
-          username: 'smitteyyyy',
-          apiKey: '9ddaab7dc99dbcfb3f2ed8204ef965ce',
-        });
+    const fetchData = async () => {
+      const fmDataCurrentResult = await getCurrentlyPlaying({
+        username: 'smitteyyyy',
+        apiKey: '9ddaab7dc99dbcfb3f2ed8204ef965ce',
+      });
+      console.log({ fmDataCurrentResult });
+      const current = fmDataCurrentResult.recenttracks.track.find((item) => item['@attr'] && item['@attr'].nowplaying);
 
-        const current = fmDataCurrentResult.recenttracks.track.find((item) => item['@attr'] && item['@attr'].nowplaying);
-
-        if (current) {
-          const currentArtist = `Currently playing: ${current.name} - ${current.artist['#text']}`;
-          setCurrentlyListening(currentArtist);
-        } else {
-          setCurrentlyListening('');
-        }
-      }, 10000);
+      if (current) {
+        const currentArtist = `Currently playing: ${current.name} - ${current.artist['#text']}`;
+        setCurrentlyListening(currentArtist);
+      } else {
+        setCurrentlyListening('');
+      }
     };
 
     fetchData();
+    setInterval(fetchData, 10000);
   }, []);
 
   return (
