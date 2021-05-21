@@ -47,7 +47,6 @@ const InterestsPage = ({ data }) => {
         username: 'smitteyyyy',
         apiKey: '9ddaab7dc99dbcfb3f2ed8204ef965ce',
       });
-      console.log({ fmDataCurrentResult });
       const current = fmDataCurrentResult.recenttracks.track.find((item) => item['@attr'] && item['@attr'].nowplaying);
 
       if (current) {
