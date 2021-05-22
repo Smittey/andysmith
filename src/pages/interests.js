@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import {
   FaHeart, FaArrowUp, FaFireAlt, FaSeedling,
 } from 'react-icons/fa';
+import parse from 'html-react-parser';
+import ReactTooltip from 'react-tooltip';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import InterestBox from '../components/InterestBox';
@@ -24,6 +26,13 @@ const InterestsPage = ({ data }) => {
     topArtistsTitle,
   } = data.contentfulInterests;
 
+
+  const buildArtistLink = (artist) => (
+    <a href={artist.url} target="_blank" rel="noopener noreferrer">
+      {artist.name}
+    </a>
+  );
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -31,8 +40,10 @@ const InterestsPage = ({ data }) => {
           username: 'smitteyyyy',
           apiKey: '9ddaab7dc99dbcfb3f2ed8204ef965ce',
         });
-
-        setArtistsList(fmDataTopResult.topartists.artist.map((item) => item.name));
+        const artistListItems = fmDataTopResult.topartists.artist.map(
+          (artist) => buildArtistLink(artist),
+        );
+        setArtistsList(artistListItems);
       } catch (error) {
         setArtistsList({ error });
       }
@@ -50,8 +61,11 @@ const InterestsPage = ({ data }) => {
       const current = fmDataCurrentResult.recenttracks.track.find((item) => item['@attr'] && item['@attr'].nowplaying);
 
       if (current) {
-        const currentArtist = `Currently playing: ${current.name} - ${current.artist['#text']}`;
-        setCurrentlyListening(currentArtist);
+        const currentArtist = `Currently playing: 
+          <a href=${current.url} target="_blank" rel="noopener noreferrer">
+            ${current.name} - ${current.artist['#text']}
+          </a>`;
+        setCurrentlyListening(parse(currentArtist));
       } else {
         setCurrentlyListening('');
       }
@@ -60,6 +74,24 @@ const InterestsPage = ({ data }) => {
     fetchData();
     setInterval(fetchData, 10000);
   }, []);
+
+  const artistTitleAndToolTip = (
+    <span>
+      {topArtistsTitle}
+      <ReactTooltip
+        id="interest-tooltip"
+        delayHide={100}
+        effect="solid"
+      />
+      <div
+        style={{ display: 'inline' }}
+        data-for="interest-tooltip"
+        data-tip="Top listened to artists from the last 3 months"
+      >
+        <sup>?</sup>
+      </div>
+    </span>
+  );
 
   return (
     <Layout>
@@ -75,7 +107,7 @@ const InterestsPage = ({ data }) => {
           <InterestBox icon={<FaHeart />} title={lovesTitle} list={lovesList} />
           <InterestBox
             icon={<FaArrowUp />}
-            title={topArtistsTitle}
+            title={artistTitleAndToolTip}
             list={artistsList}
             extra={currentlyListening && (
             <li>

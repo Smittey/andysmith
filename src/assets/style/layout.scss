@@ -45,13 +45,19 @@ a {
     text-decoration: none;
     outline: none;
 
+    &:hover {
+        color: #77D1D2;
+    }
+
     .dark-theme & {
         color: rgb(247, 229, 199);
         text-decoration-color: initial;
     }
 }
 
-
+sup {
+    font-size: 10px;
+}
 
 .bold {
     font-family: $bold;
