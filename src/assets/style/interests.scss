@@ -25,6 +25,13 @@
 
     a {
       font-weight: bold;
+      &:hover {
+          color: $theme-color;
+
+          .dark-theme & {
+              color: rgb(185, 216, 192);
+          }
+      }
     }
 
     &:nth-child(odd) {
