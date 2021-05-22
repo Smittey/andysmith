@@ -17,7 +17,7 @@ const InterestBox = ({
 
     {(list && list.length > 0) && (
     <ul>
-      {list.map((item) => <li key={item}>{item}</li>)}
+      {list.map((item) => <li key={JSON.stringify(item)}>{item}</li>)}
       {extra}
     </ul>
     )}
@@ -26,7 +26,10 @@ const InterestBox = ({
 
 InterestBox.propTypes = {
   icon: PropTypes.element.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.string,
+  ]),
   list: PropTypes.array.isRequired,
   extra: PropTypes.string,
 };
