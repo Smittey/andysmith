@@ -156,7 +156,7 @@
 
             @include desktop {
                 margin-left: -19px;
-                left: 20%;
+                left: 100px;
             }
         }
 
@@ -194,7 +194,7 @@
                 }
     
                 @include desktop {
-                    margin: 0 0 50px 25%;
+                    margin: 0 0 50px 130px;
                 }
 
                 h2 { 
@@ -218,7 +218,7 @@
     
                 @include desktop {
                     margin: 0 0 0 -25px;
-                    left: 20%;
+                    left: 100px;
                 }
 
                 .dark-theme & {
