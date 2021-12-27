@@ -14,8 +14,12 @@ const TimelineItem = ({
 }) => {
   const { state, dispatch } = useContext(experienceContext);
 
-  const addFilter = (newValue) => {
-    dispatch({ type: 'ADD_FILTER', data: newValue });
+  const changeFilter = (newValue) => {
+    if (state.filterTags.includes(newValue)) {
+      dispatch({ type: 'REMOVE_FILTER', data: newValue });
+    } else {
+      dispatch({ type: 'ADD_FILTER', data: newValue });
+    }
   };
 
   const formattedStartDate = moment(startDate).format('MMM [\']YY');
@@ -45,7 +49,7 @@ const TimelineItem = ({
               type="button"
               category="Timeline Section"
               action="Tag Filter"
-              onClick={() => addFilter(skill)}
+              onClick={() => changeFilter(skill)}
               classNameProp={(state.filterTags.includes(skill)) ? 'selected' : 'deselected'}
             />
           ))
