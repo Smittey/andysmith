@@ -90,8 +90,12 @@ const Layout = ({ children, isIndex }) => {
           }}
         >
           <main>{children}</main>
-        </div>
-        <Navbar isIndex={isIndex && width > 910} />
+        </div>        
+        {
+          (isIndex && width > 909) && <Navbar isIndex={true} />
+          || (isIndex && width < 910) && <Navbar isIndex={false} />
+          || (!isIndex) && <Navbar isIndex={false} />
+        }
       </div>
     </div>
   );
