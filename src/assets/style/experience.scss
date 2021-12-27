@@ -140,73 +140,100 @@
         padding: 0;
         list-style: none;
         position: relative;
+
+        /* The line */
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #C9C6C6;
+
+            @include mobile {
+                left: 6px;
+            }
+
+            @include desktop {
+                margin-left: -19px;
+                left: 20%;
+            }
+        }
+
+        & > li {
+            position: relative;
+
+            /* The date/time */
+            .time {
+                display: block;
+                width: 30%;
+
+                @include mobile {
+                    margin: 0px 0 10px 16%;
+                    font-size: 12px;
+                }
+    
+                @include desktop {
+                    padding-right: 100px;
+                    position: absolute;
+                }
+
+                span {
+                    display: block;
+                    text-align: left;
+                    font-family: $bold;
+                }
+            }
+
+            /* Right content */
+            .label {
+                position: relative;
+
+                @include mobile {
+                    margin: 0 0 50px 16%;
+                }
+    
+                @include desktop {
+                    margin: 0 0 50px 25%;
+                }
+
+                h2 { 
+                    margin-top: 0px;
+                    margin-bottom: 5px;
+                }
+
+                h4 { 
+                    margin-top: 0px;
+                }
+            }
+
+            /* The icons */
+            .icon {
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                background: $theme-color;
+                border-radius: 50%;
+                top: 0;
+    
+                @include desktop {
+                    margin: 0 0 0 -25px;
+                    left: 20%;
+                }
+
+                .dark-theme & {
+                    background: rgb(71, 98, 87);
+                }
+            }
+        }
+
+    
     } 
     
-    /* The line */
-    .timeline:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 3px;
-        background: #C9C6C6;
-        left: 20%;
-        margin-left: -19px;
-    }
-    
-    .timeline > li {
-        position: relative;
-    }
-
     *, *:after, *:before {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
 
-    /* The date/time */
-    .timeline > li .time {
-        display: block;
-        width: 30%;
-        padding-right: 100px;
-        position: absolute;
-    }
-
-    .timeline > li .time span {
-        display: block;
-        text-align: left;
-        font-family: $bold;
-    }
-
-
-    /* Right content */
-    .timeline > li .label {
-        margin: 0 0 50px 25%;
-        position: relative;
-    }
-
-    .timeline > li .label h2 { 
-        margin-top: 0px;
-        margin-bottom: 5px;
-    }
-
-    .timeline > li .label h4 { 
-        margin-top: 0px;
-    }
-
-    /* The icons */
-    .timeline > li .icon {
-        width: 15px;
-        height: 15px;
-        position: absolute;
-        background: $theme-color;
-        border-radius: 50%;
-        left: 20%;
-        top: 0;
-        margin: 0 0 0 -25px;
-
-        .dark-theme & {
-            background: rgb(71, 98, 87);
-        }
-    }
 }
