@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
@@ -13,26 +13,10 @@ const Layout = ({ children, isIndex }) => {
   const dispatch = useContext(GlobalDispatchContext);
   const state = useContext(GlobalStateContext);
 
-  const [width, setWidth] = useState();
-
   useEffect(() => {
     if (localStorage.getItem('themeColour')) {
       dispatch({ type: 'SET_THEME', payload: localStorage.getItem('themeColour') });
     }
-  }, []);
-
-  const setScreenSize = () => {
-    setWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenSize();
-    };
-
-    setScreenSize();
-    window.addEventListener('resize', handleResize);
-    return () => { window.removeEventListener('resize', handleResize); };
   }, []);
 
   const themeToggleHandler = () => {
@@ -90,12 +74,8 @@ const Layout = ({ children, isIndex }) => {
           }}
         >
           <main>{children}</main>
-        </div>        
-        {
-          (isIndex && width > 909) && <Navbar isIndex={true} />
-          || (isIndex && width < 910) && <Navbar isIndex={false} />
-          || (!isIndex) && <Navbar isIndex={false} />
-        }
+        </div>
+        <Navbar isIndex={isIndex} />
       </div>
     </div>
   );
