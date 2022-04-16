@@ -8,7 +8,6 @@ const initialState = {
   theme: 'light',
 };
 
-
 function reducer(state, action) {
   switch (action.type) {
     case 'SET_THEME': {

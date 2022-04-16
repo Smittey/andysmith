@@ -176,6 +176,11 @@ button {
             margin-top: 50px;
         }
     }
+
+    main {
+        max-width: 140ch;
+        margin: 0 auto;
+    }
 }
 
 .content::-webkit-scrollbar {

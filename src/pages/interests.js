@@ -26,7 +26,6 @@ const InterestsPage = ({ data }) => {
     topArtistsTitle,
   } = data.contentfulInterests;
 
-
   const buildArtistLink = (artist) => (
     <a href={artist.url} target="_blank" rel="noopener noreferrer">
       {artist.name}

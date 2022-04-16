@@ -17,7 +17,6 @@ const Image = () => {
 
   return (
     <Img
-
       imgStyle={{
         position: '',
         left: '',
@@ -30,12 +29,10 @@ const Image = () => {
         marginBottom: '-50%',
 
       }}
-
       style={{
         position: 'absolute',
         bottom: '0',
       }}
-
       fluid={data.placeholderImage.childImageSharp.fluid}
     />
   );

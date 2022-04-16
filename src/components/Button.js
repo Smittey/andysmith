@@ -31,7 +31,7 @@ const Button = ({
       ? (
         /* eslint-disable-next-line react/button-has-type */
         <button
-          type={type}
+          type={type ? 'button' : 'submit'}
           className={cssClasses}
           disabled={disabled}
           onClick={() => {
