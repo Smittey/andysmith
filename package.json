@@ -35,7 +35,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "classnames": "^2.2.6",
-    "dotenv": "^8.2.0",
+    "dotenv": "^16.0.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-react": "^7.17.0",
