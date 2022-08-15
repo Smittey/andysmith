@@ -40,7 +40,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-react": "^7.17.0",
     "gatsby": "^2.24.91",
-    "gatsby-background-image": "^0.9.12",
+    "gatsby-background-image": "^1.6.0",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-google-analytics": "^2.1.33",
     "gatsby-plugin-manifest": "^2.2.31",
