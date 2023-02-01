@@ -52,7 +52,7 @@
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-remark": "^2.6.48",
     "gatsby-transformer-sharp": "^2.3.7",
-    "html-react-parser": "^1.2.6",
+    "html-react-parser": "^3.0.8",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "moment": "^2.29.4",
