@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import { FaBars } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 import BackgroundImage from 'gatsby-background-image';
+import { getImage } from 'gatsby-plugin-image';
+import { convertToBgImage } from 'gbimage-bridge';
 import SocialIcons from './SocialIcons';
 import NavLinks from './NavLinks';
-import { convertToBgImage } from 'gbimage-bridge';
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 const Navbar = ({ isIndex }) => {
   const [menuState, setMenuState] = useState('closed');
@@ -32,21 +32,21 @@ const Navbar = ({ isIndex }) => {
   }, [menuState]);
 
   const { contentfulAsset } = useStaticQuery(
-      graphql`
-        query {
-          contentfulAsset(contentful_id: {eq: "3Q1Kn2aUi6rUxunGYPZkAI"}) {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  placeholder: BLURRED
-                  quality: 90
-                )
-              }
+    graphql`
+      query {
+        contentfulAsset(contentful_id: {eq: "3Q1Kn2aUi6rUxunGYPZkAI"}) {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                placeholder: BLURRED
+                quality: 90
+              )
             }
           }
         }
-      `,
-    );
+      }
+    `,
+  );
 
   const image = getImage(contentfulAsset.localFile);
   const bgImage = convertToBgImage(image);

@@ -11,7 +11,7 @@ import {
 
 const Layout = ({ children, isIndex }) => {
   const dispatch = useContext(GlobalDispatchContext);
-  const state = useContext(GlobalStateContext);
+  const { theme } = useContext(GlobalStateContext);
 
   useEffect(() => {
     if (localStorage.getItem('themeColour')) {
@@ -20,7 +20,7 @@ const Layout = ({ children, isIndex }) => {
   }, []);
 
   const themeToggleHandler = () => {
-    const toggleTo = state.theme === 'light' ? 'dark' : 'light';
+    const toggleTo = theme === 'light' ? 'dark' : 'light';
     dispatch({ type: 'TOGGLE_THEME' });
     localStorage.setItem('themeColour', toggleTo);
     trackCustomEvent({
@@ -37,7 +37,7 @@ const Layout = ({ children, isIndex }) => {
   return (
     <div>
       <Helmet>
-        <body className={state.theme === 'light' ? 'light-theme' : 'dark-theme'} />
+        <body className={theme === 'light' ? 'light-theme' : 'dark-theme'} />
       </Helmet>
       <div className="themeToggle">
         <span
@@ -56,7 +56,7 @@ const Layout = ({ children, isIndex }) => {
           >
             <title>
               {
-                state.theme === 'light'
+                theme === 'light'
                   ? 'Toggle to dark mode'
                   : 'Toggle to light mode'
               }

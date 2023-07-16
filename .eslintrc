@@ -7,6 +7,7 @@
     "react/require-default-props": "off",
     "react/forbid-prop-types": "off",
     "react/self-closing-comp": "off",
+    "react/jsx-props-no-spreading": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {"devDependencies": true}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { useStaticQuery, graphql } from 'gatsby';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 

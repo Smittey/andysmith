@@ -50,8 +50,7 @@ query TestimonialsQuery {
         displayPicture {
           description
           gatsbyImageData(
-            cropFocus: CENTER
-            height: 200 
+            placeholder: BLURRED
           )
         }
         body {

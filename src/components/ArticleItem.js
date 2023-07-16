@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import BackgroundImage from 'gatsby-background-image';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { convertToBgImage } from 'gbimage-bridge';
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { getImage } from 'gatsby-plugin-image';
 
 const ArticleItem = ({
   data,

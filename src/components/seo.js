@@ -1,10 +1,3 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
@@ -24,7 +17,15 @@ function SEO({
             title
           }
         }
-       
+        contentfulAsset(contentful_id: {eq: "4lKopBwBTzByQLvoCs6UrQ"}) {
+          localFile {
+            childImageSharp {
+              resize(width: 800, quality: 100) {
+                src
+              }
+            }
+          }
+        }
       }
     `,
   );
@@ -36,7 +37,7 @@ function SEO({
     title: metadataTitle,
   } = site.siteMetadata;
 
-  const metaImage = '';//contentfulAsset.fixed.src;
+  const metaImage = contentfulAsset.localFile.childImageSharp.resize.src;
   const metaImageurl = `https:${metaImage}`;
   const url = [siteUrl, title].join('/').toLowerCase();
 
