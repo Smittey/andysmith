@@ -44,9 +44,12 @@ export const pageQuery = graphql`
               slug
               publishDate
               heroImage {
-                  sizes(maxHeight: 500, cropFocus: CENTER) {
-                      ...GatsbyContentfulSizes
-                  }
+                description
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  cropFocus: CENTER
+                  height: 500 
+                )
               }
           }
       }

@@ -24,11 +24,7 @@ function SEO({
             title
           }
         }
-        contentfulAsset(contentful_id: {eq: "4lKopBwBTzByQLvoCs6UrQ"}) {
-          fixed(quality: 100, width: 800) {
-            src
-          }
-        }
+       
       }
     `,
   );
@@ -40,7 +36,7 @@ function SEO({
     title: metadataTitle,
   } = site.siteMetadata;
 
-  const metaImage = contentfulAsset.fixed.src;
+  const metaImage = '';//contentfulAsset.fixed.src;
   const metaImageurl = `https:${metaImage}`;
   const url = [siteUrl, title].join('/').toLowerCase();
 

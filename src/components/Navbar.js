@@ -6,6 +6,8 @@ import { IconContext } from 'react-icons';
 import BackgroundImage from 'gatsby-background-image';
 import SocialIcons from './SocialIcons';
 import NavLinks from './NavLinks';
+import { convertToBgImage } from 'gbimage-bridge';
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 const Navbar = ({ isIndex }) => {
   const [menuState, setMenuState] = useState('closed');
@@ -30,16 +32,24 @@ const Navbar = ({ isIndex }) => {
   }, [menuState]);
 
   const { contentfulAsset } = useStaticQuery(
-    graphql`
-      query {
-        contentfulAsset(contentful_id: {eq: "3Q1Kn2aUi6rUxunGYPZkAI"}) {
-          sizes(maxHeight: 2000) {
-              ...GatsbyContentfulSizes
+      graphql`
+        query {
+          contentfulAsset(contentful_id: {eq: "3Q1Kn2aUi6rUxunGYPZkAI"}) {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  quality: 90
+                )
+              }
+            }
           }
         }
-      }
-    `,
-  );
+      `,
+    );
+
+  const image = getImage(contentfulAsset.localFile);
+  const bgImage = convertToBgImage(image);
 
   const navToggle = () => {
     setMenuState(menuState === 'closed' ? 'open' : 'closed');
@@ -68,8 +78,9 @@ const Navbar = ({ isIndex }) => {
               backgroundSize: 'contain',
               backgroundPosition: backgroundPositionStyle,
             }}
-            fluid={contentfulAsset.sizes}
-          />
+            {...bgImage}
+          >
+          </BackgroundImage>
         </div>
       </div>
     </nav>

@@ -48,9 +48,11 @@ query TestimonialsQuery {
         company
         jobTitle
         displayPicture {
-          sizes(maxHeight: 200, cropFocus: CENTER) {
-            ...GatsbyContentfulSizes
-          }
+          description
+          gatsbyImageData(
+            cropFocus: CENTER
+            height: 200 
+          )
         }
         body {
           body
@@ -59,10 +61,14 @@ query TestimonialsQuery {
       }
     }
     contentfulAsset(contentful_id: {eq: "3PuWX6xVy970fMd5zDNahD"}) {
-        sizes(maxHeight: 500, cropFocus: CENTER) {
-            ...GatsbyContentfulSizes
+      localFile {
+        childImageSharp {
+          gatsbyImageData(
+            placeholder: BLURRED
+            height: 500
+          )
         }
-      
+      }
     }
   }
 `;

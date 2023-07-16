@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+// import Img from 'gatsby-image';
 
 const TestimonialItem = ({
   data,
@@ -14,12 +15,20 @@ const TestimonialItem = ({
     displayPicture,
   } = data;
 
-  const image = displayPicture || defaultImage;
-
+  const image = displayPicture || defaultImage.localFile;
+  const description = displayPicture?.description || "Defalt display picture";
   return (
     <div className="box" key={name}>
       <div className="avatar">
-        <Img sizes={image.sizes} />
+        <GatsbyImage
+          className="social"
+          imgStyle={{
+            width: '50px',
+            height: '50px',
+          }}
+          image={getImage(image)}
+          alt={description}
+        />
       </div>
       <div className="details">
         <p className="company bold">{company}</p>

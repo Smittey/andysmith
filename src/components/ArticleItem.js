@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BackgroundImage from 'gatsby-background-image';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { convertToBgImage } from 'gbimage-bridge';
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 const ArticleItem = ({
   data,
@@ -14,6 +16,9 @@ const ArticleItem = ({
     heroImage,
     slug,
   } = data;
+
+  const image = getImage(heroImage);
+  const bgImage = convertToBgImage(image);
 
   return (
     (index % 2)
@@ -41,7 +46,7 @@ const ArticleItem = ({
               Tag="section"
               id="media-test"
               className="heroImageGatsby"
-              fluid={heroImage.sizes}
+              {...bgImage}
             >
               <div className="box" />
             </BackgroundImage>
@@ -59,7 +64,7 @@ const ArticleItem = ({
               Tag="section"
               id="media-test"
               className="heroImageGatsby"
-              fluid={heroImage.sizes}
+              {...bgImage}
             >
               <div className="box" />
             </BackgroundImage>

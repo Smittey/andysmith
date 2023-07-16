@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from 'gatsby';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
@@ -13,16 +13,19 @@ const SocialIcons = () => {
                 link
                 altText
                 image {
-                  sizes(maxHeight: 300) {
-                      ...GatsbyContentfulSizes
-                  }
+                  gatsbyImageData(layout: FULL_WIDTH)
                 }
               }
             }
             contentfulAsset(contentful_id: {eq: "lb7CFYVbXd8BZOHXjvwMP"}) {
-              sizes(maxHeight: 200) {
-                ...GatsbyContentfulSizes
-              }            
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(
+                    placeholder: BLURRED
+                    quality: 90
+                  )
+                }
+              }
             }
             site {
               siteMetadata {
@@ -32,6 +35,7 @@ const SocialIcons = () => {
           }
         `,
   );
+
   return (
     <div className="icons">
       {
@@ -43,13 +47,15 @@ const SocialIcons = () => {
             className="imgBox"
             key={item.name}
           >
-            <Img
+            <GatsbyImage
               className="social"
               imgStyle={{
                 width: '50px',
                 height: '50px',
               }}
-              sizes={item.image.sizes}
+              image={
+                getImage(item.image)
+              }
               alt={item.altText}
             />
           </OutboundLink>
@@ -61,14 +67,16 @@ const SocialIcons = () => {
         rel="noopener noreferrer"
         className="imgBox"
       >
-        <Img
+        <GatsbyImage
           className="social"
           style={{
             display: 'inline-block',
             width: '50px',
             height: '50px',
           }}
-          sizes={contentfulAsset.sizes}
+          image={
+            getImage(contentfulAsset.localFile)
+          }
           alt="Personal blog icon link"
         />
       </OutboundLink>
